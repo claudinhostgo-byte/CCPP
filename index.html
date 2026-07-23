@@ -120,6 +120,18 @@
   /* NOTA */
   .nota{background:var(--dorado-suave);border:1px solid #ecd9a8;border-left:5px solid var(--dorado);border-radius:12px;padding:20px 24px;margin-top:46px;font-size:.92rem;color:#6b5420;max-width:840px;margin-left:auto;margin-right:auto}
 
+  /* DIRECTIVA / EQUIPO */
+  .equipo{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px;max-width:920px;margin:0 auto}
+  .persona{background:var(--card);border:1px solid var(--linea);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .18s,box-shadow .18s}
+  .persona:hover{transform:translateY(-4px);box-shadow:0 16px 38px rgba(12,64,133,.12)}
+  .persona .foto{width:104px;height:104px;border-radius:50%;margin:0 auto 16px;overflow:hidden;border:3px solid var(--dorado);box-shadow:0 6px 18px rgba(12,64,133,.18)}
+  .persona .foto img{width:100%;height:100%;object-fit:cover}
+  .persona h3{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:4px}
+  .persona .rol{display:inline-block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#9a7415;background:var(--dorado-suave);padding:4px 12px;border-radius:20px}
+  .persona.proximamente{display:flex;flex-direction:column;align-items:center;justify-content:center;border-style:dashed;background:transparent}
+  .persona.proximamente .foto{background:#eef3f8;display:flex;align-items:center;justify-content:center;color:var(--gris2);font-size:1.8rem;border-color:var(--linea)}
+  .persona.proximamente p{font-size:.85rem;color:var(--gris)}
+
   footer{background:var(--navy);color:#cfdcec;padding:52px 0;text-align:center;font-size:.88rem}
   footer .mark-f{width:118px;height:118px;margin:0 auto 22px;border-radius:50%;background:#fff;color:var(--azul);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.35rem;letter-spacing:-.5px;padding:13px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
   footer .mark-f img{width:100%;height:100%;object-fit:contain}
@@ -152,6 +164,7 @@
       <a href="#relevante">Relevante</a>
       <a href="#importante">Importante</a>
       <a href="#plan">Plan por etapas</a>
+      <a href="#directiva">Directiva</a>
     </nav>
   </div>
 </header>
@@ -424,6 +437,28 @@
 
     <div class="nota">
       <strong>Nota:</strong> la clasificación en <em>urgente / relevante / importante</em> es una propuesta de trabajo basada en el orden de prioridad del documento (primero alumnos, luego familias, luego comunidad). Puede ajustarse según la validación con el colegio y las encuestas a apoderados.
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTIVA -->
+<section class="bloque" id="directiva">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag imp">Quiénes lideran</span>
+      <h2>La directiva que impulsa esta propuesta</h2>
+      <p>Apoderados que asumen la representación con compromiso, cercanía y gestión real.</p>
+    </div>
+    <div class="equipo">
+      <div class="persona">
+        <div class="foto"><img src="assets/JACH.png" alt="Juan Andrés Cristi"></div>
+        <h3>Juan Andrés Cristi</h3>
+        <span class="rol">Presidente</span>
+      </div>
+      <div class="persona proximamente">
+        <div class="foto">+</div>
+        <p>Próximamente más integrantes de la directiva.</p>
+      </div>
     </div>
   </div>
 </section>
