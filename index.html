@@ -137,6 +137,26 @@
   /* NOTA */
   .nota{background:var(--dorado-suave);border:1px solid #ecd9a8;border-left:5px solid var(--dorado);border-radius:12px;padding:20px 24px;margin-top:46px;font-size:.92rem;color:#6b5420;max-width:840px;margin-left:auto;margin-right:auto}
 
+  /* COMPATIBILIDAD (semáforo) */
+  .sem-tabla{max-width:960px;margin:0 auto;border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(12,64,133,.05)}
+  .sem-row{display:grid;grid-template-columns:1.1fr 120px 1.6fr;border-top:1px solid var(--linea)}
+  .sem-row:first-child{border-top:0}
+  .sem-row.head{background:var(--navy);color:#fff}
+  .sem-row.head>div{color:#fff;font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.6px}
+  .sem-row>div{padding:14px 18px;font-size:.9rem;display:flex;align-items:center}
+  .sem-row .eje{color:var(--navy);font-weight:600}
+  .sem-row .obs{color:#3a4854}
+  .luz{font-weight:700;font-size:.78rem;padding:5px 13px;border-radius:20px;white-space:nowrap}
+  .luz.v{background:#e0f0e4;color:var(--verde)}
+  .luz.a{background:#fbf0d5;color:#9a7415}
+  @media(max-width:720px){
+    .sem-row{grid-template-columns:1fr}
+    .sem-row.head{display:none}
+    .sem-row>div{padding:6px 16px}
+    .sem-row .eje{padding-top:16px}
+    .sem-row .obs{padding-bottom:16px;color:var(--gris)}
+  }
+
   /* DIRECTIVA / EQUIPO */
   .equipo{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px;max-width:920px;margin:0 auto}
   .persona{background:var(--card);border:1px solid var(--linea);border-radius:16px;padding:28px 20px;text-align:center;transition:transform .18s,box-shadow .18s}
@@ -186,9 +206,11 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <nav id="mainNav">
+      <a href="#contexto">Contexto</a>
       <a href="#urgente">Urgente</a>
       <a href="#relevante">Relevante</a>
       <a href="#importante">Importante</a>
+      <a href="#compatibilidad">Compatibilidad</a>
       <a href="#plan">Plan por etapas</a>
       <a href="#directiva">Directiva</a>
     </nav>
@@ -223,6 +245,20 @@
   </div>
 </section>
 
+<!-- CONTEXTO NORD ANGLIA -->
+<section class="bloque band" id="contexto" style="padding:56px 0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px">
+      <span class="tag rel">El nuevo contexto</span>
+      <h2>La transición a Nord Anglia</h2>
+      <p>El colegio inicia una nueva etapa como parte de un grupo educativo internacional. Es una oportunidad —y también una razón para que las familias cuenten con una representación preparada.</p>
+    </div>
+    <div class="nota" style="margin-top:0">
+      Proponemos que el Centro de Padres sea una <strong>contraparte formal, informada y colaborativa</strong> durante esta transición: canalizar de forma ordenada las inquietudes sobre continuidad del proyecto educativo, aranceles y gestión, y velar por que los compromisos ya adquiridos por el colegio se mantengan y se cumplan.
+    </div>
+  </div>
+</section>
+
 <!-- URGENTE -->
 <section class="bloque" id="urgente">
   <div class="wrap">
@@ -250,8 +286,29 @@
           <li>Difusión simple de protocolos de convivencia y ciberbullying.</li>
           <li>Canal claro para reportar situaciones y seguimiento de casos.</li>
           <li>Plazos de respuesta y comunicación responsable con las familias.</li>
+          <li>Vínculo con la Red Preventiva (prevención de alcohol y drogas).</li>
         </ul>
         <div class="obj">Que ningún estudiante enfrente maltrato o exclusión sin apoyo.</div>
+      </div>
+      <div class="card urg">
+        <div class="ico">🚨</div>
+        <h3>Plan ante emergencias</h3>
+        <ul>
+          <li>Revisión y socialización del Plan Integral de Seguridad (sismo, incendio, emergencia médica).</li>
+          <li>Guía para las familias: qué hacer y cómo será la reunificación con los alumnos.</li>
+          <li>Al menos un simulacro anual con participación de familias.</li>
+        </ul>
+        <div class="obj">Que la seguridad sea conocida por toda la comunidad, no solo internamente.</div>
+      </div>
+      <div class="card urg">
+        <div class="ico">🚗</div>
+        <h3>Retiro y tránsito seguro</h3>
+        <ul>
+          <li>Zonas de espera y retiro por ciclo; flujos ordenados de transporte y autos.</li>
+          <li>Refuerzo de supervisión en horarios críticos, con foco en marzo.</li>
+          <li>Campaña permanente de seguridad vial en los accesos.</li>
+        </ul>
+        <div class="obj">Un ingreso y salida predecibles, seguros y ordenados.</div>
       </div>
       <div class="card urg">
         <div class="ico">♿</div>
@@ -293,10 +350,20 @@
         <ul>
           <li>Colaciones saludables en recreos.</li>
           <li>Máquinas con agua, yogur, frutos secos y barras nutritivas.</li>
+          <li>Kiosco saludable administrado por 2° Medio para financiar su gira, con rendición transparente.</li>
           <li>Opciones para restricciones alimentarias y precios accesibles.</li>
-          <li>Proveedores autorizados y reposición controlada.</li>
         </ul>
-        <div class="obj">Que la opción saludable sea fácil, permanente y atractiva.</div>
+        <div class="obj">Que la opción saludable sea fácil, permanente y de bajo riesgo operacional.</div>
+      </div>
+      <div class="card rel">
+        <div class="ico">🚻</div>
+        <h3>Baños dignos</h3>
+        <ul>
+          <li>Diagnóstico de frecuencia de aseo y reposición de insumos.</li>
+          <li>Canal simple para reportar baños en mal estado durante la jornada.</li>
+          <li>Indicadores de cumplimiento revisados con la administración.</li>
+        </ul>
+        <div class="obj">Baños limpios, dignos y seguros durante toda la jornada escolar.</div>
       </div>
       <div class="card rel">
         <div class="ico">👨‍👩‍👧</div>
@@ -402,6 +469,30 @@
         </ul>
         <div class="obj">Fortalecer vínculos, pertenencia y cercanía.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPATIBILIDAD -->
+<section class="bloque band" id="compatibilidad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag imp">Viabilidad</span>
+      <h2>Compatibilidad con el Reglamento del colegio</h2>
+      <p>Contrastamos cada eje con el marco institucional. La mayoría es plenamente compatible; los temas de alimentación requieren evaluación de factibilidad y autorización previa. No es una lista de promesas: es un plan viable y responsable.</p>
+    </div>
+    <div class="sem-tabla">
+      <div class="sem-row head"><div>Eje de la propuesta</div><div>Compatib.</div><div>Observación</div></div>
+      <div class="sem-row"><div class="eje">Seguridad, recreos, retiro, vialidad y emergencias</div><div><span class="luz v">Verde</span></div><div class="obs">Compatible si se plantea como propuesta y apoyo al colegio, no como imposición operativa directa.</div></div>
+      <div class="sem-row"><div class="eje">Convivencia, bullying, redes y teléfonos</div><div><span class="luz v">Verde</span></div><div class="obs">Compatible como canalización de inquietudes y apoyo a la vida escolar.</div></div>
+      <div class="sem-row"><div class="eje">Inclusión real</div><div><span class="luz v">Verde</span></div><div class="obs">Compatible con la formación integral, protección y desarrollo de los estudiantes.</div></div>
+      <div class="sem-row"><div class="eje">Alimentación saludable, kiosco y vending</div><div><span class="luz a">Amarillo</span></div><div class="obs">Compatible, pero requiere autorización del colegio, evaluación sanitaria, financiera y rendición clara.</div></div>
+      <div class="sem-row"><div class="eje">Casino o servicio de alimentación</div><div><span class="luz a">Amarillo</span></div><div class="obs">Compatible como evaluación de factibilidad, no como promesa inmediata de implementación.</div></div>
+      <div class="sem-row"><div class="eje">Biblioteca, tecnología, IA y material educativo</div><div><span class="luz v">Verde</span></div><div class="obs">Compatible con apoyo a infraestructura, material didáctico e innovación.</div></div>
+      <div class="sem-row"><div class="eje">Escuela para Padres</div><div><span class="luz v">Verde</span></div><div class="obs">Muy compatible con las finalidades de capacitación y formación familiar.</div></div>
+      <div class="sem-row"><div class="eje">Apoyo a giras de estudio y recaudación</div><div><span class="luz a">Amarillo</span></div><div class="obs">Compatible si se administra con transparencia, reglas claras y destino educacional/social.</div></div>
+      <div class="sem-row"><div class="eje">Red de emprendimientos de apoderados</div><div><span class="luz a">Amarillo</span></div><div class="obs">Compatible si es voluntaria, no lucrativa para el Centro y con criterios de transparencia.</div></div>
+      <div class="sem-row"><div class="eje">Actividades lúdicas, bingos, café concert, ferias</div><div><span class="luz v">Verde</span></div><div class="obs">Compatible como actividades recreativas, destinando fondos a los fines del Centro.</div></div>
     </div>
   </div>
 </section>
