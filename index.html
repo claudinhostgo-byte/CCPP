@@ -86,10 +86,18 @@
   .cta a.primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(212,168,59,.36)}
   .cta a.ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
   .cta a.ghost:hover{background:rgba(255,255,255,.14)}
+  .bandera{margin-top:32px;display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px 20px;max-width:640px}
+  .bandera .flag{font-size:1.4rem;flex:0 0 auto}
+  .bandera .bar{flex:1;min-width:120px}
+  .bandera .bar .track{background:rgba(255,255,255,.18);border-radius:20px;height:8px;overflow:hidden;margin-bottom:6px}
+  .bandera .bar .fill{background:var(--dorado);height:100%;border-radius:20px}
+  .bandera .bar small{font-size:.82rem;opacity:.9}
+  .bandera .bar small strong{color:var(--dorado)}
+  @media(max-width:600px){.bandera{display:flex}}
 
   /* PRINCIPIOS */
   .principios{background:var(--navy);color:#fff;padding:30px 0}
-  .principios .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;text-align:center}
+  .principios .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
   .principios .p b{display:block;color:var(--dorado);font-size:.95rem;font-weight:600;margin-bottom:4px}
   .principios .p small{opacity:.82;font-size:.78rem;line-height:1.45;display:block}
 
@@ -183,6 +191,9 @@
   footer .lema-f{font-style:italic;font-size:1.08rem;color:#fff;max-width:680px;margin:0 auto 18px;line-height:1.5}
   footer .fine{opacity:.7;font-size:.82rem;margin-top:10px}
 
+  @media(max-width:1000px){
+    .principios .grid{grid-template-columns:repeat(3,1fr)}
+  }
   @media(max-width:860px){
     .principios .grid{grid-template-columns:repeat(2,1fr);gap:16px}
     .cards{grid-template-columns:1fr}
@@ -237,6 +248,13 @@
       <a class="primary" href="#urgente">Ver prioridades</a>
       <a class="ghost" href="#plan">Conocer el plan</a>
     </div>
+    <div class="bandera">
+      <div class="flag">🚩</div>
+      <div class="bar">
+        <div class="track"><div class="fill" style="width:22%"></div></div>
+        <small>Nuestra bandera: recuperar la comunidad — de <strong>22%</strong> a más del <strong>50%</strong> de familias socias del Centro de Padres.</small>
+      </div>
+    </div>
   </div>
   <div class="sello">
     <img src="assets/logo.png" alt="Logo Centro de Padres Trewhela's School">
@@ -247,22 +265,26 @@
   <div class="wrap grid">
     <div class="p"><b>Alumno al centro</b><small>Toda decisión prioriza su seguridad, bienestar y desarrollo.</small></div>
     <div class="p"><b>Gestión real</b><small>Diagnóstico, responsables, plazos, costos e indicadores.</small></div>
+    <div class="p"><b>Promesas cumplibles</b><small>Compromisos (lo que hacemos directo) vs. gestiones (lo que impulsamos ante el colegio, con plazo y reporte).</small></div>
     <div class="p"><b>Colaboración</b><small>Con el colegio, con representación firme.</small></div>
     <div class="p"><b>Inclusión</b><small>Todos los niños participan y se sienten parte.</small></div>
     <div class="p"><b>Transparencia</b><small>Informamos avances, pendientes y resultados.</small></div>
   </div>
 </section>
 
-<!-- CONTEXTO NORD ANGLIA -->
+<!-- NUESTRA BASE: LO COMPROMETIDO Y EL NUEVO CONTEXTO -->
 <section class="bloque band" id="contexto" style="padding:56px 0">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:26px">
-      <span class="tag rel">El nuevo contexto</span>
-      <h2>La transición a Nord Anglia</h2>
-      <p>El colegio inicia una nueva etapa como parte de un grupo educativo internacional. Es una oportunidad —y también una razón para que las familias cuenten con una representación preparada.</p>
+      <span class="tag rel">Nuestra base</span>
+      <h2>Lo comprometido y el nuevo contexto</h2>
+      <p>Partimos de lo que el propio colegio declara y firma —no exigimos lo imposible: pedimos lo comprometido.</p>
+    </div>
+    <div class="nota" style="margin-top:0;margin-bottom:20px">
+      El contrato de prestación de servicios (cláusula 6ª) compromete: <strong>nivel académico exigente</strong> con énfasis en inglés, profesionales idóneos, infraestructura (aula, biblioteca, laboratorio y campo deportivo), actividades extraprogramáticas, e información y participación de las familias en el Centro de Padres.
     </div>
     <div class="nota" style="margin-top:0">
-      Proponemos que el Centro de Padres sea una <strong>contraparte formal, informada y colaborativa</strong> durante esta transición: canalizar de forma ordenada las inquietudes sobre continuidad del proyecto educativo, aranceles y gestión, y velar por que los compromisos ya adquiridos por el colegio se mantengan y se cumplan.
+      <strong>La transición a Nord Anglia:</strong> el ingreso del colegio a un grupo educativo internacional abre oportunidades, pero también genera preguntas legítimas sobre continuidad del proyecto, aranceles y gestión. Proponemos que el Centro de Padres sea una <strong>contraparte formal, informada y colaborativa</strong> durante esta transición: canalizar de forma ordenada las inquietudes de las familias, y velar por que los compromisos ya adquiridos por el colegio se mantengan y se cumplan.
     </div>
   </div>
 </section>
@@ -280,41 +302,41 @@
         <div class="ico">🛡️</div>
         <h3>Recreos seguros y supervisión</h3>
         <ul>
-          <li>Presencia visible de adultos responsables en recreos.</li>
-          <li>Mapa de supervisión de patios, pasillos, baños y zonas críticas.</li>
+          <li>Presencia visible de adultos responsables en recreos; mapa de supervisión de patios, pasillos, baños y zonas críticas.</li>
           <li>Registro y seguimiento de incidentes.</li>
-          <li>Reuniones periódicas Inspectoría–Convivencia–Centro de Padres.</li>
+          <li>Reuniones periódicas entre Inspectoría, Convivencia Escolar y Directiva del Centro de Padres.</li>
+          <li>Asegurar la presencia de un adulto responsable del colegio, con apoderados del CCPP como apoyo complementario.</li>
         </ul>
         <div class="obj">Reducir riesgos, conflictos y espacios sin supervisión.</div>
       </div>
       <div class="card urg">
         <div class="ico">🤝</div>
-        <h3>Convivencia, bullying y redes</h3>
+        <h3>Convivencia, bullying y mundo digital</h3>
         <ul>
-          <li>Difusión simple de protocolos de convivencia y ciberbullying.</li>
-          <li>Canal claro para reportar situaciones y seguimiento de casos.</li>
-          <li>Plazos de respuesta y comunicación responsable con las familias.</li>
-          <li>Vínculo con la Red Preventiva (prevención de alcohol y drogas).</li>
+          <li>Difusión simple de protocolos de convivencia, bullying y ciberbullying.</li>
+          <li>Charlas para alumnos y apoderados sobre redes sociales, teléfonos y respeto digital.</li>
+          <li>Canal claro de apoyo del CCPP para reportar situaciones, con plazos de respuesta y seguimiento.</li>
+          <li>Vínculo con la Red Preventiva (prevención de alcohol y drogas), presente en más de 80 colegios.</li>
         </ul>
         <div class="obj">Que ningún estudiante enfrente maltrato o exclusión sin apoyo.</div>
       </div>
       <div class="card urg">
         <div class="ico">🚨</div>
-        <h3>Plan ante emergencias</h3>
+        <h3>Plan ante emergencias mayores</h3>
         <ul>
-          <li>Revisión y socialización del Plan Integral de Seguridad (sismo, incendio, emergencia médica).</li>
-          <li>Guía para las familias: qué hacer y cómo será la reunificación con los alumnos.</li>
-          <li>Al menos un simulacro anual con participación de familias.</li>
+          <li>Revisión, actualización y socialización del Plan Integral de Seguridad (incendio, sismo, fuga de gas, amenaza externa, emergencia médica).</li>
+          <li>Plan para las familias: qué hacer, dónde informarse y cómo será la reunificación con los alumnos.</li>
+          <li>Al menos un simulacro anual con participación de familias y evaluación posterior.</li>
         </ul>
         <div class="obj">Que la seguridad sea conocida por toda la comunidad, no solo internamente.</div>
       </div>
       <div class="card urg">
         <div class="ico">🚗</div>
-        <h3>Retiro y tránsito seguro</h3>
+        <h3>Retiro seguro y campaña de tránsito</h3>
         <ul>
-          <li>Zonas de espera y retiro por ciclo; flujos ordenados de transporte y autos.</li>
-          <li>Refuerzo de supervisión en horarios críticos, con foco en marzo.</li>
-          <li>Campaña permanente de seguridad vial en los accesos.</li>
+          <li>Zonas de espera y retiro por ciclo; ordenar flujos de transporte, autos y talleres, con foco en marzo.</li>
+          <li>Campaña permanente de seguridad vial en los accesos, junto al Centro de Alumnos (CCAA); evaluar señalética y semáforo.</li>
+          <li>Gestionar ante el colegio un sistema de control de acceso y retiro, con resguardo estricto de datos personales (Ley 21.719).</li>
         </ul>
         <div class="obj">Un ingreso y salida predecibles, seguros y ordenados.</div>
       </div>
@@ -322,11 +344,12 @@
         <div class="ico">♿</div>
         <h3>Inclusión real</h3>
         <ul>
-          <li>Mesa permanente de inclusión.</li>
-          <li>Apoyo a estudiantes con TEA, TDAH y otras necesidades.</li>
-          <li>Participación efectiva en deporte, talleres y actos.</li>
+          <li>Mesa permanente de inclusión y apoyo a estudiantes con necesidades diversas (TEA, TDAH, neurodivergencias, situación de discapacidad).</li>
+          <li>Canal voluntario y confidencial para asesorar a las familias que lo deseen; el CCPP no solicitará datos de alumnos al colegio.</li>
+          <li>Sensibilización para alumnos, familias y comunidad; participación efectiva en deporte, talleres y actos.</li>
+          <li>Puente para que el colegio facilite, dentro del establecimiento, actividades vinculadas a apoyos y terapias.</li>
         </ul>
-        <div class="obj">Que todos los niños puedan participar y sentirse parte.</div>
+        <div class="obj">Que todos los niños puedan participar, desarrollarse y sentirse parte.</div>
       </div>
     </div>
   </div>
@@ -354,11 +377,11 @@
       </div>
       <div class="card rel">
         <div class="ico">🥗</div>
-        <h3>Vida sana y vending inteligente</h3>
+        <h3>Alimentación saludable, kiosco y vending</h3>
         <ul>
-          <li>Colaciones saludables en recreos.</li>
-          <li>Máquinas con agua, yogur, frutos secos y barras nutritivas.</li>
-          <li>Kiosco administrado por 2° Medio para financiar su gira, con rendición transparente.</li>
+          <li>Piloto de kiosco administrado por 2° Medio —sujeto a autorización del colegio y evaluación sanitaria— como recaudación anticipada para su gira, con rendición transparente.</li>
+          <li>Vending saludable con proveedor externo (agua, yogur, frutos secos, barras), administrado por 1° Medio para financiar su propia gira.</li>
+          <li>Financiamiento inicial a definir: aporte recuperable del CCPP, auspicio o comodato del proveedor.</li>
           <li>Opciones para restricciones alimentarias y precios accesibles.</li>
         </ul>
         <div class="obj">Que la opción saludable sea fácil, permanente y de bajo riesgo operacional.</div>
@@ -374,12 +397,22 @@
         <div class="obj">Baños limpios, dignos y seguros durante toda la jornada escolar.</div>
       </div>
       <div class="card rel">
+        <div class="ico">💉</div>
+        <h3>Salud y prevención</h3>
+        <ul>
+          <li>Continuar la jornada anual de vacunación (influenza) abierta a la comunidad.</li>
+          <li>Apoyo a Enfermería y actividades del Día Mundial de la Salud.</li>
+          <li>Coordinación con Convivencia Escolar y la Red Preventiva del colegio.</li>
+        </ul>
+        <div class="obj">Cuidar la salud de la comunidad con acciones concretas y periódicas.</div>
+      </div>
+      <div class="card rel">
         <div class="ico">👨‍👩‍👧</div>
         <h3>Escuela para Padres</h3>
         <ul>
           <li>Crianza, límites, adolescencia, autoestima y salud mental.</li>
           <li>Pantallas, redes sociales, alcohol/drogas e inteligencia emocional.</li>
-          <li>Formato presencial, online y cápsulas breves descargables.</li>
+          <li>Formato presencial y online, con cápsulas breves y material descargable (incluye material de la Red Preventiva).</li>
         </ul>
         <div class="obj">Herramientas prácticas para criar y acompañar hoy.</div>
       </div>
@@ -387,19 +420,21 @@
         <div class="ico">📊</div>
         <h3>Transparencia y financiamiento</h3>
         <ul>
-          <li>Encuestas periódicas, boletín de avances y cuenta pública semestral.</li>
-          <li>Opción voluntaria de aportar al Centro de Padres al firmar el pago anual (p. ej. $40.000), gestionada con el colegio — nunca obligatoria.</li>
-          <li>Mesa de Centros de Padres de Chicureo para colaborar entre comunidades del sector.</li>
+          <li>Encuestas periódicas; continuidad del newsletter mensual y del Instagram del CCPP; cuenta pública semestral.</li>
+          <li>Mesas de trabajo con responsables y plazos, manteniendo el mecanismo de reuniones mensuales con la dirección (formulario de delegados → respuesta y acta), agregando plazos de respuesta.</li>
+          <li>Fortalecer la Comisión Revisora de Cuentas y la red de delegados y subdelegados por curso; trabajo en red con el CCPP Sede Providencia y otros centros de padres de la comuna.</li>
+          <li>Proponer al colegio ofrecer, al firmar el pago anual, la opción <strong>voluntaria</strong> de aportar la cuota del Centro de Padres (cuota vigente: $30.000 anuales) — nunca obligatoria.</li>
+          <li>Impulsar una Mesa de Centros de Padres de Chicureo para colaborar entre comunidades del sector.</li>
         </ul>
         <div class="obj">Representar a las familias, informar resultados y asegurar un financiamiento sustentable.</div>
       </div>
       <div class="card rel">
         <div class="ico">🎓</div>
-        <h3>Apoyo a cursos y giras</h3>
+        <h3>Apoyo a cursos y giras de estudio</h3>
         <ul>
-          <li>Guía de buenas prácticas para reunir fondos.</li>
-          <li>Capacitación a directivas de curso, especialmente III Medio.</li>
-          <li>Rifas, ferias, auspicios y rendición transparente.</li>
+          <li>Guía de buenas prácticas de recaudación y capacitación a directivas de curso.</li>
+          <li>Modelos de rendición transparente y banco de proveedores/auspiciadores.</li>
+          <li>Planes de ahorro desde los cursos menores, con actividades de recaudación permanentes para la gira de 2° Medio, con el menor aporte posible de las familias.</li>
         </ul>
         <div class="obj">Ayudar a los cursos a organizarse mejor y apoyar sus proyectos.</div>
       </div>
@@ -407,12 +442,11 @@
         <div class="ico">🏃</div>
         <h3>Deporte y vida activa</h3>
         <ul>
-          <li>Fortalecer fútbol, rugby, natación, atletismo y deporte inclusivo.</li>
-          <li>Campeonatos internos y encuentros familiares.</li>
-          <li>Talleres para niñas y niños de todos los ciclos.</li>
-          <li>Convenios con clubes externos cuando sea viable.</li>
+          <li>Apoyo permanente a todas las ramas deportivas (fútbol, rugby, natación, atletismo) y su recaudación de fondos.</li>
+          <li>Impulsar el aumento de la dotación de profesores de deporte.</li>
+          <li>Campeonatos internos, encuentros familiares y deporte inclusivo.</li>
         </ul>
-        <div class="obj">Alumnos más sanos, disciplinados e integrados.</div>
+        <div class="obj">Formar alumnos más sanos, disciplinados e integrados.</div>
       </div>
     </div>
   </div>
@@ -458,22 +492,40 @@
         <div class="obj">Fortalecer lectura, cultura, inglés y pensamiento crítico.</div>
       </div>
       <div class="card imp">
-        <div class="ico">💼</div>
-        <h3>Red de emprendimiento Trewhela's</h3>
+        <div class="ico">🌱</div>
+        <h3>Sustentabilidad y ciencias</h3>
         <ul>
-          <li>Directorio voluntario de profesiones, oficios y emprendimientos.</li>
-          <li>Feria de emprendedores y marketplace interno cuando sea viable.</li>
-          <li>Mentorías, bolsa de oportunidades y red solidaria con respeto.</li>
+          <li>Continuidad a la actual Comisión de Sustentabilidad y Ciencias: ferias científicas, reciclaje y educación ambiental.</li>
+          <li>Actividades que conecten ciencia y medio ambiente con la vida escolar, en coordinación con el colegio.</li>
         </ul>
-        <div class="obj">Una comunidad que se conoce, colabora y se apoya.</div>
+        <div class="obj">Mantener vivo el trabajo ambiental y científico ya iniciado.</div>
+      </div>
+      <div class="card imp">
+        <div class="ico">🤲</div>
+        <h3>Solidaridad y apoyo</h3>
+        <ul>
+          <li>Continuar la Comisión Solidaridad: donaciones mensuales a hogares (p. ej. Hogar San Ricardo) y recaudación para la Teletón.</li>
+          <li>Campañas de recolección; red solidaria para situaciones familiares complejas, con privacidad y respeto.</li>
+          <li>Trabajos comunitarios y visitas a hogares y jardines apoyados.</li>
+        </ul>
+        <div class="obj">Movilizar a nuestros hijos e hijas mediante acciones solidarias concretas.</div>
+      </div>
+      <div class="card imp">
+        <div class="ico">💼</div>
+        <h3>Beneficios, convenios y red de emprendimiento</h3>
+        <ul>
+          <li>Mantener y ampliar convenios y beneficios para las familias (deporte, salud, comercios y servicios de la zona) con tarjeta de socio vigente.</li>
+          <li>Directorio voluntario de profesiones y emprendimientos; red de mentorías y colaboración.</li>
+          <li>Comisión Lost &amp; Found y venta periódica de uniformes usados.</li>
+        </ul>
+        <div class="obj">Una comunidad que se conoce, colabora y se apoya, con beneficios reales.</div>
       </div>
       <div class="card imp">
         <div class="ico">🎉</div>
         <h3>Vida social y familiar</h3>
         <ul>
-          <li>Café Concert, bingos, campeonatos y networking de apoderados.</li>
-          <li>Feria navideña, corrida familiar, cine al aire libre y olimpiadas.</li>
-          <li>Festival gastronómico y Día de la Familia.</li>
+          <li>Continuidad a Café Concert, Bingo Trewheliano, Día de la Chilenidad/Fonda y Parents Games.</li>
+          <li>Actividades familiares: feria, corrida familiar, cine al aire libre y Día de la Familia.</li>
         </ul>
         <div class="obj">Fortalecer vínculos, pertenencia y cercanía.</div>
       </div>
@@ -597,6 +649,7 @@
     <p class="lema-f">"Primero nuestros hijos: una comunidad que cumple, acompaña y construye futuro."</p>
     <p>Centro de Padres Trewhela's School · Sede Chicureo — Propuesta de la comunidad de apoderados</p>
     <p class="fine">Iniciativa de apoderados. No constituye comunicación oficial del establecimiento.</p>
+    <p class="fine">Programa v1.1 — 31 de julio de 2026</p>
   </div>
 </footer>
 

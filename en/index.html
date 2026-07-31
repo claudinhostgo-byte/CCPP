@@ -86,10 +86,18 @@
   .cta a.primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(212,168,59,.36)}
   .cta a.ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
   .cta a.ghost:hover{background:rgba(255,255,255,.14)}
+  .bandera{margin-top:32px;display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px 20px;max-width:640px}
+  .bandera .flag{font-size:1.4rem;flex:0 0 auto}
+  .bandera .bar{flex:1;min-width:120px}
+  .bandera .bar .track{background:rgba(255,255,255,.18);border-radius:20px;height:8px;overflow:hidden;margin-bottom:6px}
+  .bandera .bar .fill{background:var(--dorado);height:100%;border-radius:20px}
+  .bandera .bar small{font-size:.82rem;opacity:.9}
+  .bandera .bar small strong{color:var(--dorado)}
+  @media(max-width:600px){.bandera{display:flex}}
 
   /* PRINCIPLES */
   .principios{background:var(--navy);color:#fff;padding:30px 0}
-  .principios .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;text-align:center}
+  .principios .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
   .principios .p b{display:block;color:var(--dorado);font-size:.95rem;font-weight:600;margin-bottom:4px}
   .principios .p small{opacity:.82;font-size:.78rem;line-height:1.45;display:block}
 
@@ -183,6 +191,9 @@
   footer .lema-f{font-style:italic;font-size:1.08rem;color:#fff;max-width:680px;margin:0 auto 18px;line-height:1.5}
   footer .fine{opacity:.7;font-size:.82rem;margin-top:10px}
 
+  @media(max-width:1000px){
+    .principios .grid{grid-template-columns:repeat(3,1fr)}
+  }
   @media(max-width:860px){
     .principios .grid{grid-template-columns:repeat(2,1fr);gap:16px}
     .cards{grid-template-columns:1fr}
@@ -237,6 +248,13 @@
       <a class="primary" href="#urgent">See priorities</a>
       <a class="ghost" href="#plan">See the plan</a>
     </div>
+    <div class="bandera">
+      <div class="flag">🚩</div>
+      <div class="bar">
+        <div class="track"><div class="fill" style="width:22%"></div></div>
+        <small>Our banner: rebuilding the community — from <strong>22%</strong> to over <strong>50%</strong> of families as paid Association members.</small>
+      </div>
+    </div>
   </div>
   <div class="sello">
     <img src="../assets/logo.png" alt="Parents' Association Trewhela's School logo">
@@ -247,22 +265,26 @@
   <div class="wrap grid">
     <div class="p"><b>Students first</b><small>Every decision puts their safety, wellbeing, and growth first.</small></div>
     <div class="p"><b>Real management</b><small>Diagnosis, owners, timelines, costs, and indicators.</small></div>
+    <div class="p"><b>Promises we can keep</b><small>Commitments (what we do directly) vs. efforts (what we push for with the school, with deadlines and reporting).</small></div>
     <div class="p"><b>Collaboration</b><small>With the school, with a firm voice.</small></div>
     <div class="p"><b>Inclusion</b><small>Every child takes part and feels they belong.</small></div>
     <div class="p"><b>Transparency</b><small>We report progress, pending items, and results.</small></div>
   </div>
 </section>
 
-<!-- NORD ANGLIA CONTEXT -->
+<!-- OUR FOUNDATION: WHAT'S COMMITTED AND THE NEW CONTEXT -->
 <section class="bloque band" id="context" style="padding:56px 0">
   <div class="wrap">
     <div class="sec-head" style="margin-bottom:26px">
-      <span class="tag rel">The new context</span>
-      <h2>The transition to Nord Anglia</h2>
-      <p>The school is entering a new stage as part of an international education group. It's an opportunity —and also a reason for families to have prepared representation.</p>
+      <span class="tag rel">Our foundation</span>
+      <h2>What's committed, and the new context</h2>
+      <p>We start from what the school itself states and signs —we're not asking for the impossible: we're asking for what was already committed.</p>
+    </div>
+    <div class="nota" style="margin-top:0;margin-bottom:20px">
+      The service agreement (clause 6) commits to: <strong>a demanding academic level</strong> with an emphasis on English, qualified staff, infrastructure (classrooms, library, lab, and sports field), extracurricular activities, and information and participation for families through the Parents' Association.
     </div>
     <div class="nota" style="margin-top:0">
-      We propose that the Parents' Association act as a <strong>formal, informed, and collaborative counterpart</strong> during this transition: channeling concerns about the continuity of the educational project, tuition, and management in an orderly way, and ensuring that commitments already made by the school are upheld.
+      <strong>The transition to Nord Anglia:</strong> the school's entry into an international education group opens up opportunities, but also raises legitimate questions about the continuity of the project, tuition, and management. We propose that the Parents' Association act as a <strong>formal, informed, and collaborative counterpart</strong> during this transition: channeling families' concerns in an orderly way, and ensuring that commitments already made by the school are upheld.
     </div>
   </div>
 </section>
@@ -280,41 +302,41 @@
         <div class="ico">🛡️</div>
         <h3>Safe recess and supervision</h3>
         <ul>
-          <li>Visible presence of responsible adults during recess.</li>
-          <li>Supervision map of yards, hallways, restrooms, and critical areas.</li>
+          <li>Visible presence of responsible adults during recess; supervision map of yards, hallways, restrooms, and critical areas.</li>
           <li>Incident logging and follow-up.</li>
-          <li>Regular meetings between Student Affairs, School Climate, and the Parents' Association.</li>
+          <li>Regular meetings between Student Affairs, School Climate, and the Association's Board.</li>
+          <li>Ensure a responsible school staff member is present, with Association parents as complementary support.</li>
         </ul>
         <div class="obj">Reduce risks, conflicts, and unsupervised spaces.</div>
       </div>
       <div class="card urg">
         <div class="ico">🤝</div>
-        <h3>School climate, bullying and social media</h3>
+        <h3>School climate, bullying and the digital world</h3>
         <ul>
-          <li>Clear, simple communication of school climate and cyberbullying protocols.</li>
-          <li>A clear channel to report incidents, with follow-up.</li>
-          <li>Response timelines and responsible communication with families.</li>
-          <li>Link with the Red Preventiva (drug and alcohol prevention network).</li>
+          <li>Clear, simple communication of school climate, bullying, and cyberbullying protocols.</li>
+          <li>Talks for students and parents on social media, phones, and digital respect.</li>
+          <li>A clear Association support channel to report incidents, with response timelines and follow-up.</li>
+          <li>Ongoing link with the Red Preventiva (drug and alcohol prevention network), active in over 80 schools.</li>
         </ul>
         <div class="obj">That no student faces mistreatment or exclusion without support.</div>
       </div>
       <div class="card urg">
         <div class="ico">🚨</div>
-        <h3>Emergency plan</h3>
+        <h3>Major emergency plan</h3>
         <ul>
-          <li>Review and communication of the school's Comprehensive Safety Plan (earthquake, fire, medical emergency).</li>
-          <li>A family guide: what to do and how reunification with students will work.</li>
-          <li>At least one annual drill with family participation.</li>
+          <li>Review, update, and communication of the Comprehensive Safety Plan (fire, earthquake, gas leak, external threat, medical emergency).</li>
+          <li>A family plan: what to do, where to get information, and how reunification with students will work.</li>
+          <li>At least one annual drill with family participation and a follow-up review.</li>
         </ul>
         <div class="obj">That safety protocols are known across the whole community, not just internally.</div>
       </div>
       <div class="card urg">
         <div class="ico">🚗</div>
-        <h3>Safe pickup and traffic</h3>
+        <h3>Safe pickup and traffic campaign</h3>
         <ul>
-          <li>Waiting and pickup zones by grade level; orderly traffic and drop-off flow.</li>
-          <li>Extra supervision during peak hours, with a focus on March (start of the school year).</li>
-          <li>Ongoing road-safety campaign at entrances.</li>
+          <li>Waiting and pickup zones by grade level; orderly traffic, drop-off, and workshop flow, with a focus on March.</li>
+          <li>Ongoing road-safety campaign at entrances with the Student Council (CCAA); assess signage and traffic lights.</li>
+          <li>Push the school for an access-control and pickup system, with strict protection of students' personal data (Law 21.719).</li>
         </ul>
         <div class="obj">A predictable, safe, and orderly arrival and departure.</div>
       </div>
@@ -322,9 +344,10 @@
         <div class="ico">♿</div>
         <h3>Real inclusion</h3>
         <ul>
-          <li>Standing inclusion committee.</li>
-          <li>Support for students with ASD, ADHD, and other needs.</li>
-          <li>Meaningful participation in sports, workshops, and school events.</li>
+          <li>Standing committee for inclusion and support for students with diverse needs (ASD, ADHD, neurodivergence, disability).</li>
+          <li>A voluntary, confidential channel to advise families who wish to use it; the Association will not request student data from the school.</li>
+          <li>Awareness-building for students, families, and the community; meaningful participation in sports, workshops, and events.</li>
+          <li>A bridge for the school to enable, on campus, activities linked to students' therapies and support needs.</li>
         </ul>
         <div class="obj">That every child can take part, grow, and feel they belong.</div>
       </div>
@@ -354,11 +377,11 @@
       </div>
       <div class="card rel">
         <div class="ico">🥗</div>
-        <h3>Healthy living & smart vending</h3>
+        <h3>Healthy food, kiosk & vending</h3>
         <ul>
-          <li>Healthy snacks during recess.</li>
-          <li>Vending machines with water, yogurt, nuts, and nutrition bars.</li>
-          <li>Kiosk run by senior year (2° Medio) students to fund their class trip, with transparent accounting.</li>
+          <li>Pilot kiosk run by 2° Medio (senior year) students —subject to school authorization and a health review— as advance fundraising for their class trip, with transparent accounting.</li>
+          <li>Healthy vending with an outside provider (water, yogurt, nuts, bars), run by 1° Medio students to fund their own trip.</li>
+          <li>Initial funding to be defined: a recoverable Association contribution, sponsorship, or a provider loan.</li>
           <li>Options for dietary restrictions and accessible prices.</li>
         </ul>
         <div class="obj">Make the healthy choice easy, permanent, and low operational risk.</div>
@@ -374,12 +397,22 @@
         <div class="obj">Clean, dignified, and safe restrooms throughout the school day.</div>
       </div>
       <div class="card rel">
+        <div class="ico">💉</div>
+        <h3>Health and prevention</h3>
+        <ul>
+          <li>Continue the annual flu vaccination drive, open to the community.</li>
+          <li>Support for the Nursing office and World Health Day activities.</li>
+          <li>Coordination with School Climate and the school's Red Preventiva.</li>
+        </ul>
+        <div class="obj">Care for community health with concrete, regular actions.</div>
+      </div>
+      <div class="card rel">
         <div class="ico">👨‍👩‍👧</div>
         <h3>Parenting School</h3>
         <ul>
           <li>Parenting, boundaries, adolescence, self-esteem, and mental health.</li>
           <li>Screens, social media, alcohol/drugs, and emotional intelligence.</li>
-          <li>In-person, online, and short downloadable formats.</li>
+          <li>In-person and online formats, with short video segments and downloadable material (including Red Preventiva resources).</li>
         </ul>
         <div class="obj">Practical tools to raise and support our children today.</div>
       </div>
@@ -387,19 +420,21 @@
         <div class="ico">📊</div>
         <h3>Transparency and funding</h3>
         <ul>
-          <li>Regular surveys, progress bulletins, and a biannual public report.</li>
-          <li>Voluntary option to contribute to the Parents' Association when paying annual tuition (e.g., CLP $40,000), managed with the school — never mandatory.</li>
-          <li>Chicureo Parents' Associations Roundtable, to collaborate with other communities in the area.</li>
+          <li>Regular surveys; continuity of the monthly newsletter and the Association's Instagram; a biannual public report.</li>
+          <li>Working groups with owners and deadlines, keeping the existing monthly meetings with school leadership (delegate form → response and minutes), adding response timelines.</li>
+          <li>Strengthen the Accounts Review Committee and the network of class delegates and sub-delegates; network with the Providencia campus Association and other parent associations in the area.</li>
+          <li>Propose that the school offer, when paying annual tuition, a <strong>voluntary</strong> option to contribute the Association's fee (current fee: CLP $30,000/year) — never mandatory.</li>
+          <li>Promote a Chicureo Parents' Associations Roundtable to collaborate with other communities in the area.</li>
         </ul>
         <div class="obj">Represent families, report results, and secure sustainable funding.</div>
       </div>
       <div class="card rel">
         <div class="ico">🎓</div>
-        <h3>Support for classes and trips</h3>
+        <h3>Support for classes and study trips</h3>
         <ul>
-          <li>Best-practices guide for fundraising.</li>
-          <li>Training for class representatives, especially senior year (III Medio).</li>
-          <li>Raffles, fairs, sponsorships, and transparent accounting.</li>
+          <li>Best-practices guide for fundraising and training for class representatives.</li>
+          <li>Transparent-accounting models and a directory of vendors/sponsors.</li>
+          <li>Savings plans starting in the lower grades, with ongoing fundraising activities for the senior (2° Medio) trip, keeping the families' contribution as low as possible.</li>
         </ul>
         <div class="obj">Help classes get organized and support their projects.</div>
       </div>
@@ -407,10 +442,9 @@
         <div class="ico">🏃</div>
         <h3>Sports and active living</h3>
         <ul>
-          <li>Strengthen soccer, rugby, swimming, athletics, and inclusive sports.</li>
-          <li>Internal championships and family events.</li>
-          <li>Workshops for children of all grade levels.</li>
-          <li>Partnerships with outside clubs when feasible.</li>
+          <li>Ongoing support for all sports programs (soccer, rugby, swimming, athletics) and their fundraising.</li>
+          <li>Push for more sports teaching staff.</li>
+          <li>Internal championships, family events, and inclusive sports.</li>
         </ul>
         <div class="obj">Healthier, more disciplined, and engaged students.</div>
       </div>
@@ -458,22 +492,40 @@
         <div class="obj">Strengthen reading, culture, English, and critical thinking.</div>
       </div>
       <div class="card imp">
-        <div class="ico">💼</div>
-        <h3>Trewhela's Entrepreneurship Network</h3>
+        <div class="ico">🌱</div>
+        <h3>Sustainability and science</h3>
         <ul>
-          <li>Volunteer directory of parents' professions, trades, and businesses.</li>
-          <li>Entrepreneurs' fair and internal marketplace when feasible.</li>
-          <li>Mentorships, networking, and a respectful support network.</li>
+          <li>Continuity for the current Sustainability and Science Committee: science fairs, recycling, and environmental education.</li>
+          <li>Activities that connect science and the environment to school life, in coordination with the school.</li>
         </ul>
-        <div class="obj">A community that knows, collaborates, and supports each other.</div>
+        <div class="obj">Keep the environmental and scientific work already underway alive.</div>
+      </div>
+      <div class="card imp">
+        <div class="ico">🤲</div>
+        <h3>Solidarity and support</h3>
+        <ul>
+          <li>Continue the Solidarity Committee: monthly donations to shelters (e.g., Hogar San Ricardo) and fundraising for the Teletón.</li>
+          <li>Collection drives; a solidarity network for complex family situations, with privacy and respect.</li>
+          <li>Community service and visits to supported shelters and daycares.</li>
+        </ul>
+        <div class="obj">Mobilize our children through concrete acts of solidarity.</div>
+      </div>
+      <div class="card imp">
+        <div class="ico">💼</div>
+        <h3>Benefits, partnerships & entrepreneurship network</h3>
+        <ul>
+          <li>Maintain and expand family benefits and partnerships (sports, health, local businesses and services) through a member card.</li>
+          <li>Volunteer directory of parents' professions and businesses; a mentorship and collaboration network.</li>
+          <li>A Lost & Found committee and periodic sales of used uniforms.</li>
+        </ul>
+        <div class="obj">A community that knows, collaborates, and supports each other, with real benefits.</div>
       </div>
       <div class="card imp">
         <div class="ico">🎉</div>
         <h3>Social & family life</h3>
         <ul>
-          <li>Café Concert, bingo nights, tournaments, and parent networking.</li>
-          <li>Christmas fair, family fun run, outdoor movie nights, and field day.</li>
-          <li>Food festival and Family Day.</li>
+          <li>Continuity for Café Concert, Bingo Trewheliano, Chilean Heritage Day/Fonda, and Parents Games.</li>
+          <li>Family activities: fair, family fun run, outdoor movie nights, and Family Day.</li>
         </ul>
         <div class="obj">Strengthen bonds, belonging, and closeness.</div>
       </div>
@@ -597,6 +649,7 @@
     <p class="lema-f">"Our children first: a community that delivers, supports, and builds the future."</p>
     <p>Trewhela's School Parents' Association · Chicureo Campus — A proposal from the parent community</p>
     <p class="fine">A parent-led initiative. This is not an official communication from the school.</p>
+    <p class="fine">Program v1.1 — July 31, 2026</p>
   </div>
 </footer>
 
