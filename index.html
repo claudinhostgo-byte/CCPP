@@ -86,6 +86,8 @@
   .cta a.primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(212,168,59,.36)}
   .cta a.ghost{background:rgba(255,255,255,.06);color:#fff;border:1.5px solid rgba(255,255,255,.5)}
   .cta a.ghost:hover{background:rgba(255,255,255,.14)}
+  .cta a.socio{background:#25d366;color:#0a3d1f;box-shadow:0 8px 22px rgba(37,211,102,.3)}
+  .cta a.socio:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,211,102,.4)}
   .bandera{margin-top:32px;display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px 20px;max-width:640px}
   .bandera .flag{font-size:1.4rem;flex:0 0 auto}
   .bandera .bar{flex:1;min-width:120px}
@@ -188,6 +190,8 @@
   .persona.proximamente.whatsapp:hover{border-color:#25d366}
   .persona.proximamente.whatsapp .foto{background:#25d366;border-color:#25d366}
   .persona.proximamente.whatsapp .foto svg{width:34px;height:34px;fill:#fff}
+  .persona.proximamente.pago:hover{border-color:var(--azul2)}
+  .persona.proximamente.pago .foto{background:var(--azul2);border-color:var(--azul2);color:#fff;font-size:1.7rem}
 
   footer{background:var(--navy);color:#cfdcec;padding:52px 0;text-align:center;font-size:.88rem}
   footer .mark-f{width:118px;height:118px;margin:0 auto 22px;border-radius:50%;background:#fff;color:var(--azul);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.35rem;letter-spacing:-.5px;padding:13px;box-shadow:0 8px 24px rgba(0,0,0,.3)}
@@ -198,12 +202,7 @@
   @media(max-width:1000px){
     .principios .grid{grid-template-columns:repeat(3,1fr)}
   }
-  @media(max-width:860px){
-    .principios .grid{grid-template-columns:repeat(2,1fr);gap:16px}
-    .cards{grid-template-columns:1fr}
-    .hero{padding:64px 0 72px}
-    .hero h1{font-size:2.1rem}
-    .sec-head h2{font-size:1.75rem}
+  @media(max-width:1180px){
     .brand .txt span{display:none}
     .brand .txt b{white-space:normal;font-size:.92rem}
     .menu-btn{display:block}
@@ -211,6 +210,14 @@
     .nav nav.open{display:flex}
     .nav nav a{margin:0;padding:13px 2px;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.1)}
     .nav nav a:last-child{border-bottom:none}
+    .nav nav a.lang-switch{margin:10px 0 0;align-self:flex-start}
+  }
+  @media(max-width:860px){
+    .principios .grid{grid-template-columns:repeat(2,1fr);gap:16px}
+    .cards{grid-template-columns:1fr}
+    .hero{padding:64px 0 72px}
+    .hero h1{font-size:2.1rem}
+    .sec-head h2{font-size:1.75rem}
   }
 </style>
 </head>
@@ -250,6 +257,7 @@
     <h1>Primero nuestros hijos: una comunidad que cumple, acompaña y construye futuro.</h1>
     <p class="lema">Trabajamos con el colegio —no contra el colegio— sobre la base del Reglamento Interno, para transformar compromisos en acciones concretas, medibles y sostenibles.</p>
     <div class="cta">
+      <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">💳 Hazte socio</a>
       <a class="primary" href="#urgente">Ver prioridades</a>
       <a class="ghost" href="#plan">Conocer el plan</a>
     </div>
@@ -694,12 +702,16 @@
       <h2>Una propuesta abierta a la comunidad</h2>
       <p>Estas son las ideas que ponemos sobre la mesa. La lista se está conformando: compartimos primero la visión y dejamos la puerta abierta a quienes quieran sumarse y aportar nuevas propuestas.</p>
     </div>
-    <div class="equipo" style="max-width:460px">
+    <div class="equipo" style="max-width:700px">
       <div class="persona">
         <div class="foto"><img src="assets/JACH.jpg" alt="Juan Andrés Cristi"></div>
         <h3>Juan Andrés Cristi</h3>
         <span class="rol">Impulsor de esta propuesta</span>
       </div>
+      <a class="persona proximamente pago" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">
+        <div class="foto">💳</div>
+        <p><strong>Hazte socio del CCPP.</strong> Tu aporte nos permite seguir impulsando actividades y proyectos que fortalecen nuestra comunidad escolar. Paga tu cuota aquí.</p>
+      </a>
       <a class="persona proximamente whatsapp" href="https://wa.me/56998219668?text=Me%20interesa%20su%20propuesta%2C%20me%20interesa%20aportar" target="_blank" rel="noopener">
         <div class="foto">
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.16 0 0 7.16 0 16c0 2.82.74 5.55 2.14 7.94L0 32l8.28-2.13A15.9 15.9 0 0 0 16 32c8.84 0 16-7.16 16-16S24.84 0 16 0Zm0 29.09c-2.53 0-5-.68-7.15-1.97l-.51-.3-4.9 1.26 1.3-4.78-.33-.49A13.07 13.07 0 0 1 2.91 16C2.91 8.77 8.77 2.91 16 2.91S29.09 8.77 29.09 16 23.23 29.09 16 29.09Zm7.17-9.8c-.39-.2-2.31-1.14-2.67-1.27-.36-.13-.62-.2-.88.2-.26.39-1 1.27-1.23 1.53-.23.26-.45.29-.84.1-2.27-1.13-3.76-2.02-5.26-4.58-.4-.68.4-.63 1.14-2.1.13-.26.06-.48-.07-.68-.13-.2-.72-1.74-.99-2.39-.26-.63-.53-.55-.73-.56-.19-.01-.42-.01-.64-.01-.23 0-.59.08-.9.42-.32.35-1.21 1.18-1.21 2.87s1.24 3.33 1.41 3.56c.17.23 2.36 3.6 5.72 4.9 2.84 1.11 3.42.89 4.04.84.62-.06 2.02-.83 2.31-1.63.28-.79.28-1.47.2-1.63-.09-.16-.32-.26-.7-.46Z"/></svg>
