@@ -1,0 +1,15 @@
+# Archivos internos de la herramienta
+.claude/
+
+# Fotos originales grandes sin optimizar (se usan las versiones .jpg)
+assets/*.png
+!assets/logo.png
+
+# Base de convenios en Excel (el sitio usa el pop-up, no el archivo)
+assets/Convenios-CCPP-Trewhelas-2024.xlsx
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.lock

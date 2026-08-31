@@ -165,10 +165,10 @@
   /* Directiva */
   .dir-sub{text-align:center;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--navy);margin:0 0 26px}
   .dir-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px 22px;max-width:880px;margin:0 auto 40px}
-  .dir{display:flex;flex-direction:column;align-items:center;gap:9px;width:146px}
-  .dir .silueta{width:78px;height:78px;border-radius:50%;background:#e2edf8;display:flex;align-items:center;justify-content:center;color:var(--azul2);border:2px solid var(--linea);box-shadow:0 4px 12px rgba(12,64,133,.1);overflow:hidden}
-  .dir.lead .silueta{width:88px;height:88px;border-color:var(--dorado);border-width:3px}
-  .dir .silueta svg{width:40px;height:40px;fill:currentColor}
+  .dir{display:flex;flex-direction:column;align-items:center;gap:11px;width:172px}
+  .dir .silueta{width:116px;height:116px;border-radius:50%;background:#e2edf8;display:flex;align-items:center;justify-content:center;color:var(--azul2);border:2px solid var(--linea);box-shadow:0 6px 16px rgba(12,64,133,.14);overflow:hidden}
+  .dir.lead .silueta{width:130px;height:130px;border-color:var(--dorado);border-width:3px}
+  .dir .silueta svg{width:56px;height:56px;fill:currentColor}
   .dir .silueta img{width:100%;height:100%;object-fit:cover}
   .dir .cargo{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#9a7415;background:var(--dorado-suave);padding:3px 10px;border-radius:14px;text-align:center}
   .dir .nom{font-size:.87rem;font-weight:700;color:var(--navy);text-align:center;line-height:1.3}
@@ -184,7 +184,7 @@
   /* Modal bio */
   .bio-modal{background:#fff;border-radius:16px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(6,26,54,.4);animation:naIn .2s ease}
   .bio-modal .na-head{background:linear-gradient(135deg,var(--navy),var(--azul2));color:#fff;padding:22px 26px;border-radius:16px 16px 0 0;position:relative;display:flex;gap:18px;align-items:center}
-  .bio-modal .na-head img{width:74px;height:74px;border-radius:50%;object-fit:cover;border:3px solid var(--dorado);flex:0 0 auto}
+  .bio-modal .na-head img{width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--dorado);flex:0 0 auto}
   .bio-modal .na-head h3{font-size:1.25rem;font-weight:700;line-height:1.2;padding-right:26px}
   .bio-modal .na-head .rolb{font-size:.82rem;opacity:.9;margin-top:3px;display:block;font-weight:500}
   .bio-modal .bio-body{padding:22px 26px}
@@ -877,20 +877,19 @@
     <p class="dir-sub">Mesa directiva</p>
     <div class="dir-grid">
       <div class="dir lead bio" onclick="openBio()" tabindex="0" role="button" aria-label="Ver perfil de Juan Andrés Cristi" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio();}"><div class="silueta"><img src="assets/JACH.jpg" alt="Juan Andrés Cristi Hormazábal"><span class="hint">Ver detalle</span></div><span class="cargo">Presidente</span><span class="nom">Juan Andrés Cristi Hormazábal</span><span class="vermas">👆 Ver perfil</span></div>
-      <div class="dir lead"><div class="silueta"><img src="assets/RV.jpg" alt="Rodrigo Vergara Tapia"></div><span class="cargo">Vicepresidente</span><span class="nom">Rodrigo Andrés Vergara Tapia</span></div>
-      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Secretario</span><span class="nom">Leonardo Mas</span></div>
-      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Tesorera</span><span class="nom">Carolina Garrido</span></div>
-      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Comunicaciones &amp; RRSS</span><span class="nom">Francisca León Gutiérrez</span></div>
+      <div class="dir lead bio" onclick="openBio('rv')" tabindex="0" role="button" aria-label="Ver perfil de Rodrigo Vergara Tapia" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('rv');}"><div class="silueta"><img src="assets/RV.jpg" alt="Rodrigo Andrés Vergara Tapia"><span class="hint">Ver detalle</span></div><span class="cargo">Vicepresidente</span><span class="nom">Rodrigo Andrés Vergara Tapia</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir lead bio" onclick="openBio('lm')" tabindex="0" role="button" aria-label="Ver perfil de Leonardo Mas Toledo" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('lm');}"><div class="silueta"><img src="assets/LM.jpg" alt="Leonardo Mas Toledo"><span class="hint">Ver detalle</span></div><span class="cargo">Secretario</span><span class="nom">Leonardo Mas Toledo</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir lead bio" onclick="openBio('cg')" tabindex="0" role="button" aria-label="Ver perfil de Carolina Garrido" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('cg');}"><div class="silueta"><img src="assets/CG.jpg" alt="Carolina Garrido"><span class="hint">Ver detalle</span></div><span class="cargo">Tesorera</span><span class="nom">Carolina Garrido</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir lead bio" onclick="openBio('fl')" tabindex="0" role="button" aria-label="Ver perfil de Francisca León Gutiérrez" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('fl');}"><div class="silueta"><img src="assets/FL.jpg" alt="Francisca León Gutiérrez"><span class="hint">Ver detalle</span></div><span class="cargo">Comunicaciones &amp; RRSS</span><span class="nom">Francisca León Gutiérrez</span><span class="vermas">👆 Ver perfil</span></div>
     </div>
 
     <p class="dir-sub">Directores</p>
     <div class="dir-grid">
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Rossana Muñoz Ramírez</span></div>
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Juan Astete</span></div>
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Juan Guillermo Cartagena Torrealba</span></div>
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Grace</span></div>
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Paulina Contreras</span></div>
-      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Pablo Olivares</span></div>
+      <div class="dir bio" onclick="openBio('rm')" tabindex="0" role="button" aria-label="Ver perfil de Rossana Muñoz Ramírez" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('rm');}"><div class="silueta"><img src="assets/RM.jpg" alt="Rossana Muñoz Ramírez"><span class="hint">Ver detalle</span></div><span class="cargo">Directora</span><span class="nom">Rossana Muñoz Ramírez</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir bio" onclick="openBio('ja')" tabindex="0" role="button" aria-label="Ver perfil de Juan Astete Urrutia" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('ja');}"><div class="silueta"><img src="assets/JA.jpg" alt="Juan Astete Urrutia"><span class="hint">Ver detalle</span></div><span class="cargo">Director</span><span class="nom">Juan Astete Urrutia</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir bio" onclick="openBio('jgc')" tabindex="0" role="button" aria-label="Ver perfil de Juan Guillermo Cartagena Torrealba" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('jgc');}"><div class="silueta"><img src="assets/JGC.jpg" alt="Juan Guillermo Cartagena Torrealba"><span class="hint">Ver detalle</span></div><span class="cargo">Director</span><span class="nom">Juan Guillermo Cartagena Torrealba</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir bio" onclick="openBio('ga')" tabindex="0" role="button" aria-label="Ver perfil de Grace Arriagada Basaure" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('ga');}"><div class="silueta"><img src="assets/GA.jpg" alt="Grace Arriagada Basaure"><span class="hint">Ver detalle</span></div><span class="cargo">Directora</span><span class="nom">Grace Arriagada Basaure</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir bio" onclick="openBio('pc')" tabindex="0" role="button" aria-label="Ver perfil de Paulina Contreras" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('pc');}"><div class="silueta"><img src="assets/PC.jpg" alt="Paulina Contreras"><span class="hint">Ver detalle</span></div><span class="cargo">Directora</span><span class="nom">Paulina Contreras</span><span class="vermas">👆 Ver perfil</span></div>
     </div>
 
     <div class="equipo" style="max-width:700px">
@@ -988,7 +987,50 @@ function filterCV(q){
   document.getElementById('cvEmpty').style.display=vis?'none':'block';
 }
 // Modal perfil directiva
-function openBio(){document.getElementById('bioOverlay').classList.add('open');document.body.style.overflow='hidden';}
+var BIOS={
+  jach:{img:'assets/JACH.jpg',nom:'Juan Andrés Cristi Hormazábal',roles:['Presidente · Ingeniero Agrónomo','Apoderado de 7° Básico, 2° Básico, 1° Básico y ambos Kínder'],
+    paras:[
+      'Como apoderado de cinco hijos en distintos niveles del colegio, creo firmemente en la importancia de construir comunidad y generar espacios de colaboración entre las familias. Desde mi experiencia profesional puedo aportar en áreas como liderazgo, gestión de presupuestos, resolución de conflictos, innovación y desarrollo de proyectos, siempre con una mirada constructiva y orientada al bien común.',
+      'En 2025 fui reconocido entre "Los 50 Supply Chain más Influyentes de Chile", distinción a 26 años de experiencia en trabajo colaborativo, aporte a la innovación y gestión desarrollada junto a distintos equipos. Espero poner esa experiencia al servicio de nuestra comunidad escolar, contribuyendo con una mirada práctica, responsable y orientada al trabajo conjunto entre apoderados.'],
+    cierre:'Los desafíos del colegio se enfrentan mejor cuando participamos juntos. Los invito a sumar ideas, tiempo y entusiasmo para seguir construyendo una comunidad cada día más cercana, inclusiva y comprometida con el desarrollo de nuestros hijos.'},
+  ga:{img:'assets/GA.jpg',nom:'Grace Arriagada Basaure',roles:['Directora · Ingeniero','Apoderada de 3° Medio y 6° Básico'],
+    paras:['Ingeniero de profesión y apoderada de 3° Medio y 6° Básico. Llevo más de 12 años en el colegio, siempre ligada a las directivas y al trabajo por el bien comunitario de nuestros niños.'],
+    cierre:'Conozco de cerca la vida del colegio y quiero seguir aportando esa experiencia al servicio de todas las familias.'},
+  lm:{img:'assets/LM.jpg',nom:'Leonardo Mas Toledo',roles:['Secretario · Arquitecto','Apoderado de 2° Básico E y PK E'],
+    paras:['Como arquitecto y apoderado del colegio, valoro los espacios que forman comunidad y el trabajo bien hecho, con orden y visión de largo plazo. Quiero aportar esa mirada al Centro de Padres: propuestas concretas, buena organización y colaboración entre las familias.'],
+    cierre:'Creo en un colegio donde las ideas se conversan, se ordenan y se llevan a la práctica, pensando siempre en el bienestar y el desarrollo de nuestros hijos.'},
+  rv:{img:'assets/RV.jpg',nom:'Rodrigo Andrés Vergara Tapia',roles:['Vicepresidente · Ingeniero Civil de Minas (U. de Chile)','Apoderado de 4° Básico T y 1° Básico E'],
+    paras:['Ingeniero Civil de Minas de la Universidad de Chile y apoderado del colegio. Me motiva aportar orden, análisis y una mirada de largo plazo al trabajo del Centro de Padres.'],
+    cierre:'Creo en soluciones concretas y en la colaboración entre las familias para construir una mejor comunidad para nuestros hijos.'},
+  fl:{img:'assets/FL.jpg',nom:'Francisca León Gutiérrez',roles:['Comunicaciones &amp; RRSS · Cosmetóloga','Apoderada de Kínder y 3° Básico'],
+    paras:['Cosmetóloga de profesión y ejecutiva comercial con 15 años de experiencia en ventas y liderazgo de equipos.'],
+    cierre:'Pongo al servicio de la comunidad la organización, el dinamismo y la escucha activa, para construir juntos un entorno escolar colaborativo y seguro para nuestros hijos.'},
+  rm:{img:'assets/RM.jpg',nom:'Rossana Muñoz Ramírez',roles:['Directora · Ingeniera','Apoderada de 3° BT y 6° BT'],
+    paras:['Ingeniera de profesión y apoderada del colegio. Quiero contribuir con compromiso y trabajo colaborativo a los proyectos del Centro de Padres.'],
+    cierre:'Me interesa una comunidad participativa, transparente y siempre enfocada en el bienestar de nuestros hijos.'},
+  ja:{img:'assets/JA.jpg',nom:'Juan Astete Urrutia',roles:['Director · Ingeniero','Apoderado de 2° Básico E'],
+    paras:['Padre de Borja, de 2° Básico E. Ingeniero de profesión y co-fundador de un proyecto empresarial. He participado en las directivas del curso desde Infant.'],
+    cierre:'Mi propósito es aportar con mi experiencia a que nuestros sueños se transformen en compromisos, y luego en acciones concretas, para que nuestros hijos tengan cada día un mejor desarrollo educacional.'},
+  jgc:{img:'assets/JGC.jpg',nom:'Juan Guillermo Cartagena Torrealba',roles:['Director · Estrategia y Desarrollo','Apoderado de 4° T y PKT'],
+    paras:['Padre de Mía y Santino, de los cursos 4° T y PKT. He dedicado mi vida profesional al desarrollo de estrategias de crecimiento para empresas globales de ingeniería y construcción, mucho de ello ligado a la integración de comunidades para lograr resultados que benefician a todas las partes involucradas.'],
+    cierre:'Creo que el CCPP es un cuerpo integrador entre los apoderados y el colegio, donde el resultado es hacer el mejor esfuerzo conjunto en beneficio de nuestros hijos. Conectar y representar es mi compromiso y objetivo central.'},
+  pc:{img:'assets/PC.jpg',nom:'Paulina Contreras',roles:['Directora · Publicista, Jefe Corporativo de Marketing','Mamá de Julián, Leonor y Joaquín (1° E, 2° E y 4° E)'],
+    paras:['Publicista y Jefe Corporativo de Marketing, mamá de Julián, Leonor y Joaquín, en 1° E, 2° E y 4° E. Desde mi experiencia en comunicación y marca, quiero aportar a que el Centro de Padres informe mejor, llegue a todas las familias y fortalezca el sentido de comunidad.'],
+    cierre:'Creo en una comunidad escolar cercana y bien comunicada, donde cada familia se sienta parte, escuchada y con ganas de participar por el bienestar de nuestros hijos.'},
+  cg:{img:'assets/CG.jpg',nom:'Carolina Garrido',roles:['Tesorera · Psicóloga','Mamá de Samuel (3° Básico) y Alonso (Kínder)'],
+    paras:['Madre de Samuel, de 3° Básico, y Alonso, de Kínder. Psicóloga de profesión, con orientación al área laboral y al desarrollo profesional de las personas.'],
+    cierre:'Me interesa especialmente comprender a las personas, sus intereses, motivaciones y fortalezas, acompañándolas en la búsqueda de oportunidades que les permitan desarrollarse y alcanzar su potencial.'}
+};
+function openBio(id){
+  var b=BIOS[id||'jach']; if(!b) return;
+  var im=document.getElementById('bioImg');
+  if(b.img){im.src=b.img;im.alt=b.nom;im.style.display='';}else{im.removeAttribute('src');im.style.display='none';}
+  document.getElementById('bioTitle').textContent=b.nom;
+  document.getElementById('bioRoles').innerHTML=b.roles.map(function(r){return '<span class="rolb">'+r+'</span>';}).join('');
+  var body=b.paras.map(function(p){return '<p>'+p+'</p>';}).join('')+'<p class="cierre">'+b.cierre+'</p>';
+  document.getElementById('bioBody').innerHTML=body;
+  document.getElementById('bioOverlay').classList.add('open');document.body.style.overflow='hidden';
+}
 function closeBio(){document.getElementById('bioOverlay').classList.remove('open');document.body.style.overflow='';}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeNA();closeCV();closeBio();}});
 </script>
@@ -1146,18 +1188,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeNA();c
   <div class="bio-modal" role="dialog" aria-modal="true" aria-labelledby="bioTitle">
     <div class="na-head">
       <button type="button" class="na-close" onclick="closeBio()" aria-label="Cerrar">&times;</button>
-      <img src="assets/JACH.jpg" alt="Juan Andrés Cristi Hormazábal">
+      <img id="bioImg" src="assets/JACH.jpg" alt="">
       <div>
-        <h3 id="bioTitle">Juan Andrés Cristi Hormazábal</h3>
-        <span class="rolb">Presidente · Ingeniero Agrónomo</span>
-        <span class="rolb">Apoderado de 7° Básico, 2° Básico, 1° Básico y ambos Kínder</span>
+        <h3 id="bioTitle"></h3>
+        <div id="bioRoles"></div>
       </div>
     </div>
-    <div class="bio-body">
-      <p>Como apoderado de cinco hijos en distintos niveles del colegio, creo firmemente en la importancia de construir comunidad y generar espacios de colaboración entre las familias. Desde mi experiencia profesional puedo aportar en áreas como liderazgo, gestión de presupuestos, resolución de conflictos, innovación y desarrollo de proyectos, siempre con una mirada constructiva y orientada al bien común.</p>
-      <p>En 2025 fui reconocido entre "Los 50 Supply Chain más Influyentes de Chile", distinción a 26 años de experiencia en trabajo colaborativo, aporte a la innovación y gestión desarrollada junto a distintos equipos. Espero poner esa experiencia al servicio de nuestra comunidad escolar, contribuyendo con una mirada práctica, responsable y orientada al trabajo conjunto entre apoderados.</p>
-      <p class="cierre">Los desafíos del colegio se enfrentan mejor cuando participamos juntos. Los invito a sumar ideas, tiempo y entusiasmo para seguir construyendo una comunidad cada día más cercana, inclusiva y comprometida con el desarrollo de nuestros hijos.</p>
-    </div>
+    <div class="bio-body" id="bioBody"></div>
   </div>
 </div>
 </body>
