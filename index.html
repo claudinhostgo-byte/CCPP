@@ -162,6 +162,34 @@
   .apoyo .silueta{width:72px;height:72px;border-radius:50%;background:#e2edf8;display:flex;align-items:center;justify-content:center;color:var(--azul2);border:2px solid var(--linea);box-shadow:0 4px 12px rgba(12,64,133,.1)}
   .apoyo .silueta svg{width:38px;height:38px;fill:currentColor}
   .apoyo span{font-size:.85rem;font-weight:700;color:var(--navy);text-align:center;line-height:1.3}
+  /* Directiva */
+  .dir-sub{text-align:center;font-size:.9rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--navy);margin:0 0 26px}
+  .dir-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:30px 22px;max-width:880px;margin:0 auto 40px}
+  .dir{display:flex;flex-direction:column;align-items:center;gap:9px;width:146px}
+  .dir .silueta{width:78px;height:78px;border-radius:50%;background:#e2edf8;display:flex;align-items:center;justify-content:center;color:var(--azul2);border:2px solid var(--linea);box-shadow:0 4px 12px rgba(12,64,133,.1);overflow:hidden}
+  .dir.lead .silueta{width:88px;height:88px;border-color:var(--dorado);border-width:3px}
+  .dir .silueta svg{width:40px;height:40px;fill:currentColor}
+  .dir .silueta img{width:100%;height:100%;object-fit:cover}
+  .dir .cargo{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#9a7415;background:var(--dorado-suave);padding:3px 10px;border-radius:14px;text-align:center}
+  .dir .nom{font-size:.87rem;font-weight:700;color:var(--navy);text-align:center;line-height:1.3}
+  /* Directiva con perfil (clickable) */
+  .dir.bio{cursor:pointer;outline:none}
+  .dir.bio .silueta{position:relative}
+  .dir.bio .silueta:after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px dashed var(--dorado);opacity:.55;transition:.18s}
+  .dir.bio:hover .silueta:after,.dir.bio:focus .silueta:after{opacity:1;inset:-6px}
+  .dir.bio .hint{position:absolute;inset:0;background:rgba(10,46,92,.74);color:#fff;display:flex;align-items:center;justify-content:center;font-size:.62rem;font-weight:800;text-transform:uppercase;letter-spacing:.5px;opacity:0;transition:.18s;text-align:center;padding:4px;border-radius:50%}
+  .dir.bio:hover .hint,.dir.bio:focus .hint{opacity:1}
+  .dir .vermas{display:inline-flex;align-items:center;gap:5px;font-size:.7rem;font-weight:700;color:#8a6712;background:var(--dorado-suave);padding:3px 11px;border-radius:14px}
+  .dir.bio:hover .vermas{background:var(--dorado);color:#3a2d09}
+  /* Modal bio */
+  .bio-modal{background:#fff;border-radius:16px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(6,26,54,.4);animation:naIn .2s ease}
+  .bio-modal .na-head{background:linear-gradient(135deg,var(--navy),var(--azul2));color:#fff;padding:22px 26px;border-radius:16px 16px 0 0;position:relative;display:flex;gap:18px;align-items:center}
+  .bio-modal .na-head img{width:74px;height:74px;border-radius:50%;object-fit:cover;border:3px solid var(--dorado);flex:0 0 auto}
+  .bio-modal .na-head h3{font-size:1.25rem;font-weight:700;line-height:1.2;padding-right:26px}
+  .bio-modal .na-head .rolb{font-size:.82rem;opacity:.9;margin-top:3px;display:block;font-weight:500}
+  .bio-modal .bio-body{padding:22px 26px}
+  .bio-modal .bio-body p{font-size:.93rem;color:#3a4854;line-height:1.6;margin-bottom:14px}
+  .bio-modal .bio-body p.cierre{font-weight:700;color:var(--navy)}
 
   /* COMPATIBILIDAD (semáforo) */
   .sem-tabla{max-width:960px;margin:0 auto;border:1px solid var(--linea);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(12,64,133,.05)}
@@ -227,6 +255,56 @@
     .hero h1{font-size:2.1rem}
     .sec-head h2{font-size:1.75rem}
   }
+
+  /* Trigger Nord Anglia */
+  .na-trigger{margin-top:14px;width:100%;text-align:left;cursor:pointer;background:#eef4fb;border:1px solid #d8e4f2;border-left:4px solid var(--dorado);border-radius:10px;padding:12px 14px;font-family:inherit;font-weight:700;font-size:.8rem;color:var(--navy);letter-spacing:.2px;line-height:1.35;display:flex;align-items:center;gap:9px;transition:.15s}
+  .na-trigger:hover{background:#e2edfa;box-shadow:0 4px 14px rgba(12,64,133,.12)}
+  .na-dot{flex:0 0 auto;width:22px;height:22px;border-radius:50%;background:var(--dorado);color:#3a2d09;display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700}
+
+  /* Modal */
+  .na-overlay{position:fixed;inset:0;z-index:200;background:rgba(10,26,54,.6);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;padding:24px}
+  .na-overlay.open{display:flex}
+  .na-modal{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;box-shadow:0 24px 60px rgba(6,26,54,.4);animation:naIn .2s ease}
+  @keyframes naIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .na-modal .na-head{background:linear-gradient(135deg,var(--navy),var(--azul2));color:#fff;padding:22px 26px;border-radius:16px 16px 0 0;position:relative}
+  .na-modal .na-head .k{text-transform:uppercase;letter-spacing:2px;font-size:.7rem;color:var(--dorado);font-weight:600;margin-bottom:6px}
+  .na-modal .na-head h3{font-size:1.3rem;font-weight:700;line-height:1.25;padding-right:32px}
+  .na-modal .na-close{position:absolute;top:16px;right:18px;background:none;border:0;color:#fff;font-size:1.6rem;line-height:1;cursor:pointer;opacity:.85}
+  .na-modal .na-close:hover{opacity:1}
+  .na-modal .na-body{padding:22px 26px}
+  .na-item{display:flex;gap:12px;margin-bottom:15px}
+  .na-item:last-child{margin-bottom:0}
+  .na-item .n{flex:0 0 auto;width:30px;height:30px;border-radius:8px;background:var(--dorado-suave);color:#9a7415;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+  .na-item .t b{display:block;color:var(--navy);font-size:.95rem;margin-bottom:2px}
+  .na-item .t span{font-size:.88rem;color:#3a4854;line-height:1.5}
+
+  /* Convenios */
+  .conv-panel{display:grid;grid-template-columns:1.1fr 1fr;gap:26px;align-items:center;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:28px;margin-bottom:44px;box-shadow:0 8px 26px rgba(12,64,133,.06)}
+  .conv-count{font-size:1.05rem;color:var(--navy);margin-bottom:8px}
+  .conv-count b{font-size:2rem;color:var(--dorado);font-weight:800;margin-right:6px;vertical-align:-2px}
+  .conv-panel p{color:var(--gris);font-size:.95rem;margin-bottom:18px}
+  .conv-btn{display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:13px 22px;border-radius:10px;transition:.18s}
+  .conv-btn:hover{background:var(--azul2);transform:translateY(-2px);box-shadow:0 10px 24px rgba(12,64,133,.2)}
+  .conv-chips{display:flex;flex-wrap:wrap;gap:10px}
+  .conv-chip{background:var(--dorado-suave);color:#8a6712;border-radius:20px;padding:8px 15px;font-size:.85rem;font-weight:600}
+  .conv-chip b{color:var(--navy)}
+  .conv-sub{text-align:center;color:var(--navy);font-size:1.35rem;font-weight:700;margin-bottom:8px}
+  .conv-sub-p{text-align:center;color:var(--gris);max-width:640px;margin:0 auto 34px;font-size:.98rem}
+  @media(max-width:760px){.conv-panel{grid-template-columns:1fr;gap:18px}}
+  /* Modal convenios */
+  .cv-modal{background:#fff;border-radius:16px;max-width:720px;width:100%;max-height:90vh;display:flex;flex-direction:column;box-shadow:0 24px 60px rgba(6,26,54,.4);animation:naIn .2s ease}
+  .cv-modal .na-head{background:linear-gradient(135deg,var(--navy),var(--azul2));color:#fff;padding:20px 26px;border-radius:16px 16px 0 0;position:relative}
+  .cv-search{margin:16px 26px 0;position:relative;flex:0 0 auto}
+  .cv-search input{width:100%;border:1px solid var(--linea);border-radius:10px;padding:11px 14px;font-family:inherit;font-size:.92rem;outline:none}
+  .cv-search input:focus{border-color:var(--azul2);box-shadow:0 0 0 3px rgba(16,75,153,.12)}
+  .cv-list{overflow-y:auto;padding:14px 26px 24px;flex:1 1 auto}
+  .cv-row{border:1px solid var(--linea);border-radius:11px;padding:13px 15px;margin-bottom:10px}
+  .cv-row .cv-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:5px}
+  .cv-row .cv-top b{color:var(--navy);font-size:.98rem}
+  .cv-cat{flex:0 0 auto;background:var(--dorado-suave);color:#8a6712;border-radius:14px;padding:3px 10px;font-size:.72rem;font-weight:600;white-space:nowrap}
+  .cv-ben{font-size:.86rem;color:#3a4854;line-height:1.5}
+  .cv-meta{font-size:.78rem;color:#7a8894;margin-top:6px}
+  .cv-empty{text-align:center;color:#8a97a3;padding:30px;font-size:.9rem}
 </style>
 </head>
 <body>
@@ -247,6 +325,7 @@
       <a href="#urgente">Urgente</a>
       <a href="#relevante">Relevante</a>
       <a href="#importante">Importante</a>
+      <a href="#convenios">Convenios</a>
       <a href="#futuro">Futuro</a>
       <a href="#compatibilidad">Compatibilidad</a>
       <a href="#plan">Plan por etapas</a>
@@ -355,10 +434,20 @@
         <h3>Retiro seguro y campaña de tránsito</h3>
         <ul>
           <li>Zonas de espera y retiro por ciclo; ordenar flujos de transporte, autos y talleres, con foco en marzo.</li>
-          <li>Campaña permanente de seguridad vial en los accesos, junto al Centro de Alumnos (CCAA); evaluar señalética y semáforo.</li>
+          <li>Campaña permanente de seguridad vial en los accesos, impulsada en conjunto por el Centro de Alumnos (CCAA) y el Centro de Padres (CCPP); evaluar señalética y semáforo.</li>
           <li>Gestionar ante el colegio un sistema de control de acceso y retiro, con resguardo estricto de datos personales (Ley 21.719).</li>
         </ul>
         <div class="obj">Un ingreso y salida predecibles, seguros y ordenados.</div>
+      </div>
+      <div class="card urg">
+        <div class="ico">🏘️</div>
+        <h3>Seguridad del entorno</h3>
+        <ul>
+          <li>Velar por la tranquilidad del perímetro y las calles aledañas al colegio.</li>
+          <li>Coordinar acciones con actores externos —seguridad municipal y Carabineros— en los horarios críticos de entrada y salida.</li>
+          <li>Levantar puntos de riesgo del entorno y canalizar las inquietudes de las familias ante el municipio.</li>
+        </ul>
+        <div class="obj">Un entorno más seguro y tranquilo alrededor del colegio.</div>
       </div>
       <div class="card urg">
         <div class="ico">♿</div>
@@ -369,6 +458,9 @@
           <li>Sensibilización para alumnos, familias y comunidad; participación efectiva en deporte, talleres y actos.</li>
           <li>Puente para que el colegio facilite, dentro del establecimiento, actividades vinculadas a apoyos y terapias.</li>
         </ul>
+        <button type="button" class="na-trigger" onclick="openNA()">
+          <span class="na-dot">✚</span> Alineada con las políticas de inclusión de Nord Anglia
+        </button>
         <div class="obj">Que todos los niños puedan participar, desarrollarse y sentirse parte.</div>
       </div>
     </div>
@@ -399,22 +491,22 @@
         <div class="ico">🥗</div>
         <h3>Alimentación saludable, kiosco y vending</h3>
         <ul>
-          <li>Piloto de kiosco administrado por 2° Medio —sujeto a autorización del colegio y evaluación sanitaria— como recaudación anticipada para su gira, con rendición transparente.</li>
-          <li>Vending saludable con proveedor externo (agua, yogur, frutos secos, barras), administrado por 1° Medio para financiar su propia gira.</li>
+          <li>Piloto de kiosco administrado por 1° Medio —sujeto a autorización del colegio y evaluación sanitaria— como recaudación anticipada para su gira, con rendición transparente.</li>
+          <li>Vending saludable con proveedor externo (agua, yogur, frutos secos, barras), administrado por 2° Medio para financiar su propia gira.</li>
           <li>Financiamiento inicial a definir: aporte recuperable del CCPP, auspicio o comodato del proveedor.</li>
           <li>Opciones para restricciones alimentarias y precios accesibles.</li>
         </ul>
         <div class="obj">Que la opción saludable sea fácil, permanente y de bajo riesgo operacional.</div>
       </div>
       <div class="card rel">
-        <div class="ico">🚻</div>
-        <h3>Baños dignos</h3>
+        <div class="ico">🏫</div>
+        <h3>Infraestructura y mantención</h3>
         <ul>
-          <li>Diagnóstico de frecuencia de aseo y reposición de insumos.</li>
-          <li>Canal simple para reportar baños en mal estado durante la jornada.</li>
-          <li>Indicadores de cumplimiento revisados con la administración.</li>
+          <li>Canal simple para reportar necesidades de infraestructura y mantención (salas, jardines, baños, espacios comunes).</li>
+          <li>Seguimiento y priorización de los requerimientos junto a la administración.</li>
+          <li>Indicadores de cumplimiento y respuesta oportuna.</li>
         </ul>
-        <div class="obj">Baños limpios, dignos y seguros durante toda la jornada escolar.</div>
+        <div class="obj">Canalizar y dar respuesta a las necesidades de los espacios que usan nuestros hijos.</div>
       </div>
       <div class="card rel">
         <div class="ico">💉</div>
@@ -553,12 +645,74 @@
   </div>
 </section>
 
+<!-- CONVENIOS -->
+<section class="bloque" id="convenios">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag rel">Beneficios para las familias</span>
+      <h2>Convenios</h2>
+      <p>Mantendremos activos los convenios vigentes y sumaremos nuevos, con foco en las familias del colegio y en panoramas para nuestros niños.</p>
+    </div>
+
+    <div class="conv-panel">
+      <div>
+        <div class="conv-count"><b>23</b> convenios vigentes (2024)</div>
+        <p>Base de datos con descuentos y beneficios en deporte, salud, alimentación, belleza, útiles escolares y más. La mantendremos actualizada y disponible para todos los apoderados.</p>
+        <button type="button" class="conv-btn" onclick="openCV()">📋 Ver base de convenios</button>
+      </div>
+      <div class="conv-chips">
+        <span class="conv-chip">Deporte <b>· 4</b></span>
+        <span class="conv-chip">Salud y odontología <b>· 5</b></span>
+        <span class="conv-chip">Belleza y estética <b>· 4</b></span>
+        <span class="conv-chip">Cafetería y alimentación <b>· 4</b></span>
+        <span class="conv-chip">Útiles y uniformes <b>· 3</b></span>
+        <span class="conv-chip">Servicios y eventos <b>· 3</b></span>
+      </div>
+    </div>
+
+    <h3 class="conv-sub">Nuevos convenios que buscamos</h3>
+    <p class="conv-sub-p">Priorizando a la propia comunidad Trewhela's y ampliando los beneficios hacia el bienestar y la entretención familiar.</p>
+    <div class="cards">
+      <div class="card rel">
+        <div class="ico">🤝</div>
+        <h3>Negocios y emprendimientos de familias</h3>
+        <ul>
+          <li>Incorporar los negocios y emprendimientos de apoderados del colegio.</li>
+          <li>Directorio de la comunidad con beneficios preferentes entre familias.</li>
+          <li>Difusión y vínculo con la Red de emprendimiento Trewhela's.</li>
+        </ul>
+        <div class="obj">Que la comunidad se conozca, se recomiende y se apoye.</div>
+      </div>
+      <div class="card rel">
+        <div class="ico">🧠</div>
+        <h3>Salud y apoyo al aprendizaje</h3>
+        <ul>
+          <li>Clases particulares y reforzamiento escolar.</li>
+          <li>Terapias, psicólogos, psicopedagogos y fonoaudiólogos.</li>
+          <li>Profesionales de la salud y el bienestar con valores preferentes.</li>
+        </ul>
+        <div class="obj">Apoyo cercano y accesible para el desarrollo de los niños.</div>
+      </div>
+      <div class="card rel">
+        <div class="ico">🏕️</div>
+        <h3>Panoramas y experiencias familiares</h3>
+        <ul>
+          <li>Glampings y turismo familiar.</li>
+          <li>Zoológicos y parques como Mampato y Fantasilandia.</li>
+          <li>Entretención, cultura y actividades al aire libre.</li>
+        </ul>
+        <div class="obj">Más panoramas para disfrutar en familia con descuento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FUTURO, INNOVACIÓN Y OPORTUNIDADES GLOBALES -->
 <section class="bloque band alt" id="futuro">
   <div class="wrap">
     <div class="sec-head">
       <span class="tag imp">Nuevo pilar estratégico</span>
-      <h2>Futuro, innovación y oportunidades globales</h2>
+      <h2>Futuro, innovación y oportunidades globales, alineado con Nord Anglia</h2>
       <p>Así como impulsaremos seguridad, inclusión y bienestar, también queremos asegurar que cada alumno de Trewhela's pueda beneficiarse de las oportunidades académicas, tecnológicas, deportivas y globales que Nord Anglia pone a disposición de nuestra comunidad escolar.</p>
     </div>
     <div class="lineas">
@@ -610,6 +764,16 @@
           <li>Con fechas, cupos, requisitos y costos.</li>
         </ul>
         <div class="obj">Que ninguna familia se entere tarde o por casualidad de estas oportunidades.</div>
+      </div>
+      <div class="card imp">
+        <div class="ico">💼</div>
+        <h3>Inmersión profesional y orientación vocacional</h3>
+        <ul>
+          <li>Coordinación con el Centro de Alumnos (CCAA) para acercar a los estudiantes a experiencias de trabajo real desde etapas tempranas.</li>
+          <li>Visitas, pasantías y charlas en distintos ámbitos profesionales, aprovechando la red de profesiones y emprendimientos de las familias.</li>
+          <li>Orientación vocacional temprana que ayude a explorar intereses y descubrir posibles caminos.</li>
+        </ul>
+        <div class="obj">Que nuestros hijos conozcan el mundo del trabajo real y descubran su vocación con tiempo.</div>
       </div>
     </div>
   </div>
@@ -706,15 +870,30 @@
   <div class="wrap">
     <div class="sec-head">
       <span class="tag imp">Nuestro sello</span>
-      <h2>Una propuesta abierta a la comunidad</h2>
-      <p>Estas son las ideas que ponemos sobre la mesa. La lista se está conformando: compartimos primero la visión y dejamos la puerta abierta a quienes quieran sumarse y aportar nuevas propuestas.</p>
+      <h2>Nuestra directiva</h2>
+      <p>El equipo de apoderados que se presenta para integrar el Centro de Padres, con una propuesta abierta a la comunidad. Dejamos la puerta abierta a quienes quieran sumarse y aportar nuevas ideas.</p>
     </div>
+
+    <p class="dir-sub">Mesa directiva</p>
+    <div class="dir-grid">
+      <div class="dir lead bio" onclick="openBio()" tabindex="0" role="button" aria-label="Ver perfil de Juan Andrés Cristi" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio();}"><div class="silueta"><img src="assets/JACH.jpg" alt="Juan Andrés Cristi Hormazábal"><span class="hint">Ver detalle</span></div><span class="cargo">Presidente</span><span class="nom">Juan Andrés Cristi Hormazábal</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir lead"><div class="silueta"><img src="assets/RV.jpg" alt="Rodrigo Vergara Tapia"></div><span class="cargo">Vicepresidente</span><span class="nom">Rodrigo Andrés Vergara Tapia</span></div>
+      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Secretario</span><span class="nom">Leonardo Mas</span></div>
+      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Tesorera</span><span class="nom">Carolina Garrido</span></div>
+      <div class="dir lead"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Comunicaciones &amp; RRSS</span><span class="nom">Francisca León Gutiérrez</span></div>
+    </div>
+
+    <p class="dir-sub">Directores</p>
+    <div class="dir-grid">
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Rossana Muñoz Ramírez</span></div>
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Juan Astete</span></div>
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Juan Guillermo Cartagena Torrealba</span></div>
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Grace</span></div>
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Directora</span><span class="nom">Paulina Contreras</span></div>
+      <div class="dir"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span class="cargo">Director</span><span class="nom">Pablo Olivares</span></div>
+    </div>
+
     <div class="equipo" style="max-width:700px">
-      <div class="persona">
-        <div class="foto"><img src="assets/JACH.jpg" alt="Juan Andrés Cristi"></div>
-        <h3>Juan Andrés Cristi</h3>
-        <span class="rol">Impulsor de esta propuesta</span>
-      </div>
       <a class="persona proximamente pago" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">
         <div class="foto">💳</div>
         <p><strong>Hazte socio del CCPP.</strong> Tu aporte nos permite seguir impulsando actividades y proyectos que fortalecen nuestra comunidad escolar. Paga tu cuota aquí.</p>
@@ -725,17 +904,6 @@
         </div>
         <p>¿Compartes estas ideas? Escríbenos por WhatsApp: hay espacio para nuevas personas y propuestas.</p>
       </a>
-    </div>
-    <div class="apoyan">
-      <p class="apoyan-label">Apoyan estas ideas</p>
-      <div class="apoyo-grid">
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Juan Astete</span></div>
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Leonardo Más</span></div>
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Carolina Garrido</span></div>
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Rossana Muñoz</span></div>
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Rodrigo Vergara</span></div>
-        <div class="apoyo"><div class="silueta"><svg viewBox="0 0 24 24"><path d="M12 12.5c2.9 0 5.3-2.4 5.3-5.3S14.9 2 12 2 6.7 4.3 6.7 7.3s2.4 5.2 5.3 5.2Zm0 2.6c-3.5 0-10.5 1.8-10.5 5.3V22h21v-1.6c0-3.5-7-5.3-10.5-5.3Z"/></svg></div><span>Juan Cartajena</span></div>
-      </div>
     </div>
   </div>
 </section>
@@ -806,6 +974,191 @@
     });
   }
 })();
+
+// Modal Nord Anglia
+function openNA(){document.getElementById('naOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeNA(){document.getElementById('naOverlay').classList.remove('open');document.body.style.overflow='';}
+// Modal Convenios
+function openCV(){document.getElementById('cvOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeCV(){document.getElementById('cvOverlay').classList.remove('open');document.body.style.overflow='';}
+function filterCV(q){
+  q=(q||'').toLowerCase().trim();
+  var rows=document.querySelectorAll('#cvList .cv-row'),vis=0;
+  rows.forEach(function(r){var m=r.getAttribute('data-s').indexOf(q)>-1;r.style.display=m?'':'none';if(m)vis++;});
+  document.getElementById('cvEmpty').style.display=vis?'none':'block';
+}
+// Modal perfil directiva
+function openBio(){document.getElementById('bioOverlay').classList.add('open');document.body.style.overflow='hidden';}
+function closeBio(){document.getElementById('bioOverlay').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeNA();closeCV();closeBio();}});
 </script>
+
+<div class="na-overlay" id="naOverlay" onclick="if(event.target===this)closeNA()">
+  <div class="na-modal" role="dialog" aria-modal="true" aria-labelledby="naTitle">
+    <div class="na-head">
+      <button type="button" class="na-close" onclick="closeNA()" aria-label="Cerrar">&times;</button>
+      <div class="k">Inclusión real</div>
+      <h3 id="naTitle">Alineada con las políticas de inclusión de Nord Anglia</h3>
+    </div>
+    <div class="na-body">
+      <div class="na-item"><div class="n">1</div><div class="t"><b>Todos pertenecen</b><span>Cada estudiante, familia y colaborador debe sentirse visto, escuchado, valorado y respetado. La pertenencia es tan importante como la inclusión.</span></div></div>
+      <div class="na-item"><div class="n">2</div><div class="t"><b>Igualdad de oportunidades</b><span>Reconocimiento por méritos, sin discriminación por edad, discapacidad, neurodiversidad, género, identidad de género, raza, religión, orientación sexual u otra condición personal.</span></div></div>
+      <div class="na-item"><div class="n">3</div><div class="t"><b>Entornos seguros e inclusivos</b><span>Espacios libres de discriminación, acoso y prácticas excluyentes, que promueven el respeto mutuo y la dignidad de todas las personas.</span></div></div>
+      <div class="na-item"><div class="n">4</div><div class="t"><b>Inclusión como práctica diaria</b><span>No es una actividad aislada ni una obligación administrativa: se refleja en las relaciones, las decisiones, la enseñanza, el liderazgo y la cultura escolar.</span></div></div>
+      <div class="na-item"><div class="n">5</div><div class="t"><b>Responsabilidad compartida</b><span>Directivos, docentes, estudiantes, familias y colaboradores tienen responsabilidad en construir una comunidad inclusiva.</span></div></div>
+      <div class="na-item"><div class="n">6</div><div class="t"><b>Diversidad como fortaleza</b><span>Las diferencias culturales, lingüísticas, cognitivas y personales enriquecen el aprendizaje y la convivencia escolar.</span></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="na-overlay" id="cvOverlay" onclick="if(event.target===this)closeCV()">
+  <div class="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cvTitle">
+    <div class="na-head">
+      <button type="button" class="na-close" onclick="closeCV()" aria-label="Cerrar">&times;</button>
+      <div class="k">Beneficios para las familias</div>
+      <h3 id="cvTitle">Base de convenios vigentes · 2024</h3>
+    </div>
+    <div class="cv-search">
+      <input type="text" placeholder="Buscar por empresa o categoría…" oninput="filterCV(this.value)" aria-label="Buscar convenio">
+    </div>
+    <div class="cv-list" id="cvList">
+      <div class="cv-row" data-s="bichoto art oficina/escolar">
+        <div class="cv-top"><b>Bichoto</b><span class="cv-cat">Art Oficina/Escolar</span></div>
+        <div class="cv-ben">15% Dcto lista escolar (solo en lista escolar?)</div>
+        <div class="cv-meta">IG @bichoto.cl &middot; www.bichoto.cl &middot; Tel. 569 82390460</div>
+      </div>
+      <div class="cv-row" data-s="happy days art oficina/escolar">
+        <div class="cv-top"><b>Happy Days</b><span class="cv-cat">Art Oficina/Escolar</span></div>
+        <div class="cv-ben">20% Dcto lista escolar/ 5% extra por sobre 20 alumnos misma lista/ 10% dcto general</div>
+        <div class="cv-meta">IG @happydayoutlet_ &middot; Tel. 569 54129176</div>
+      </div>
+      <div class="cv-row" data-s="glanz salon y spa belleza">
+        <div class="cv-top"><b>Glanz Salon y Spa</b><span class="cv-cat">Belleza</span></div>
+        <div class="cv-ben">Enviara informacion de descuentos</div>
+        <div class="cv-meta">IG @glanzsalonyspa &middot; Tel. 569 98425559</div>
+      </div>
+      <div class="cv-row" data-s="piel de seda belleza">
+        <div class="cv-top"><b>Piel de Seda</b><span class="cv-cat">Belleza</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @pieldesedachicureo &middot; www.pieldeseda.cl &middot; Tel. 569 81531996</div>
+      </div>
+      <div class="cv-row" data-s="café del valle cafeteria">
+        <div class="cv-top"><b>Café del Valle</b><span class="cv-cat">Cafeteria</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @cafedelvalle_23 &middot; Tel. 569 79059323</div>
+      </div>
+      <div class="cv-row" data-s="me latte liray cafeteria">
+        <div class="cv-top"><b>Me Latte Liray</b><span class="cv-cat">Cafeteria</span></div>
+        <div class="cv-ben">10% Dcto por consumo en local con QR y Cedula de Identidad, 5% de descuento en despacho a domicilio por compra sobre $25,000 con QR y Cedula de Identidad.</div>
+        <div class="cv-meta">IG @melattelife &middot; www.melattelife.midelivery.cl &middot; Tel. 569 83611718</div>
+      </div>
+      <div class="cv-row" data-s="clinica avantt clinica estetica">
+        <div class="cv-top"><b>Clinica AVANTT</b><span class="cv-cat">Clinica Estetica</span></div>
+        <div class="cv-ben">60% Dcto en tratamientos corporales y  20% Dcto en tratamientos inyectables.</div>
+        <div class="cv-meta">IG @clinicaesteticaavantt &middot; Tel. 56983834835</div>
+      </div>
+      <div class="cv-row" data-s="carniceria los lopez comida">
+        <div class="cv-top"><b>Carniceria Los Lopez</b><span class="cv-cat">Comida</span></div>
+        <div class="cv-ben">10% de descuento por compras sobre $50.000 y despacho gratis</div>
+        <div class="cv-meta">IG @carnesloslopez_delivery_beef &middot; www.loslopez.cl &middot; Tel. 569 88277642</div>
+      </div>
+      <div class="cv-row" data-s="club chicureo deporte">
+        <div class="cv-top"><b>Club Chicureo</b><span class="cv-cat">Deporte</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @club_chicureo &middot; Tel. 569 40212825</div>
+      </div>
+      <div class="cv-row" data-s="club fama dance &amp; fitness deporte">
+        <div class="cv-top"><b>Club Fama Dance &amp; Fitness</b><span class="cv-cat">Deporte</span></div>
+        <div class="cv-ben">Valor prefencial hasta 50% por contrato anual de 12 meses, matricula gratis, evaluacion gratis, entrada liberada</div>
+        <div class="cv-meta">IG @clubfamachicureo &middot; Tel. 569 64126587</div>
+      </div>
+      <div class="cv-row" data-s="club padel lo pinto deporte">
+        <div class="cv-top"><b>Club Padel Lo Pinto</b><span class="cv-cat">Deporte</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @clubpadellopinto &middot; www.clubpadellopinto.cl &middot; Tel. 569 68744116</div>
+      </div>
+      <div class="cv-row" data-s="santa elena soccer and padel deporte">
+        <div class="cv-top"><b>Santa Elena Soccer and Padel</b><span class="cv-cat">Deporte</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @santaelena_soccer_and_padel &middot; www.santaelenasoccer.cl &middot; Tel. 569 78505182</div>
+      </div>
+      <div class="cv-row" data-s="espacio chicureo eventos">
+        <div class="cv-top"><b>Espacio Chicureo</b><span class="cv-cat">Eventos</span></div>
+        <div class="cv-ben">se esta revisando convenio con el local 03/04/24</div>
+        <div class="cv-meta">Tel. 569 34176088</div>
+      </div>
+      <div class="cv-row" data-s="tgc paisajismo paisajismo">
+        <div class="cv-top"><b>TGC Paisajismo</b><span class="cv-cat">Paisajismo</span></div>
+        <div class="cv-ben">10% descuento por compras superiores a $35,000</div>
+        <div class="cv-meta">@thegreencollectionstore &middot; Tel. 56976954007</div>
+      </div>
+      <div class="cv-row" data-s="mash peluqueria peluqueria">
+        <div class="cv-top"><b>MASH Peluqueria</b><span class="cv-cat">Peluqueria</span></div>
+        <div class="cv-ben">15% descuento en total de boleta</div>
+        <div class="cv-meta">IG @mashpeluqueria &middot; www.mashstore.cl &middot; Tel. 5696724042</div>
+      </div>
+      <div class="cv-row" data-s="marcela benito vargas psicologa">
+        <div class="cv-top"><b>Marcela Benito Vargas</b><span class="cv-cat">Psicologa</span></div>
+        <div class="cv-ben">10% Dcto por sesion online</div>
+        <div class="cv-meta">Reserva sa.doct.to/037cmvhz &middot; Tel. 56987754222</div>
+      </div>
+      <div class="cv-row" data-s="uniformes victoria ropa colegio">
+        <div class="cv-top"><b>Uniformes Victoria</b><span class="cv-cat">Ropa Colegio</span></div>
+        <div class="cv-ben">5 % de descuento con un minimo de compra de $35,000</div>
+        <div class="cv-meta">Tel. 569 94338463</div>
+      </div>
+      <div class="cv-row" data-s="clinica blumen salud/odontologia">
+        <div class="cv-top"><b>Clinica Blumen</b><span class="cv-cat">Salud/Odontologia</span></div>
+        <div class="cv-ben">20% Dcto en todas las prestaciones dentales/ Estudiantes y Familiares/ ofrece presencia en actividades</div>
+        <div class="cv-meta">IG @clinicablumen &middot; www.clinicablumen.com &middot; Tel. 569 75163557</div>
+      </div>
+      <div class="cv-row" data-s="kinder sonrisa salud/odontologia">
+        <div class="cv-top"><b>Kinder Sonrisa</b><span class="cv-cat">Salud/Odontologia</span></div>
+        <div class="cv-ben">50% Dcto sobre arancel clinico / Diagnóstico sin costo / 70% Dcto blanqueamiento (20 primeros cupos) / hasta 12 cuotas en implantes y ortodoncia invisible / Programa Sonrisa Segura: primera atención de urgencia sin costo.</div>
+        <div class="cv-meta">IG @kinder.sonrisa &middot; www.kindersonrisa.cl &middot; Tel. 56 965717020</div>
+      </div>
+      <div class="cv-row" data-s="optica prima vision salud/optica">
+        <div class="cv-top"><b>Optica Prima Vision</b><span class="cv-cat">Salud/Optica</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @opticasprima &middot; Tel. 569 69025050</div>
+      </div>
+      <div class="cv-row" data-s="helpet hospital veterinario salud/veterinario">
+        <div class="cv-top"><b>Helpet Hospital Veterinario</b><span class="cv-cat">Salud/Veterinario</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @helpet_hospital_vet &middot; www.helpet.cl &middot; Tel. 569 73310415</div>
+      </div>
+      <div class="cv-row" data-s="skalo cowork servicios/negocios">
+        <div class="cv-top"><b>Skalo Cowork</b><span class="cv-cat">Servicios/Negocios</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @skalo_cowork &middot; www.skalo.cl &middot; Tel. 569 97233807</div>
+      </div>
+      <div class="cv-row" data-s="wines cav vinos">
+        <div class="cv-top"><b>Wines Cav</b><span class="cv-cat">Vinos</span></div>
+        <div class="cv-ben"><em style="color:#8a97a3">Convenio en gestión / sin detalle publicado</em></div>
+        <div class="cv-meta">IG @winescav_chicureo &middot; www.winescav.cl &middot; Tel. 569 50673434</div>
+      </div>
+      <div class="cv-empty" id="cvEmpty" style="display:none">Sin resultados para tu búsqueda.</div>
+    </div>
+  </div>
+</div>
+
+<div class="na-overlay" id="bioOverlay" onclick="if(event.target===this)closeBio()">
+  <div class="bio-modal" role="dialog" aria-modal="true" aria-labelledby="bioTitle">
+    <div class="na-head">
+      <button type="button" class="na-close" onclick="closeBio()" aria-label="Cerrar">&times;</button>
+      <img src="assets/JACH.jpg" alt="Juan Andrés Cristi Hormazábal">
+      <div>
+        <h3 id="bioTitle">Juan Andrés Cristi Hormazábal</h3>
+        <span class="rolb">Presidente · Ingeniero Agrónomo</span>
+        <span class="rolb">Apoderado de 7° Básico, 2° Básico, 1° Básico y ambos Kínder</span>
+      </div>
+    </div>
+    <div class="bio-body">
+      <p>Como apoderado de cinco hijos en distintos niveles del colegio, creo firmemente en la importancia de construir comunidad y generar espacios de colaboración entre las familias. Desde mi experiencia profesional puedo aportar en áreas como liderazgo, gestión de presupuestos, resolución de conflictos, innovación y desarrollo de proyectos, siempre con una mirada constructiva y orientada al bien común.</p>
+      <p>En 2025 fui reconocido entre "Los 50 Supply Chain más Influyentes de Chile", distinción a 26 años de experiencia en trabajo colaborativo, aporte a la innovación y gestión desarrollada junto a distintos equipos. Espero poner esa experiencia al servicio de nuestra comunidad escolar, contribuyendo con una mirada práctica, responsable y orientada al trabajo conjunto entre apoderados.</p>
+      <p class="cierre">Los desafíos del colegio se enfrentan mejor cuando participamos juntos. Los invito a sumar ideas, tiempo y entusiasmo para seguir construyendo una comunidad cada día más cercana, inclusiva y comprometida con el desarrollo de nuestros hijos.</p>
+    </div>
+  </div>
+</div>
 </body>
 </html>
