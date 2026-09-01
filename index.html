@@ -891,6 +891,7 @@
       <div class="dir bio" onclick="openBio('jgc')" tabindex="0" role="button" aria-label="Ver perfil de Juan Guillermo Cartagena Torrealba" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('jgc');}"><div class="silueta"><img src="assets/JGC.jpg" alt="Juan Guillermo Cartagena Torrealba"><span class="hint">Ver detalle</span></div><span class="cargo">Director</span><span class="nom">Juan Guillermo Cartagena Torrealba</span><span class="vermas">👆 Ver perfil</span></div>
       <div class="dir bio" onclick="openBio('ga')" tabindex="0" role="button" aria-label="Ver perfil de Grace Arriagada Basaure" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('ga');}"><div class="silueta"><img src="assets/GA.jpg" alt="Grace Arriagada Basaure"><span class="hint">Ver detalle</span></div><span class="cargo">Directora</span><span class="nom">Grace Arriagada Basaure</span><span class="vermas">👆 Ver perfil</span></div>
       <div class="dir bio" onclick="openBio('pc')" tabindex="0" role="button" aria-label="Ver perfil de Paulina Contreras" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('pc');}"><div class="silueta"><img src="assets/PC.jpg" alt="Paulina Contreras"><span class="hint">Ver detalle</span></div><span class="cargo">Directora</span><span class="nom">Paulina Contreras</span><span class="vermas">👆 Ver perfil</span></div>
+      <div class="dir bio" onclick="openBio('rd')" tabindex="0" role="button" aria-label="Ver perfil de Ronald Díaz Quiroz" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openBio('rd');}"><div class="silueta"><img src="assets/RD.jpg" alt="Ronald Díaz Quiroz"><span class="hint">Ver detalle</span></div><span class="cargo">Director</span><span class="nom">Ronald Díaz Quiroz</span><span class="vermas">👆 Ver perfil</span></div>
     </div>
 
     <div class="equipo" style="max-width:700px">
@@ -1020,7 +1021,10 @@ var BIOS={
     cierre:'Creo en una comunidad escolar cercana y bien comunicada, donde cada familia se sienta parte, escuchada y con ganas de participar por el bienestar de nuestros hijos.'},
   cg:{img:'assets/CG.jpg',nom:'Carolina Garrido',roles:['Tesorera · Psicóloga','Mamá de Samuel (3° Básico) y Alonso (Kínder)'],
     paras:['Madre de Samuel, de 3° Básico, y Alonso, de Kínder. Psicóloga de profesión, con orientación al área laboral y al desarrollo profesional de las personas.'],
-    cierre:'Me interesa especialmente comprender a las personas, sus intereses, motivaciones y fortalezas, acompañándolas en la búsqueda de oportunidades que les permitan desarrollarse y alcanzar su potencial.'}
+    cierre:'Me interesa especialmente comprender a las personas, sus intereses, motivaciones y fortalezas, acompañándolas en la búsqueda de oportunidades que les permitan desarrollarse y alcanzar su potencial.'},
+  rd:{img:'assets/RD.jpg',nom:'Ronald Díaz Quiroz',roles:['Director · Ingeniero','Apoderado de 2° BT y 4° BE'],
+    paras:['Ingeniero de profesión y apoderado de 2° BT y 4° BE. Con 7 años en la comunidad Trewheliana, he participado activamente en las actividades del colegio, aportando con compromiso, disposición y entusiasmo.'],
+    cierre:'Espero seguir contribuyendo al fortalecimiento de nuestra comunidad, promoviendo la participación, la colaboración y el bienestar de nuestros niños.'}
 };
 function openBio(id){
   var b=BIOS[id||'jach']; if(!b) return;
