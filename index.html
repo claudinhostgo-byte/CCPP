@@ -97,6 +97,29 @@
   .bandera .bar small strong{color:var(--dorado)}
   @media(max-width:600px){.bandera{display:flex}}
 
+  /* HERO EVENTO: slogan + 5 pilares */
+  .hero.evento{padding:64px 0 70px}
+  .hero.evento h1{font-size:2.6rem;margin-bottom:10px}
+  .hero.evento .sub{font-size:1.02rem;opacity:.92;max-width:720px;margin-bottom:26px}
+  .pilares{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:920px;margin:0 0 28px}
+  .pilares li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:14px 16px}
+  .pilares .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--dorado);color:#3a2d09;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .pilares b{display:block;font-weight:700;font-size:1rem;line-height:1.25;margin-bottom:3px}
+  .pilares small{display:block;font-size:.84rem;opacity:.88;line-height:1.45}
+  .plazo-hero{display:inline-block;background:rgba(212,168,59,.16);border:1px solid rgba(212,168,59,.55);color:#fff;border-radius:20px;padding:7px 14px;font-size:.84rem;font-weight:600;line-height:1.4;margin-bottom:16px}
+  .plazo-hero strong{color:var(--dorado)}
+
+  /* MANIFIESTO: lema del programa + bandera */
+  .manifiesto{background:#fff;padding:56px 0;border-bottom:1px solid var(--linea)}
+  .manifiesto .wrap{max-width:900px;text-align:center}
+  .manifiesto .tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;padding:6px 15px;border-radius:20px;margin-bottom:14px}
+  .manifiesto h2{font-size:1.95rem;font-weight:800;color:var(--navy);line-height:1.2;letter-spacing:-.4px;margin-bottom:14px}
+  .manifiesto p{color:#3a4854;font-size:1.05rem;font-style:italic;max-width:760px;margin:0 auto 24px}
+  .manifiesto .bandera{margin-top:0;background:#e2edf8;border-color:#cfdcec;color:var(--navy);text-align:left}
+  .manifiesto .bandera .bar .track{background:#fff}
+  .manifiesto .bandera .bar small{opacity:1}
+  .manifiesto .bandera .bar small strong{color:#9a7415}
+
   /* PRINCIPIOS */
   .principios{background:var(--navy);color:#fff;padding:30px 0}
   .principios .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
@@ -255,6 +278,17 @@
     .hero{padding:64px 0 72px}
     .hero h1{font-size:2.1rem}
     .sec-head h2{font-size:1.75rem}
+    /* Hero evento en móvil: liviano y directo */
+    .hero.evento{padding:34px 0 48px}
+    .hero.evento h1{font-size:1.8rem}
+    .hero.evento .kicker{padding-right:84px;margin-bottom:12px}
+    .hero.evento .bg-video{display:none}
+    .hero.evento .sello{top:16px;bottom:auto;right:16px;width:66px;height:66px;padding:7px}
+    .pilares{grid-template-columns:1fr;gap:10px}
+    .pilares li{padding:12px 14px}
+    .hero.evento .cta a{flex:1 1 100%;text-align:center}
+    .manifiesto{padding:40px 0}
+    .manifiesto h2{font-size:1.45rem}
   }
 
   /* Trigger Nord Anglia */
@@ -336,19 +370,38 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero evento">
   <video class="bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="heroVideo">
     <source src="assets/a_partir_de_esta_imagen_haz.mp4" type="video/mp4">
   </video>
   <div class="wrap">
     <div class="kicker">CCPP 2027 · Candidatura de la comunidad de apoderados</div>
-    <h1>Primero nuestros hijos: una comunidad que cumple, acompaña y construye futuro.</h1>
-    <p class="lema">Trabajamos con el colegio —no contra el colegio— sobre la base del Reglamento Interno, para transformar compromisos en acciones concretas, medibles y sostenibles.</p>
+    <h1>Participar es aportar, conectar y transformar.</h1>
+    <p class="sub">Cinco pilares para el Centro de Padres: nuestros caballos de batalla.</p>
+    <ol class="pilares">
+      <li><span class="n">1</span><div><b>Bienestar y convivencia</b><small>Recreos seguros, protocolos claros contra el bullying y convivencia en el mundo digital.</small></div></li>
+      <li><span class="n">2</span><div><b>Seguridad de nuestros hijos</b><small>Plan ante emergencias, retiro seguro, tránsito ordenado y un entorno tranquilo.</small></div></li>
+      <li><span class="n">3</span><div><b>Inclusión y apoyo a las familias</b><small>Mesa de inclusión, Escuela para Padres y apoyo a cursos y giras de estudio.</small></div></li>
+      <li><span class="n">4</span><div><b>Vida saludable y comunidad</b><small>Alimentación saludable, deporte, salud, convenios y actividades familiares.</small></div></li>
+      <li><span class="n">5</span><div><b>Comunicación y participación</b><small>Transparencia, cuenta pública, red de delegados y más familias socias.</small></div></li>
+    </ol>
+    <div class="plazo-hero">⏳ Inscripciones abiertas hasta el <strong>30 de septiembre</strong></div>
     <div class="cta">
-      <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">💳 Hazte socio</a>
-      <a class="primary" href="#urgente">Ver prioridades</a>
-      <a class="ghost" href="#plan">Conocer el plan</a>
+      <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">✅ Inscríbete y hazte socio</a>
+      <a class="ghost" href="#programa">Ver el programa completo ↓</a>
     </div>
+  </div>
+  <div class="sello">
+    <img src="assets/logo.png" alt="Logo CCPP 2027">
+  </div>
+</section>
+
+<!-- MANIFIESTO: lema del programa + bandera (aquí aterriza "Ver el programa completo") -->
+<section class="manifiesto" id="programa">
+  <div class="wrap">
+    <span class="tag imp">El programa completo</span>
+    <h2>Primero nuestros hijos: una comunidad que cumple, acompaña y construye futuro.</h2>
+    <p>Trabajamos con el colegio —no contra el colegio— sobre la base del Reglamento Interno, para transformar compromisos en acciones concretas, medibles y sostenibles.</p>
     <div class="bandera">
       <div class="flag">🚩</div>
       <div class="bar">
@@ -356,9 +409,6 @@
         <small>Nuestra bandera: recuperar la comunidad — de <strong>22%</strong> a más del <strong>50%</strong> de familias socias del Centro de Padres.</small>
       </div>
     </div>
-  </div>
-  <div class="sello">
-    <img src="assets/logo.png" alt="Logo CCPP 2027">
   </div>
 </section>
 
@@ -916,7 +966,7 @@
     <p>CCPP 2027 · Trewhela's School, Sede Chicureo — Candidatura de la comunidad de apoderados</p>
     <p class="fine">Iniciativa de apoderados. No constituye comunicación oficial del establecimiento.</p>
     <p class="fine">CCPP 2027 es una candidatura para integrar el Centro de Padres; no es el Centro de Padres vigente.</p>
-    <p class="fine">Programa v1.3 — 31 de agosto de 2026</p>
+    <p class="fine">Programa v1.4 — 3 de septiembre de 2026</p>
   </div>
 </footer>
 

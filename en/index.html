@@ -97,6 +97,29 @@
   .bandera .bar small strong{color:var(--dorado)}
   @media(max-width:600px){.bandera{display:flex}}
 
+  /* EVENT HERO: slogan + 5 pillars */
+  .hero.evento{padding:64px 0 70px}
+  .hero.evento h1{font-size:2.6rem;margin-bottom:10px}
+  .hero.evento .sub{font-size:1.02rem;opacity:.92;max-width:720px;margin-bottom:26px}
+  .pilares{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:920px;margin:0 0 28px}
+  .pilares li{display:flex;gap:14px;align-items:flex-start;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:14px 16px}
+  .pilares .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--dorado);color:#3a2d09;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center}
+  .pilares b{display:block;font-weight:700;font-size:1rem;line-height:1.25;margin-bottom:3px}
+  .pilares small{display:block;font-size:.84rem;opacity:.88;line-height:1.45}
+  .plazo-hero{display:inline-block;background:rgba(212,168,59,.16);border:1px solid rgba(212,168,59,.55);color:#fff;border-radius:20px;padding:7px 14px;font-size:.84rem;font-weight:600;line-height:1.4;margin-bottom:16px}
+  .plazo-hero strong{color:var(--dorado)}
+
+  /* MANIFESTO: program motto + banner */
+  .manifiesto{background:#fff;padding:56px 0;border-bottom:1px solid var(--linea)}
+  .manifiesto .wrap{max-width:900px;text-align:center}
+  .manifiesto .tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;padding:6px 15px;border-radius:20px;margin-bottom:14px}
+  .manifiesto h2{font-size:1.95rem;font-weight:800;color:var(--navy);line-height:1.2;letter-spacing:-.4px;margin-bottom:14px}
+  .manifiesto p{color:#3a4854;font-size:1.05rem;font-style:italic;max-width:760px;margin:0 auto 24px}
+  .manifiesto .bandera{margin-top:0;background:#e2edf8;border-color:#cfdcec;color:var(--navy);text-align:left}
+  .manifiesto .bandera .bar .track{background:#fff}
+  .manifiesto .bandera .bar small{opacity:1}
+  .manifiesto .bandera .bar small strong{color:#9a7415}
+
   /* PRINCIPLES */
   .principios{background:var(--navy);color:#fff;padding:30px 0}
   .principios .grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px;text-align:center}
@@ -226,6 +249,17 @@
     .hero{padding:64px 0 72px}
     .hero h1{font-size:2.1rem}
     .sec-head h2{font-size:1.75rem}
+    /* Event hero on mobile: light and direct */
+    .hero.evento{padding:34px 0 48px}
+    .hero.evento h1{font-size:1.8rem}
+    .hero.evento .kicker{padding-right:84px;margin-bottom:12px}
+    .hero.evento .bg-video{display:none}
+    .hero.evento .sello{top:16px;bottom:auto;right:16px;width:66px;height:66px;padding:7px}
+    .pilares{grid-template-columns:1fr;gap:10px}
+    .pilares li{padding:12px 14px}
+    .hero.evento .cta a{flex:1 1 100%;text-align:center}
+    .manifiesto{padding:40px 0}
+    .manifiesto h2{font-size:1.45rem}
   }
 </style>
 </head>
@@ -256,19 +290,38 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero evento">
   <video class="bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="heroVideo">
     <source src="../assets/a_partir_de_esta_imagen_haz.mp4" type="video/mp4">
   </video>
   <div class="wrap">
     <div class="kicker">CCPP 2027 · A parent community candidacy</div>
-    <h1>Our children first: a community that delivers, supports, and builds the future.</h1>
-    <p class="lema">We work with the school —not against it— on the basis of its Internal Regulations, to turn commitments into concrete, measurable, and lasting actions.</p>
+    <h1>To participate is to contribute, connect, and transform.</h1>
+    <p class="sub">Five pillars for the Parents' Association — our flagship priorities.</p>
+    <ol class="pilares">
+      <li><span class="n">1</span><div><b>Wellbeing and school climate</b><small>Safe recess, clear anti-bullying protocols, and respect in the digital world.</small></div></li>
+      <li><span class="n">2</span><div><b>Our children's safety</b><small>Emergency plan, safe pickup, orderly traffic, and a calm surrounding area.</small></div></li>
+      <li><span class="n">3</span><div><b>Inclusion and family support</b><small>Inclusion committee, Parenting School, and support for classes and study trips.</small></div></li>
+      <li><span class="n">4</span><div><b>Healthy living and community</b><small>Healthy food, sports, health, partnerships, and family activities.</small></div></li>
+      <li><span class="n">5</span><div><b>Communication and participation</b><small>Transparency, public reporting, a delegate network, and more member families.</small></div></li>
+    </ol>
+    <div class="plazo-hero">⏳ Registration open until <strong>September 30</strong></div>
     <div class="cta">
-      <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">💳 Become a member</a>
-      <a class="primary" href="#urgent">See priorities</a>
-      <a class="ghost" href="#plan">See the plan</a>
+      <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">✅ Sign up and become a member</a>
+      <a class="ghost" href="#programa">See the full program ↓</a>
     </div>
+  </div>
+  <div class="sello">
+    <img src="../assets/logo.png" alt="CCPP 2027 logo">
+  </div>
+</section>
+
+<!-- MANIFESTO: program motto + banner ("See the full program" lands here) -->
+<section class="manifiesto" id="programa">
+  <div class="wrap">
+    <span class="tag imp">The full program</span>
+    <h2>Our children first: a community that delivers, supports, and builds the future.</h2>
+    <p>We work with the school —not against it— on the basis of its Internal Regulations, to turn commitments into concrete, measurable, and lasting actions.</p>
     <div class="bandera">
       <div class="flag">🚩</div>
       <div class="bar">
@@ -276,9 +329,6 @@
         <small>Our banner: rebuilding the community — from <strong>22%</strong> to over <strong>50%</strong> of families as paid Association members.</small>
       </div>
     </div>
-  </div>
-  <div class="sello">
-    <img src="../assets/logo.png" alt="CCPP 2027 logo">
   </div>
 </section>
 
@@ -747,7 +797,7 @@
     <p>CCPP 2027 · Trewhela's School, Chicureo Campus — A parent community candidacy</p>
     <p class="fine">A parent-led initiative. This is not an official communication from the school.</p>
     <p class="fine">CCPP 2027 is a candidacy running for the Parents' Association; it is not the sitting Parents' Association.</p>
-    <p class="fine">Program v1.2 — August 22, 2026</p>
+    <p class="fine">Program v1.4 — September 3, 2026</p>
   </div>
 </footer>
 
