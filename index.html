@@ -46,7 +46,7 @@
   a{color:inherit}
   img{max-width:100%;display:block}
   .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-  section[id]{scroll-margin-top:82px}
+  section[id]{scroll-margin-top:122px}
 
   /* NAV */
   header.nav{position:sticky;top:0;z-index:50;background:rgba(10,46,92,.97);backdrop-filter:blur(8px);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.06)}
@@ -106,9 +106,22 @@
   .pilares .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--dorado);color:#3a2d09;font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center}
   .pilares b{display:block;font-weight:700;font-size:1rem;line-height:1.25;margin-bottom:3px}
   .pilares small{display:block;font-size:.84rem;opacity:.88;line-height:1.45}
-  .plazo-hero{display:inline-block;background:rgba(212,168,59,.16);border:1px solid rgba(212,168,59,.55);color:#fff;border-radius:20px;padding:7px 14px;font-size:.84rem;font-weight:600;line-height:1.4;margin-bottom:16px}
+  .plazo-hero{display:inline-block;background:rgba(212,168,59,.22);border:2px solid var(--dorado);color:#fff;border-radius:24px;padding:10px 18px;font-size:1rem;font-weight:700;line-height:1.4;margin-bottom:16px;animation:pulso 2.2s ease-out infinite}
   .plazo-hero strong{color:var(--dorado)}
+  .plazo-hero .cuenta2{display:inline-block;margin-left:8px;background:var(--dorado);color:#2b2104;border-radius:14px;padding:2px 10px;font-size:.82rem;font-weight:800;vertical-align:1px}
+  .plazo-hero .cuenta2:empty{display:none}
+  @keyframes pulso{0%,100%{box-shadow:0 0 0 0 rgba(212,168,59,.6)}60%{box-shadow:0 0 0 12px rgba(212,168,59,0)}}
+  @media(prefers-reduced-motion:reduce){.plazo-hero{animation:none}}
   .hero.evento .voto{font-size:.95rem;opacity:.92;max-width:680px;margin:0 0 18px;line-height:1.5}
+
+  /* AVISO URGENTE: plazo de votación (se oculta solo después del 9 de octubre) */
+  .aviso{position:sticky;top:70px;z-index:49;background:var(--dorado);color:#2b2104;border-bottom:3px solid #b8902c;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+  .aviso .wrap{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:10px 24px;font-size:.92rem;font-weight:700;text-align:center;line-height:1.35}
+  .aviso .cuenta{background:#2b2104;color:#fff;border-radius:20px;padding:4px 12px;font-size:.84rem;white-space:nowrap}
+  .aviso .cuenta:empty{display:none}
+  .aviso a{background:#fff;color:var(--navy);text-decoration:none;border-radius:8px;padding:7px 14px;font-size:.85rem;font-weight:700;white-space:nowrap;transition:.15s}
+  .aviso a:hover{background:var(--navy);color:#fff}
+  .aviso.oculto{display:none}
 
   /* MANIFIESTO: lema del programa + bandera */
   .manifiesto{background:#fff;padding:56px 0;border-bottom:1px solid var(--linea)}
@@ -290,6 +303,10 @@
     .hero.evento .cta a{flex:1 1 100%;text-align:center}
     .manifiesto{padding:40px 0}
     .manifiesto h2{font-size:1.45rem}
+    .aviso{position:static}
+    .aviso .wrap{padding:10px 16px;font-size:.86rem;gap:8px}
+    .aviso a{padding:6px 11px;font-size:.8rem}
+    .plazo-hero{font-size:.92rem;padding:9px 14px}
   }
 
   /* Trigger Nord Anglia */
@@ -371,6 +388,15 @@
   </div>
 </header>
 
+<div class="aviso" id="aviso" role="status">
+  <div class="wrap">
+    <span>🗳️ ÚLTIMO PLAZO: <u>viernes 9 de octubre</u> — regulariza tu cuota para poder votar</span>
+    <span class="cuenta" id="cuenta"></span>
+    <a href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">💳 Pagar ahora</a>
+    <a href="https://script.google.com/macros/s/AKfycbwbmwLGGHhNiiaziPreC0B58pcc6rZSlMwjOPBMSR0UHYR3iNuzFaWzgj5TQaIumlj7/exec" target="_blank" rel="noopener">🔎 ¿Estoy al día?</a>
+  </div>
+</div>
+
 <section class="hero evento">
   <video class="bg-video" autoplay muted loop playsinline preload="auto" aria-hidden="true" id="heroVideo">
     <source src="assets/a_partir_de_esta_imagen_haz.mp4" type="video/mp4">
@@ -386,7 +412,7 @@
       <li><span class="n">4</span><div><b>Vida saludable y comunidad</b><small>Alimentación saludable, deporte, salud, convenios y actividades familiares.</small></div></li>
       <li><span class="n">5</span><div><b>Comunicación y participación</b><small>Transparencia, cuenta pública, red de delegados y más familias socias.</small></div></li>
     </ol>
-    <div class="plazo-hero">🗳️ Último plazo para regularizar tu cuota y votar: <strong>viernes 9 de octubre</strong></div>
+    <div class="plazo-hero">🗳️ Último plazo para regularizar tu cuota y votar: <strong>viernes 9 de octubre</strong> <span class="cuenta2" id="cuenta2"></span></div>
     <p class="voto">Para votar la nueva lista del Centro de Padres 2027–2028 debes tener tu cuota al día. Cada voto suma para una directiva más representativa.</p>
     <div class="cta">
       <a class="socio" href="https://www.flow.cl/app/web/pagarBtnPago.php?token=mvnqquz" target="_blank" rel="noopener">💳 Paga tu cuota y vota</a>
@@ -975,7 +1001,7 @@
     <p>CCPP 2027 · Trewhela's School, Sede Chicureo — Candidatura de la comunidad de apoderados</p>
     <p class="fine">Iniciativa de apoderados. No constituye comunicación oficial del establecimiento.</p>
     <p class="fine">CCPP 2027 es una candidatura para integrar el Centro de Padres; no es el Centro de Padres vigente.</p>
-    <p class="fine">Programa v1.7 — 4 de octubre de 2026</p>
+    <p class="fine">Programa v1.8 — 4 de octubre de 2026</p>
   </div>
 </footer>
 
@@ -1021,6 +1047,20 @@
         btn.setAttribute('aria-expanded','false');
       }
     });
+  }
+
+  // Aviso de plazo: cuenta regresiva al 9 de octubre y auto-ocultar al día siguiente
+  var av = document.getElementById('aviso'), cu = document.getElementById('cuenta'), cu2 = document.getElementById('cuenta2');
+  if(av){
+    var fin = new Date(2026, 9, 9);              // 9 de octubre de 2026 (mes 0-indexado)
+    var h = new Date(), h0 = new Date(h.getFullYear(), h.getMonth(), h.getDate());
+    var dias = Math.round((fin - h0) / 86400000);
+    if(dias < 0){ av.classList.add('oculto'); }
+    else {
+      var txt = dias === 0 ? '¡Es hoy! Último día' : (dias === 1 ? '¡Vence mañana!' : 'Quedan ' + dias + ' días');
+      if(cu) cu.textContent = txt;
+      if(cu2) cu2.textContent = txt;
+    }
   }
 
   // Botón volver arriba
