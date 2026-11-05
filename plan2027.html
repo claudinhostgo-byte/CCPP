@@ -269,6 +269,24 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
 .card .m.resp{margin-top:8px;padding-top:8px;border-top:1px dashed var(--linea);font-size:.78rem}
 .card .m.resp .cmt{font-weight:700;color:var(--azul2)}
 .card .m.resp span+span{color:var(--dorado-txt);font-weight:600}
+.gfilter{position:sticky;top:calc(env(safe-area-inset-top,0px) + 70px);z-index:40;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:12px 14px;margin-bottom:18px;box-shadow:0 8px 22px rgba(12,64,133,.10)}
+.gft{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--gris);margin-right:2px}
+.gf{display:inline-flex;align-items:center;gap:7px;font-size:.8rem;font-weight:600;color:var(--texto2);background:var(--band);border:1px solid var(--linea);border-radius:20px;padding:6px 12px 6px 9px;cursor:pointer;user-select:none;transition:.15s}
+.gf:hover{border-color:var(--azul2)}
+.gf input{position:absolute;opacity:0;width:1px;height:1px}
+.gf i{width:16px;height:16px;border-radius:5px;border:2px solid var(--fc);background:transparent;flex:0 0 auto;display:flex;align-items:center;justify-content:center;transition:.15s}
+.gf input:checked + i{background:var(--fc)}
+.gf input:checked + i:after{content:"";width:4px;height:8px;border:solid #fff;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.gf input:focus-visible + i{outline:2px solid var(--dorado);outline-offset:2px}
+.gf:has(input:not(:checked)){opacity:.55}
+.gf .n{font-variant-numeric:tabular-nums;color:var(--gris);font-weight:700;font-size:.72rem}
+.gfa{margin-left:auto;display:flex;gap:6px}
+.gfa button{font-family:var(--f);font-size:.72rem;font-weight:700;color:var(--azul2);background:transparent;border:1px solid var(--linea);border-radius:20px;padding:5px 11px;cursor:pointer}
+.gfa button:hover{border-color:var(--azul2)}
+.gfa .gclear{background:var(--dorado-suave);color:var(--dorado-txt);border-color:var(--dorado)}
+.gempty{text-align:center;color:var(--gris);font-style:italic;margin:0 0 14px}
+.ghid{display:none!important}
+@media(max-width:820px){.gfilter{position:static}.gfa{margin-left:0}}
 .gnote{max-width:880px;margin:18px auto 0;font-size:.85rem;color:var(--gris);font-style:italic;text-align:center;line-height:1.55}
 @media(max-width:820px){.gantt{min-width:820px;--gcols:190px repeat(10,1fr)}.glabel{padding:9px 12px}}
 
@@ -450,6 +468,12 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
       <h2>Plan de trabajo</h2>
       <p>Cuándo se prepara y cuándo ocurre cada cosa, cruzado con los feriados de 2027 y con el calendario que el colegio siguió en 2026 según sus comunicaciones.</p>
     </div>
+    <div class="gfilter" role="group" aria-label="Elegir qué grupos mostrar">
+      <span class="gft">Mostrar</span>
+      <label class="gf"><input type="checkbox" value="mayor" checked><i style="--fc:var(--dorado)"></i>Eventos mayores <span class="n">5</span></label><label class="gf"><input type="checkbox" value="menor" checked><i style="--fc:var(--p4)"></i>Eventos menores y campañas <span class="n">7</span></label><label class="gf"><input type="checkbox" value="perm" checked><i style="--fc:var(--azul2)"></i>Trabajos permanentes <span class="n">5</span></label><label class="gf"><input type="checkbox" value="temp" checked><i style="--fc:var(--p3)"></i>Temporadas <span class="n">2</span></label><label class="gf"><input type="checkbox" value="gest" checked><i style="--fc:var(--p5)"></i>Gestión con Dirección <span class="n">5</span></label><label class="gf"><input type="checkbox" value="colegio" checked><i style="--fc:var(--gris2)"></i>Calendario del colegio <span class="n">8</span></label><label class="gf"><input type="checkbox" value="bloq" checked><i style="--fc:var(--p2)"></i>Bloqueos <span class="n">15</span></label>
+      <span class="gfa"><button type="button" class="gclear" hidden>Quitar filtro de pilar o comisión</button><button type="button" data-a="all">Todo</button><button type="button" data-a="none">Limpiar</button></span>
+    </div>
+    <p class="gempty" hidden>Marca al menos un grupo para ver actividades. Los bloqueos se pueden mostrar solos o junto a cualquier grupo.</p>
     <div class="gkey">
       <span><i class="k prep"></i>Preparación</span>
       <span><i class="k ex"></i>Ejecución</span>
@@ -489,8 +513,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bl" style="grid-column:11"><i class="blanda" style="left:auto;right:2px">Cierre del año escolar</i></div>
       </div>
       <div class="gbody">
-      <div class="grow ggroup"><div class="glabel"><b>Trabajos permanentes</b><span>Corren todo el año. No tienen fecha: tienen dueño y rutina.</span></div><div class="gcells"></div></div>
-      <div class="grow" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="perm" class="grow ggroup"><div class="glabel"><b>Trabajos permanentes</b><span>Corren todo el año. No tienen fecha: tienen dueño y rutina.</span></div><div class="gcells"></div></div>
+      <div data-g="perm" class="grow" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Lost &amp; Found</span><span class="pil">Pilar 1</span><span class="cm">Lost &amp; Found</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -504,7 +528,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar ex perm" style="grid-column:2/12"><span>en marcha desde marzo</span></div>
       </div>
-      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="perm" class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Ventas en recreos (kiosko)</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -518,7 +542,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar ex perm" style="grid-column:2/12"><span>asignación anual, operación semanal</span></div>
       </div>
-      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+      <div data-g="perm" class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
         <div class="glabel"><span class="t">Red de apoderados nuevos</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -532,7 +556,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar ex perm" style="grid-column:2/12"><span>activa todo el año</span></div>
       </div>
-      <div class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+      <div data-g="perm" class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
         <div class="glabel"><span class="t">Reunión mensual con Dirección</span><span class="pil">Pilar 5</span><span class="cm">Comunicación</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -546,7 +570,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar ex perm" style="grid-column:2/12"><span>último jueves de cada mes</span></div>
       </div>
-      <div class="grow" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+      <div data-g="perm" class="grow" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
         <div class="glabel"><span class="t">Convenios y beneficios</span><span class="pil">Pilar 3</span><span class="cm">Beneficios &amp; Convenios</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -561,8 +585,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex perm" style="grid-column:2/12"><span>base actualizada en marzo · altas todo el año · listas 2028 en dic</span></div>
         <div class="hito" style="grid-column:11"></div>
       </div>
-      <div class="grow ggroup"><div class="glabel"><b>Eventos mayores</b><span>Dos al arranque del año y tres seguidos de agosto a noviembre.</span></div><div class="gcells"></div></div>
-      <div class="grow" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="mayor" class="grow ggroup"><div class="glabel"><b>Eventos mayores</b><span>Dos al arranque del año y tres seguidos de agosto a noviembre.</span></div><div class="gcells"></div></div>
+      <div data-g="mayor" class="grow" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Parents Games</span><span class="pil">Pilar 1</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -577,7 +601,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:2/3"><span>sáb 20 mar · inter-sede</span></div>
         <div class="hito" style="grid-column:2"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="mayor" class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Café Concert</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -593,7 +617,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:3/4"><span>viernes 16 de abril</span></div>
         <div class="hito" style="grid-column:3"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="mayor" class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Bingo</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -609,7 +633,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:7/8"><span>1ª quincena ago</span></div>
         <div class="hito" style="grid-column:7"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="mayor" class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Fonda Trewhelana</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -625,7 +649,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:8/9"><span>sáb 4 sep, con bailes</span></div>
         <div class="hito" style="grid-column:8"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="mayor" class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Feria Navideña</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -641,8 +665,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:10/11"><span>noviembre</span></div>
         <div class="hito" style="grid-column:10"></div>
       </div>
-      <div class="grow ggroup"><div class="glabel"><b>Temporadas</b><span>Semanas seguidas. Necesitan coordinador fijo, no equipo de evento.</span></div><div class="gcells"></div></div>
-      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="temp" class="grow ggroup"><div class="glabel"><b>Temporadas</b><span>Semanas seguidas. Necesitan coordinador fijo, no equipo de evento.</span></div><div class="gcells"></div></div>
+      <div data-g="temp" class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Campeonato fútbol apoderados</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -658,7 +682,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:3/8"><span>liga de abril a agosto</span></div>
         <div class="hito" style="grid-column:7"></div>
       </div>
-      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="temp" class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Clases de cueca</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -674,8 +698,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:7/9"><span>cierra en la Fonda</span></div>
         <div class="hito" style="grid-column:8"></div>
       </div>
-      <div class="grow ggroup"><div class="glabel"><b>Gestión con Dirección</b><span>El trabajo por el que los eligieron. Compite por agenda, no por manos.</span></div><div class="gcells"></div></div>
-      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+      <div data-g="gest" class="grow ggroup"><div class="glabel"><b>Gestión con Dirección</b><span>El trabajo por el que los eligieron. Compite por agenda, no por manos.</span></div><div class="gcells"></div></div>
+      <div data-g="gest" class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
         <div class="glabel"><span class="t">Mesa de aprendizaje e inclusión</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -691,7 +715,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
         <div class="hito" style="grid-column:4"></div>
       </div>
-      <div class="grow" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)">
+      <div data-g="gest" class="grow" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)">
         <div class="glabel"><span class="t">Revisión de protocolos</span><span class="pil">Pilar 2</span><span class="cm">Seguridad &amp; Infraestructura</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -707,7 +731,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
         <div class="hito" style="grid-column:4"></div>
       </div>
-      <div class="grow" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="gest" class="grow" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Encuesta de clima por curso</span><span class="pil">Pilar 1</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -723,7 +747,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:5/6"><span>junio</span></div>
         <div class="hito" style="grid-column:5"></div>
       </div>
-      <div class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+      <div data-g="gest" class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
         <div class="glabel"><span class="t">Informe semestral de compromisos</span><span class="pil">Pilar 5</span><span class="cm">Comunicación</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -739,7 +763,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:7/8"><span>agosto</span></div>
         <div class="hito" style="grid-column:7"></div>
       </div>
-      <div class="grow" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+      <div data-g="gest" class="grow" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
         <div class="glabel"><span class="t">Cierre y rendición de cuentas</span><span class="pil">Pilar 5</span><span class="cm">Directiva · sin comisión</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -755,8 +779,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:11/12"><span>diciembre</span></div>
         <div class="hito" style="grid-column:11"></div>
       </div>
-      <div class="grow ggroup"><div class="glabel"><b>Eventos menores y campañas</b><span>Si falta equipo, estos se cancelan primero.</span></div><div class="gcells"></div></div>
-      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+      <div data-g="menor" class="grow ggroup"><div class="glabel"><b>Eventos menores y campañas</b><span>Si falta equipo, estos se cancelan primero.</span></div><div class="gcells"></div></div>
+      <div data-g="menor" class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
         <div class="glabel"><span class="t">Encuentro de apoderados nuevos</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -771,7 +795,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:2/3"><span>¿fusionar con Parents Games?</span></div>
         <div class="hito" style="grid-column:2"></div>
       </div>
-      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="menor" class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Vacunación influenza</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -786,7 +810,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:2/3"><span>marzo</span></div>
         <div class="hito" style="grid-column:2"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+      <div data-g="menor" class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
         <div class="glabel"><span class="t">Semana Literaria</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -802,7 +826,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:4/5"><span>mayo · Día de las Letras</span></div>
         <div class="hito" style="grid-column:4"></div>
       </div>
-      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="menor" class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Campaña Hogar San Ricardo</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -818,7 +842,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
         <div class="hito" style="grid-column:4"></div>
       </div>
-      <div class="grow" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="menor" class="grow" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Feria de las Pulgas</span><span class="pil">Pilar 4</span><span class="cm">Comunidad y Eventos</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -834,7 +858,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:9/10"><span>octubre</span></div>
         <div class="hito" style="grid-column:9"></div>
       </div>
-      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="menor" class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Teletón</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -850,7 +874,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:10/11"><span>noviembre</span></div>
         <div class="hito" style="grid-column:10"></div>
       </div>
-      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+      <div data-g="menor" class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
         <div class="glabel"><span class="t">Juguetes Ángel de la Guarda</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -866,8 +890,8 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="bar ex" style="grid-column:10/12"><span>entrega en diciembre</span></div>
         <div class="hito" style="grid-column:11"></div>
       </div>
-      <div class="grow ggroup colg"><div class="glabel"><b>Calendario del colegio</b><span>Lo que el colegio hizo en 2026, según sus correos. Compite por la atención de las familias.</span></div><div class="gcells"></div></div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow ggroup colg"><div class="glabel"><b>Calendario del colegio</b><span>Lo que el colegio hizo en 2026, según sus correos. Compite por la atención de las familias.</span></div><div class="gcells"></div></div>
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Inicio de clases · reuniones de apoderados</span><span class="sub">2026: 2 de marzo</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -881,7 +905,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:2/3"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Semana Aniversario</span><span class="sub">2026: 20–23 abr</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -895,7 +919,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:3/4"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Día de las Letras · Día del Estudiante</span><span class="sub">2026: 13 y 21 may</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -909,7 +933,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:4/5"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Reuniones de apoderados 2° semestre</span><span class="sub">2026: 14–22 jul</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -923,7 +947,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:6/7"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Festival de la Voz · vacunación escolar</span><span class="sub">2026: 28 y 31 ago</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -937,7 +961,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:7/8"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Semana de la Chilenidad · bailes</span><span class="sub">2026: 7–11 sep</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -951,7 +975,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:8/9"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">Re-matrícula · elección CCPP · Ciencias · Cup</span><span class="sub">2026: octubre</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -965,7 +989,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
         <div class="cell" style="grid-column:11"></div>
         <div class="bar col" style="grid-column:9/10"><span>colegio</span></div>
       </div>
-      <div class="grow colrow">
+      <div data-g="colegio" class="grow colrow">
         <div class="glabel"><span class="t">SIMCE 4° · graduación · Final Show</span><span class="sub">2026: oct – 2 dic</span></div>
         <div class="cell" style="grid-column:2"></div>
         <div class="cell" style="grid-column:3"></div>
@@ -999,7 +1023,7 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
       </div>
     </div>
     </div>
-    <p class="gnote">Pasa el cursor sobre una franja para ver qué bloquea. Lo marcado «est.» se proyecta desde el calendario 2026 del colegio y hay que confirmarlo con el Plan de Funcionamiento 2027, que en 2026 llegó el 26 de enero. Las barras de preparación de marzo arrancan en realidad en enero y febrero.</p>
+    <p class="gnote">Usa las casillas de arriba para mostrar solo los grupos que quieres comparar; las selecciones se suman. Pasa el cursor sobre una franja para ver qué bloquea. Lo marcado «est.» se proyecta desde el calendario 2026 del colegio y hay que confirmarlo con el Plan de Funcionamiento 2027, que en 2026 llegó el 26 de enero. Las barras de preparación de marzo arrancan en realidad en enero y febrero.</p>
   </div>
 </section>
 
@@ -1046,34 +1070,34 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
       <div class="etapa">
         <div class="num"><b>Marzo</b><small>6</small></div>
         <div class="mitems">
-          <div class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Convenios y beneficios</span><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: ene–feb</span></div><div class="m"><b>Lanzamiento en marzo:</b> base de 23 convenios revisada y publicada, aclarando los 9 que figuran «en gestión»</div><div class="m">Después, altas y bajas todo el año; es argumento central de la campaña de socios</div></div>
-          <div class="card" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Parents Games</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m"><b>Sábado 20 de marzo</b> (propuesta) · con el CCPP de Providencia y el colegio</div><div class="m">En 2026 fue el sábado 28 de marzo y sirvió como bienvenida a familias nuevas</div></div>
-          <div class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Encuentro de apoderados nuevos</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: enero</span></div><div class="m">Primera quincena, antes de Semana Santa</div><div class="m">Puede fusionarse con Parents Games, que ya cumple ese propósito</div></div>
-          <div class="card" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Lost &amp; Found</span><div class="m resp"><span class="cmt">Lost &amp; Found</span><span>Carolina y Cristina (por confirmar)</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m">Sistema permanente, no evento</div></div>
-          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Ventas en recreos (kiosko)</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: ene–feb</span></div><div class="m">Bases y sorteo por curso</div></div>
-          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Vacunación influenza</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: febrero</span></div><div class="m">En 2026 la campaña partió en marzo (aviso del 10 de marzo)</div></div>
+          <div data-g="perm" class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Convenios y beneficios</span><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: ene–feb</span></div><div class="m"><b>Lanzamiento en marzo:</b> base de 23 convenios revisada y publicada, aclarando los 9 que figuran «en gestión»</div><div class="m">Después, altas y bajas todo el año; es argumento central de la campaña de socios</div></div>
+          <div data-g="mayor" class="card" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Parents Games</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m"><b>Sábado 20 de marzo</b> (propuesta) · con el CCPP de Providencia y el colegio</div><div class="m">En 2026 fue el sábado 28 de marzo y sirvió como bienvenida a familias nuevas</div></div>
+          <div data-g="menor" class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Encuentro de apoderados nuevos</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: enero</span></div><div class="m">Primera quincena, antes de Semana Santa</div><div class="m">Puede fusionarse con Parents Games, que ya cumple ese propósito</div></div>
+          <div data-g="perm" class="card" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Lost &amp; Found</span><div class="m resp"><span class="cmt">Lost &amp; Found</span><span>Carolina y Cristina (por confirmar)</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m">Sistema permanente, no evento</div></div>
+          <div data-g="perm" class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Ventas en recreos (kiosko)</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: ene–feb</span></div><div class="m">Bases y sorteo por curso</div></div>
+          <div data-g="menor" class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Vacunación influenza</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: febrero</span></div><div class="m">En 2026 la campaña partió en marzo (aviso del 10 de marzo)</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Abril</b><small>2</small></div>
         <div class="mitems">
-          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Café Concert</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: febrero</span></div><div class="m"><b>Viernes 16 de abril</b> · necesita 6–8 semanas</div><div class="m">Queda el viernes antes de la Semana Aniversario (est. 19–22 abr)</div></div>
-          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campeonato fútbol apoderados</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: marzo</span></div><div class="m">Liga de abril a agosto</div><div class="m">Riesgo: preemergencias ambientales suspenden deporte los sábados de mayo y junio</div></div>
+          <div data-g="mayor" class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Café Concert</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: febrero</span></div><div class="m"><b>Viernes 16 de abril</b> · necesita 6–8 semanas</div><div class="m">Queda el viernes antes de la Semana Aniversario (est. 19–22 abr)</div></div>
+          <div data-g="temp" class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campeonato fútbol apoderados</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: marzo</span></div><div class="m">Liga de abril a agosto</div><div class="m">Riesgo: preemergencias ambientales suspenden deporte los sábados de mayo y junio</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Mayo</b><small>4</small></div>
         <div class="mitems">
-          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Semana Literaria</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: marzo</span></div><div class="m">Junto al Día de las Letras del colegio (2026: miércoles 13 de mayo)</div><div class="m">Se movió desde abril para no chocar con el Aniversario</div></div>
-          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campaña Hogar San Ricardo</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: abril</span></div><div class="m">El colegio la hizo en mayo de 2026: sumarse, no duplicar</div></div>
-          <div class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Mesa de aprendizaje e inclusión</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: abril</span></div><div class="m">Con Dirección: apoyos, cómo se piden, plazos</div></div>
-          <div class="card" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)"><span class="t">Revisión de protocolos</span><div class="m resp"><span class="cmt">Seguridad &amp; Infraestructura</span><span>Rodrigo y Leo</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 2</span><span class="prep">Prep: abril</span></div><div class="m">Ingreso, retiro y salidas pedagógicas</div></div>
+          <div data-g="menor" class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Semana Literaria</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: marzo</span></div><div class="m">Junto al Día de las Letras del colegio (2026: miércoles 13 de mayo)</div><div class="m">Se movió desde abril para no chocar con el Aniversario</div></div>
+          <div data-g="menor" class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campaña Hogar San Ricardo</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: abril</span></div><div class="m">El colegio la hizo en mayo de 2026: sumarse, no duplicar</div></div>
+          <div data-g="gest" class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Mesa de aprendizaje e inclusión</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: abril</span></div><div class="m">Con Dirección: apoyos, cómo se piden, plazos</div></div>
+          <div data-g="gest" class="card" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)"><span class="t">Revisión de protocolos</span><div class="m resp"><span class="cmt">Seguridad &amp; Infraestructura</span><span>Rodrigo y Leo</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 2</span><span class="prep">Prep: abril</span></div><div class="m">Ingreso, retiro y salidas pedagógicas</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Junio</b><small>1</small></div>
         <div class="mitems">
-          <div class="card" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Encuesta de clima por curso</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag media">Media</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m">Cerrar antes del 18 de junio: después vienen las vacaciones de invierno</div></div>
+          <div data-g="gest" class="card" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Encuesta de clima por curso</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag media">Media</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m">Cerrar antes del 18 de junio: después vienen las vacaciones de invierno</div></div>
         </div>
       </div>
       <div class="etapa rest">
@@ -1083,36 +1107,36 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
       <div class="etapa">
         <div class="num"><b>Agosto</b><small>3</small></div>
         <div class="mitems">
-          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Bingo</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m"><b>Primera quincena</b> · hito de recaudación a mitad de año</div><div class="m">Evitar fin de mes: Festival de la Voz del colegio (2026: viernes 28) y vacunación escolar</div></div>
-          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Clases de cueca</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: julio</span></div><div class="m">Preparan los bailes que se presentan en la Fonda</div></div>
-          <div class="card" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Informe semestral de compromisos</span><div class="m resp"><span class="cmt">Comunicación</span><span>Paulina y Claudio</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: julio</span></div><div class="m">Avance del colegio, con indicadores</div></div>
+          <div data-g="mayor" class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Bingo</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m"><b>Primera quincena</b> · hito de recaudación a mitad de año</div><div class="m">Evitar fin de mes: Festival de la Voz del colegio (2026: viernes 28) y vacunación escolar</div></div>
+          <div data-g="temp" class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Clases de cueca</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: julio</span></div><div class="m">Preparan los bailes que se presentan en la Fonda</div></div>
+          <div data-g="gest" class="card" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Informe semestral de compromisos</span><div class="m resp"><span class="cmt">Comunicación</span><span>Paulina y Claudio</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: julio</span></div><div class="m">Avance del colegio, con indicadores</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Sept.</b><small>1</small></div>
         <div class="mitems">
-          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Fonda Trewhelana</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: julio</span></div><div class="m"><b>Sábado 4 de septiembre</b>, con los bailes de los niños dentro de la fonda</div><div class="m">En 2026 la fonda fue el sábado 5; los bailes, el 8 y 9 entre semana</div><div class="m"><span class="tag ya">Cambio</span> Requiere acuerdo con Dirección</div></div>
+          <div data-g="mayor" class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Fonda Trewhelana</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: julio</span></div><div class="m"><b>Sábado 4 de septiembre</b>, con los bailes de los niños dentro de la fonda</div><div class="m">En 2026 la fonda fue el sábado 5; los bailes, el 8 y 9 entre semana</div><div class="m"><span class="tag ya">Cambio</span> Requiere acuerdo con Dirección</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Octubre</b><small>1</small></div>
         <div class="mitems">
-          <div class="card" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Feria de las Pulgas</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: agosto</span></div><div class="m">Mes saturado: re-matrícula, elección CCPP, Feria de Ciencias, Cup, dos fines de semana largos</div></div>
+          <div data-g="menor" class="card" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Feria de las Pulgas</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: agosto</span></div><div class="m">Mes saturado: re-matrícula, elección CCPP, Feria de Ciencias, Cup, dos fines de semana largos</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Nov.</b><small>3</small></div>
         <div class="mitems">
-          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Teletón</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">En 2026 el colegio la llevó (alcancías y reciclaje con colegios de Colina): sumarse</div></div>
-          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Feria Navideña</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: septiembre</span></div><div class="m">Sin bingo: ahora son dos producciones distintas</div></div>
-          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Juguetes Ángel de la Guarda</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">Entrega en diciembre</div></div>
+          <div data-g="menor" class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Teletón</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">En 2026 el colegio la llevó (alcancías y reciclaje con colegios de Colina): sumarse</div></div>
+          <div data-g="mayor" class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Feria Navideña</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: septiembre</span></div><div class="m">Sin bingo: ahora son dos producciones distintas</div></div>
+          <div data-g="menor" class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Juguetes Ángel de la Guarda</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">Entrega en diciembre</div></div>
         </div>
       </div>
       <div class="etapa">
         <div class="num"><b>Dic.</b><small>2</small></div>
         <div class="mitems">
-          <div class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Descuentos listas escolares 2028</span><div class="m">Hito anual dentro del trabajo permanente de convenios</div><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: octubre</span></div></div>
-          <div class="card" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Cierre y rendición de cuentas</span><div class="m resp"><span class="cmt">Directiva · sin comisión</span><span>Por definir</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: noviembre</span></div><div class="m">Antes del 8 de diciembre; más encuesta a las familias</div></div>
+          <div data-g="perm" class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Descuentos listas escolares 2028</span><div class="m">Hito anual dentro del trabajo permanente de convenios</div><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: octubre</span></div></div>
+          <div data-g="gest" class="card" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Cierre y rendición de cuentas</span><div class="m resp"><span class="cmt">Directiva · sin comisión</span><span>Por definir</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: noviembre</span></div><div class="m">Antes del 8 de diciembre; más encuesta a las familias</div></div>
         </div>
       </div>
     </div>
@@ -1228,6 +1252,39 @@ footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
     el.addEventListener('blur', hide);
   });
   window.addEventListener('scroll', hide, {passive:true});
+})();
+</script>
+<script>
+(function(){
+  var boxes=[].slice.call(document.querySelectorAll('.gfilter input'));
+  var empty=document.querySelector('.gempty');
+  var clr=document.querySelector('.gclear');
+  function clearDim(){
+    [].forEach.call(document.querySelectorAll('.dim'), function(el){ el.classList.remove('dim'); });
+    [].forEach.call(document.querySelectorAll('#legend .lg'), function(x){ x.setAttribute('aria-pressed','true'); });
+    [].forEach.call(document.querySelectorAll('.cbtn'), function(x){ x.setAttribute('aria-pressed','false'); });
+    sync();
+  }
+  function sync(){ if(clr) clr.hidden = !document.querySelector('.card.dim, .grow.dim'); }
+  if(clr) clr.addEventListener('click', clearDim);
+  document.addEventListener('click', function(e){ if(e.target.closest('#legend .lg, .cbtn')) setTimeout(sync,0); });
+  function apply(){
+    clearDim();
+    var on={}; boxes.forEach(function(b){ on[b.value]=b.checked; });
+    [].forEach.call(document.querySelectorAll('[data-g]'), function(el){ el.classList.toggle('ghid', !on[el.dataset.g]); });
+    [].forEach.call(document.querySelectorAll('.gover, .blabels'), function(el){ el.classList.toggle('ghid', !on.bloq); });
+    [].forEach.call(document.querySelectorAll('#calendario .etapa:not(.rest)'), function(et){
+      var vis=[].some.call(et.querySelectorAll('.card'), function(c){ return !c.classList.contains('ghid'); });
+      et.classList.toggle('ghid', !vis);
+    });
+    var any=boxes.some(function(b){ return b.value!=='bloq' && b.checked; });
+    if(empty) empty.hidden=any;
+  }
+  boxes.forEach(function(b){ b.addEventListener('change', apply); });
+  [].forEach.call(document.querySelectorAll('.gfa button'), function(btn){
+    btn.addEventListener('click', function(){ var v=btn.dataset.a==='all'; boxes.forEach(function(b){ b.checked=v; }); apply(); });
+  });
+  apply();
 })();
 </script>
 
