@@ -1,0 +1,1208 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Plan 2027 · CCPP Trewhela's Chicureo</title>
+<link rel="icon" type="image/png" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+/* Identidad CCPP Trewhela's Chicureo: navy + dorado, Montserrat, tarjetas de 16px con barra superior de color. */
+:root{
+  --azul:#0c4085; --azul2:#104b99; --navy:#0a2e5c; --dorado:#d4a83b; --dorado-suave:#f6ead0;
+  --dorado-txt:#9a7415; --rojo:#c0492f; --verde:#2f7d4f; --celeste:#1b7fa8;
+  --gris:#5b6b78; --gris2:#7a8894;
+  --bg:#f2f5f7; --band:#eef3f8; --card:#ffffff; --linea:#e3e9ef; --texto:#141b24; --texto2:#3a4854;
+  --chip:#e2edf8; --chip-txt:#104b99;
+  --p1:#d4a83b; --p1t:#9a7415; --p1b:#f6ead0;
+  --p2:#c0492f; --p2t:#a63c25; --p2b:#fbe4de;
+  --p3:#2f7d4f; --p3t:#27683f; --p3b:#e0f0e4;
+  --p4:#1b7fa8; --p4t:#166a8c; --p4b:#ddeef6;
+  --p5:#0c4085; --p5t:#0c4085; --p5b:#e2edf8;
+  --sombra:0 16px 38px rgba(12,64,133,.12);
+  --f:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+  --bg:#0a1724; --band:#0d1e2e; --card:#122436; --linea:#1f3650; --texto:#E8EDF2; --texto2:#B6C6D6;
+  --gris:#95A8BA; --gris2:#7E92A6; --navy:#081d3a; --azul2:#5d9ddd; --dorado:#e4bc5c; --dorado-suave:#2e2718;
+  --dorado-txt:#e4bc5c; --chip:#17304b; --chip-txt:#8fbdee;
+  --p1:#e4bc5c; --p1t:#e4bc5c; --p1b:#2e2718;
+  --p2:#e07760; --p2t:#e07760; --p2b:#33201c;
+  --p3:#5cb882; --p3t:#5cb882; --p3b:#16301f;
+  --p4:#5bb6d8; --p4t:#5bb6d8; --p4b:#152e3a;
+  --p5:#6aa6e8; --p5t:#6aa6e8; --p5b:#16294a;
+  --sombra:0 16px 38px rgba(0,0,0,.35);
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0a1724; --band:#0d1e2e; --card:#122436; --linea:#1f3650; --texto:#E8EDF2; --texto2:#B6C6D6;
+  --gris:#95A8BA; --gris2:#7E92A6; --navy:#081d3a; --azul2:#5d9ddd; --dorado:#e4bc5c; --dorado-suave:#2e2718;
+  --dorado-txt:#e4bc5c; --chip:#17304b; --chip-txt:#8fbdee;
+  --p1:#e4bc5c; --p1t:#e4bc5c; --p1b:#2e2718;
+  --p2:#e07760; --p2t:#e07760; --p2b:#33201c;
+  --p3:#5cb882; --p3t:#5cb882; --p3b:#16301f;
+  --p4:#5bb6d8; --p4t:#5bb6d8; --p4b:#152e3a;
+  --p5:#6aa6e8; --p5t:#6aa6e8; --p5b:#16294a;
+  --sombra:0 16px 38px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%}
+.mark{overflow:hidden;padding:4px}
+.mark img{width:100%;height:100%;object-fit:contain;display:block}
+.brand a{color:inherit;text-decoration:none;display:flex;align-items:center;gap:13px}
+body{font-family:var(--f);background:var(--bg);color:var(--texto);line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;line-height:1.2;text-wrap:balance}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+
+/* NAV */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.06)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:16px;padding-block:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.mark{width:42px;height:42px;border-radius:50%;background:#fff;color:var(--azul);border:3px solid var(--dorado);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.72rem;letter-spacing:-.3px;flex:0 0 auto}
+.brand b{font-weight:700;font-size:.97rem;display:block;line-height:1.15}
+.brand span{opacity:.72;font-weight:400;font-size:.78rem;display:block}
+.nav nav{display:flex;flex-wrap:wrap;gap:4px 18px}
+.nav nav a{color:#fff;text-decoration:none;font-size:.84rem;font-weight:500;opacity:.88;border-bottom:2px solid transparent;padding-bottom:3px;transition:.15s}
+.nav nav a:hover,.nav nav a:focus-visible{opacity:1;border-color:var(--dorado)}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,#0a2e5c 0%,#0c4085 55%,#104b99 100%);color:#fff;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 18%,rgba(212,168,59,.18),transparent 46%),radial-gradient(circle at 8% 92%,rgba(255,255,255,.07),transparent 40%)}
+.hero .wrap{position:relative;padding-block:56px 60px}
+.kicker{text-transform:uppercase;letter-spacing:2.5px;font-size:.74rem;font-weight:600;color:var(--dorado);margin-bottom:16px}
+.hero h1{font-size:clamp(1.9rem,4.6vw,2.9rem);font-weight:800;letter-spacing:-.5px;max-width:820px;margin-bottom:18px}
+.lema{font-size:1.1rem;font-style:italic;opacity:.95;max-width:720px;border-left:3px solid var(--dorado);padding-left:18px;margin-bottom:30px;line-height:1.5}
+.legend{display:flex;flex-wrap:wrap;gap:10px}
+.lg{display:inline-flex;align-items:center;gap:9px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px 9px 11px;font-family:var(--f);font-size:.85rem;font-weight:500;color:#fff;cursor:pointer;transition:.18s}
+.lg:hover{background:rgba(255,255,255,.16)}
+.lg:focus-visible{outline:2px solid var(--dorado);outline-offset:2px}
+.lg[aria-pressed="false"]{opacity:.42}
+.lg .n{width:24px;height:24px;border-radius:50%;background:var(--dorado);color:#3a2d09;font-weight:800;font-size:.76rem;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.lg .c{opacity:.75;font-size:.78rem;font-variant-numeric:tabular-nums}
+
+/* BANDAS */
+section.bloque{padding-block:62px}
+section.band{background:var(--card)}
+section.alt{background:var(--band)}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 40px}
+.tagline{display:inline-block;font-size:.7rem;text-transform:uppercase;letter-spacing:2px;font-weight:700;padding:6px 15px;border-radius:20px;margin-bottom:14px;background:var(--dorado-suave);color:var(--dorado-txt)}
+.sec-head h2{font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:700;letter-spacing:-.4px;color:var(--azul2);margin-bottom:10px}
+.sec-head p{color:var(--gris);font-size:1rem}
+
+/* TIPOS */
+.tipos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.tipo{background:var(--card);border:1px solid var(--linea);border-radius:16px;padding:26px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.tipo:hover{transform:translateY(-4px);box-shadow:var(--sombra)}
+.tipo:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--linea)}
+.tipo.hi:before{background:var(--dorado)}
+.tipo h3{font-size:1.1rem;font-weight:700;color:var(--azul2);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.tipo h3 .c{width:28px;height:28px;border-radius:8px;background:var(--dorado-suave);color:var(--dorado-txt);font-size:.85rem;font-weight:800;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-variant-numeric:tabular-nums}
+.tipo ul{list-style:none;margin:0;padding:0}
+.tipo li{position:relative;padding-left:20px;margin-bottom:8px;font-size:.9rem;color:var(--texto2);line-height:1.5}
+.tipo li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--dorado)}
+.tipo p{margin:14px 0 0;font-size:.85rem;color:var(--gris);font-style:italic;border-top:1px dashed var(--linea);padding-top:12px;line-height:1.55}
+
+/* FRANJAS */
+.strip{background:var(--chip);border-radius:12px;border-left:5px solid var(--azul2);padding:16px 20px;margin-bottom:14px;font-size:.92rem;color:var(--texto2);line-height:1.5}
+.strip b{color:var(--azul2);font-weight:700;margin-right:6px}
+.strip.oro{background:var(--dorado-suave);border-left-color:var(--dorado);color:var(--dorado-txt)}
+.strip.oro b{color:var(--dorado-txt)}
+
+/* CALENDARIO */
+.etapas{max-width:980px;margin:34px auto 0}
+.etapa{display:grid;grid-template-columns:78px 1fr;gap:22px;padding-bottom:26px;position:relative}
+.etapa:not(:last-child):before{content:"";position:absolute;left:38px;top:84px;bottom:-4px;width:2px;background:var(--linea)}
+.num{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,var(--azul),var(--azul2));color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;box-shadow:0 6px 16px rgba(12,64,133,.25);flex:0 0 auto}
+.num b{font-size:.95rem;font-weight:700;letter-spacing:.3px}
+.num small{font-size:.63rem;opacity:.82;font-variant-numeric:tabular-nums}
+.etapa.rest .num{background:var(--linea);color:var(--gris);box-shadow:none}
+.mitems{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:16px;min-width:0;align-content:start}
+.rest-txt{align-self:center;color:var(--gris);font-style:italic;font-size:.95rem}
+
+.card{background:var(--card);border:1px solid var(--linea);border-radius:16px;padding:20px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s,opacity .18s;min-width:0}
+.card:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--pc)}
+.card:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+.card.dim{opacity:.22}
+.card .t{display:block;font-size:1.02rem;font-weight:700;color:var(--azul2);line-height:1.3;margin-bottom:10px}
+.card .m{display:flex;flex-wrap:wrap;gap:7px;align-items:center;font-size:.83rem;color:var(--texto2);line-height:1.5;margin-top:7px}
+.card .m:first-of-type{margin-top:0}
+.tag{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.6px;border-radius:14px;padding:4px 11px;white-space:nowrap}
+.tag.kind{background:var(--dorado-suave);color:var(--dorado-txt)}
+.tag.kind.mayor{background:var(--navy);color:#fff}
+.tag.ancla{background:var(--chip);color:var(--chip-txt)}
+.tag.media{background:var(--band);color:var(--gris)}
+.tag.ya{background:var(--p2b);color:var(--p2t)}
+.pil{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--pct);font-size:.79rem}
+.pil:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--pc)}
+.prep{color:var(--gris);font-size:.79rem;font-variant-numeric:tabular-nums}
+.card:has(.mayor){border-color:var(--dorado)}
+
+/* COBERTURA */
+.sem-tabla{max-width:900px;margin:0 auto;border:1px solid var(--linea);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 4px 14px rgba(12,64,133,.05)}
+.sem-row{display:grid;grid-template-columns:230px 1fr 54px;align-items:center;border-top:1px solid var(--linea);gap:14px;padding:14px 20px}
+.sem-row:first-child{border-top:0}
+.eje{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--azul2);font-size:.92rem;min-width:0}
+.eje i{width:11px;height:11px;border-radius:50%;background:var(--pc);flex:0 0 auto}
+.eje span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.track{background:var(--band);border-radius:20px;height:14px;overflow:hidden}
+.fill{height:100%;border-radius:20px;background:var(--pc)}
+.val{font-variant-numeric:tabular-nums;font-weight:700;color:var(--gris);text-align:right;font-size:.95rem}
+.nota{background:var(--dorado-suave);border:1px solid #ecd9a8;border-left:5px solid var(--dorado);border-radius:12px;padding:20px 24px;margin:34px auto 0;font-size:.93rem;color:var(--dorado-txt);max-width:900px;line-height:1.6}
+.nota b{font-weight:800}
+
+/* DECISIONES */
+.dec{max-width:900px;margin:0 auto;list-style:none;padding:0;display:grid;gap:16px;counter-reset:d}
+.dec li{counter-increment:d;background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:20px 24px 20px 66px;position:relative;font-size:.93rem;color:var(--texto2);line-height:1.6;box-shadow:0 4px 14px rgba(12,64,133,.05)}
+.dec li:before{content:counter(d);position:absolute;left:20px;top:18px;width:30px;height:30px;border-radius:8px;background:var(--dorado-suave);color:var(--dorado-txt);font-weight:800;font-size:.9rem;display:flex;align-items:center;justify-content:center}
+.dec b{color:var(--azul2);font-weight:700}
+
+footer{background:var(--navy);color:#cfdcec;padding-block:46px;text-align:center;font-size:.86rem}
+footer .mark{width:84px;height:84px;margin:0 auto 18px;font-size:1.05rem}
+footer .lema-f{font-style:italic;font-size:1.05rem;color:#fff;max-width:680px;margin:0 auto 16px;line-height:1.5}
+footer .fine{opacity:.7;font-size:.8rem;margin-top:8px}
+
+/* GANTT */
+.gkey{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin-bottom:20px;font-size:.82rem;color:var(--gris)}
+.gkey span{display:inline-flex;align-items:center;gap:8px}
+.gkey .k{width:26px;height:11px;border-radius:6px;flex:0 0 auto}
+.gkey .k.prep{background:repeating-linear-gradient(135deg,var(--chip),var(--chip) 4px,var(--card) 4px,var(--card) 8px);border:1px solid var(--linea)}
+.gkey .k.ex{background:var(--azul2)}
+.gkey .k.perm{background:linear-gradient(90deg,var(--azul2),var(--celeste))}
+.gkey .k.bloq{background:repeating-linear-gradient(135deg,rgba(192,73,47,.3),rgba(192,73,47,.3) 4px,rgba(192,73,47,.1) 4px,rgba(192,73,47,.1) 8px);border-left:2px solid var(--p2);border-right:2px solid var(--p2);border-radius:0;width:16px}
+.gkey .k.bland{background:rgba(212,168,59,.16);border-left:2px dashed var(--dorado);border-right:2px dashed var(--dorado);border-radius:0;width:16px}
+.gkey .k.hito{width:11px;height:11px;border-radius:50%;background:var(--dorado);border:2px solid var(--card);box-shadow:0 0 0 1px var(--dorado)}
+.gscroll{overflow-x:auto;border:1px solid var(--linea);border-radius:16px;background:var(--card);box-shadow:0 4px 14px rgba(12,64,133,.05)}
+.gantt{min-width:880px}
+.gantt{--gcols:238px repeat(10,1fr)}
+.grow{display:grid;grid-template-columns:var(--gcols);align-items:center;border-top:1px solid var(--linea);transition:opacity .18s}
+.gbody{position:relative}
+.grow.dim{opacity:.2}
+.grow>*{grid-row:1}
+.ghead{border-top:0;position:sticky;top:0;z-index:4;background:var(--navy);color:#fff}
+.ghead .glabel{color:#fff;font-size:.74rem;text-transform:uppercase;letter-spacing:.8px;font-weight:700;padding:12px 16px}
+.ghead [class^=gm]{text-align:center;font-size:.78rem;font-weight:700;padding:12px 4px;border-left:1px solid rgba(255,255,255,.12)}
+.ghead .q{background:rgba(255,255,255,.07)}
+.glabel{padding:9px 16px;min-width:0}
+.glabel .t{display:block;font-size:.88rem;font-weight:600;color:var(--azul2);line-height:1.3}
+.glabel .pil{font-size:.72rem;margin-top:2px}
+.ggroup{background:var(--band)}
+.ggroup .glabel{padding:11px 16px}
+.ggroup .glabel b{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:1px;color:var(--dorado-txt);font-weight:800}
+.ggroup .glabel span{display:block;font-size:.76rem;color:var(--gris);font-style:italic;line-height:1.4}
+.ggroup .gcells{grid-column:2/12}
+.cell{height:40px;border-left:1px solid var(--linea)}
+.cell.q{background:var(--band)}
+.bar{height:20px;border-radius:10px;z-index:2;display:flex;align-items:center;margin:0 3px}
+.bar.prep{background:repeating-linear-gradient(135deg,var(--chip),var(--chip) 5px,transparent 5px,transparent 10px);border:1px solid var(--linea);height:14px;border-radius:7px}
+.bar.ex{background:var(--pc);box-shadow:0 2px 6px rgba(12,64,133,.18)}
+.bar.ex.perm{background:linear-gradient(90deg,var(--pc),color-mix(in srgb,var(--pc) 55%,var(--celeste)))}
+.bar.ex span{font-size:.68rem;font-weight:700;color:#fff;padding:0 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.hito{z-index:3;justify-self:end;width:13px;height:13px;border-radius:50%;background:var(--dorado);border:2px solid var(--card);box-shadow:0 0 0 1px var(--dorado);margin-right:-3px}
+.glabel .sub{display:block;font-size:.72rem;color:var(--gris);line-height:1.35;font-variant-numeric:tabular-nums}
+.grow.bloq .glabel .t{color:var(--p2t)}
+.ggroup.bloqg .glabel b{color:var(--p2t)}
+.cell.blk{background:var(--band)}
+.bar.bloq{height:22px;border-radius:7px;background:repeating-linear-gradient(135deg,var(--p2b),var(--p2b) 6px,transparent 6px,transparent 12px);border:1px solid var(--p2);justify-content:center}
+.bar.bloq span{font-size:.68rem;font-weight:700;color:var(--p2t);padding:0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fechas{max-width:900px;margin:0 auto;border:1px solid var(--linea);border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 4px 14px rgba(12,64,133,.05)}
+.frow{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:15px 22px;border-top:1px solid var(--linea);align-items:start}
+.frow:first-child{border-top:0}
+.frow .f{font-weight:700;color:var(--azul2);font-size:.88rem;font-variant-numeric:tabular-nums}
+.frow .f small{display:block;font-weight:600;color:var(--gris);font-size:.74rem;text-transform:uppercase;letter-spacing:.6px}
+.frow .d{font-size:.9rem;color:var(--texto2);line-height:1.55}
+.frow .d b{color:var(--azul2)}
+.frow.alerta{background:var(--p2b)}
+.frow.alerta .f{color:var(--p2t)}
+.frow.alerta .d b{color:var(--p2t)}
+@media(max-width:620px){.frow{grid-template-columns:1fr;gap:4px}}
+.gover{position:absolute;inset:0;display:grid;grid-template-columns:var(--gcols);grid-template-rows:100%;pointer-events:none;z-index:6}
+.ov{position:relative;grid-row:1;height:100%}
+.ov i{position:absolute;top:0;bottom:0;display:block;min-width:5px;pointer-events:auto;cursor:help;outline:none}
+.ov i:after{content:"";position:absolute;top:0;bottom:0;left:-7px;right:-7px}
+.tip{position:absolute;top:16px;left:50%;transform:translateX(-50%);width:252px;background:var(--navy);color:#fff;border:1px solid var(--dorado);border-radius:12px;padding:12px 14px;font-size:.78rem;font-weight:400;font-style:normal;line-height:1.5;box-shadow:0 14px 34px rgba(6,26,54,.45);opacity:0;visibility:hidden;transform-origin:top center;transition:opacity .14s,visibility .14s;z-index:20;pointer-events:none;text-align:left}
+.tip strong{display:block;color:var(--dorado);font-size:.8rem;font-weight:800;margin-bottom:4px;letter-spacing:.2px}
+.ov i.l .tip{left:0;transform:none}
+.ov i.r .tip{left:auto;right:0;transform:none}
+.ov i:hover .tip,.ov i:focus .tip,.ov i:focus-visible .tip{opacity:1;visibility:visible}
+.ov i:hover,.ov i:focus{filter:brightness(.92) saturate(1.3)}
+.ov i.dura:hover,.ov i.dura:focus{box-shadow:0 0 0 1px var(--p2)}
+.ov i.dura{background:repeating-linear-gradient(135deg,rgba(192,73,47,.30),rgba(192,73,47,.30) 5px,rgba(192,73,47,.10) 5px,rgba(192,73,47,.10) 10px);border-left:2px solid var(--p2);border-right:2px solid var(--p2)}
+.ov i.blanda{background:rgba(212,168,59,.16);border-left:2px dashed var(--dorado);border-right:2px dashed var(--dorado)}
+.blabels{background:var(--card);border-top:0;min-height:30px}
+.blabels .glabel{padding:6px 16px;font-size:.68rem;text-transform:uppercase;letter-spacing:.8px;font-weight:800;color:var(--p2t)}
+.bl{position:relative;height:30px;overflow:visible}
+.bl i{position:absolute;top:7px;white-space:nowrap;font-size:.62rem;font-weight:700;font-style:normal;line-height:1.3;padding:2px 7px;border-radius:10px;z-index:3}
+.bl i.dura{background:var(--p2b);color:var(--p2t);border:1px solid var(--p2)}
+.bl i.blanda{background:var(--dorado-suave);color:var(--dorado-txt);border:1px dashed var(--dorado)}
+.bar.col{height:16px;border-radius:8px;background:repeating-linear-gradient(90deg,var(--band),var(--band) 6px,var(--linea) 6px,var(--linea) 8px);border:1px dashed var(--gris2);justify-content:center}
+.bar.col span{font-size:.6rem;font-weight:700;color:var(--gris);text-transform:uppercase;letter-spacing:.6px}
+.grow.colrow .glabel .t{color:var(--gris);font-weight:600}
+.ggroup.colg .glabel b{color:var(--gris)}
+.gkey .k.colk{background:var(--band);border:1px dashed var(--gris2)}
+.comis{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.comi{background:var(--card);border:1px solid var(--linea);border-radius:16px;padding:20px 20px 16px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.comi:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--azul2)}
+.comi.alta:before{background:var(--p2)}
+.comi.baja:before{background:var(--dorado)}
+.comi.gap{border-style:dashed}.comi.gap:before{background:var(--gris2)}
+.comi .ch{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.comi h3{font-size:1rem;font-weight:700;color:var(--azul2);line-height:1.25}
+.comi .load{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--chip);color:var(--chip-txt);font-weight:800;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+.comi.alta .load{background:var(--p2b);color:var(--p2t)}
+.comi.baja .load,.comi.gap .load{background:var(--dorado-suave);color:var(--dorado-txt)}
+.comi .ppl{margin:6px 0 10px;font-size:.84rem;font-weight:600;color:var(--dorado-txt)}
+.comi ul{list-style:none;margin:0;padding:0}
+.comi li{position:relative;padding-left:16px;font-size:.84rem;color:var(--texto2);margin-bottom:4px;line-height:1.4}
+.comi li:before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--linea)}
+.comi .cn{margin:12px 0 12px;font-size:.8rem;color:var(--gris);font-style:italic;border-top:1px dashed var(--linea);padding-top:10px;line-height:1.5;flex:1}
+.cbtn{align-self:flex-start;font-family:var(--f);font-size:.75rem;font-weight:700;color:var(--azul2);background:var(--chip);border:1px solid transparent;border-radius:20px;padding:6px 13px;cursor:pointer}
+.cbtn:hover{border-color:var(--azul2)}
+.cbtn[aria-pressed="true"]{background:var(--azul2);color:#fff}
+.cbtn:focus-visible{outline:2px solid var(--dorado);outline-offset:2px}
+.glabel .cm{display:block;font-size:.68rem;color:var(--gris);line-height:1.3;margin-top:1px}
+.card .m.resp{margin-top:8px;padding-top:8px;border-top:1px dashed var(--linea);font-size:.78rem}
+.card .m.resp .cmt{font-weight:700;color:var(--azul2)}
+.card .m.resp span+span{color:var(--dorado-txt);font-weight:600}
+.gnote{max-width:880px;margin:18px auto 0;font-size:.85rem;color:var(--gris);font-style:italic;text-align:center;line-height:1.55}
+@media(max-width:820px){.gantt{min-width:820px;--gcols:190px repeat(10,1fr)}.glabel{padding:9px 12px}}
+
+@media(max-width:820px){
+  .etapa{grid-template-columns:1fr;gap:14px}
+  .etapa:not(:last-child):before{display:none}
+  .num{width:auto;height:auto;border-radius:14px;flex-direction:row;gap:9px;padding:9px 16px;align-self:start}
+  .num small{font-size:.72rem}
+  .sem-row{grid-template-columns:1fr 46px;gap:8px 12px}
+  .sem-row .track{grid-column:1/-1}
+  .hero .wrap{padding-block:40px 46px}
+}
+</style>
+</head>
+<body>
+
+
+<header class="nav">
+  <div class="wrap">
+    <div class="brand"><a href="index.html">
+      <div class="mark"><img src="assets/logo.png" alt="Logo CCPP"></div>
+      <div><b>CCPP 2027–2028</b><span>Plan de trabajo · Sede Chicureo</span></div>
+    </a></div>
+    <nav>
+      <a href="#comisiones">Comisiones</a>
+      <a href="#tipos">Tipos de trabajo</a>
+      <a href="#gantt">Plan</a>
+      <a href="#fechas">Fechas</a>
+      <a href="#calendario">Calendario</a>
+      <a href="#cobertura">Cobertura</a>
+      <a href="#decisiones">Decisiones</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker">Centro de Padres, Madres y Apoderados</p>
+    <h1>Calendario anual 2027</h1>
+    <p class="lema">Participar es aportar, conectar y transformar. Marzo a diciembre: cada actividad con su pilar, su tipo de trabajo y el mes en que debe arrancar la preparación.</p>
+    <div class="legend" id="legend">
+      <button class="lg" aria-pressed="true" data-p="1"><i class="n">1</i>Bienestar y convivencia <i class="c">8</i></button>
+      <button class="lg" aria-pressed="true" data-p="2"><i class="n">2</i>Seguridad <i class="c">1</i></button>
+      <button class="lg" aria-pressed="true" data-p="3"><i class="n">3</i>Inclusión <i class="c">3</i></button>
+      <button class="lg" aria-pressed="true" data-p="4"><i class="n">4</i>Vida saludable y comunidad <i class="c">8</i></button>
+      <button class="lg" aria-pressed="true" data-p="5"><i class="n">5</i>Comunicación y participación <i class="c">2</i></button>
+    </div>
+  </div>
+</div>
+
+<section class="bloque alt" id="comisiones">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Directiva 2027–2028</span>
+      <h2>Comisiones y responsables</h2>
+      <p>Cada actividad del plan queda asignada a una comisión. El número indica cuántas actividades lleva cada una.</p>
+    </div>
+    <div class="comis">
+      <div class="comi alta" data-c="cev">
+        <div class="ch"><h3>Comunidad y Eventos</h3><span class="load">6</span></div>
+        <p class="ppl">Anyela, Fran y Ronald</p>
+        <ul><li>Café Concert</li><li>Bingo</li><li>Fonda Trewhelana</li><li>Feria Navideña</li><li>Semana Literaria</li><li>Feria de las Pulgas</li></ul>
+        <p class="cn">La comisión más cargada: cuatro de los cinco eventos mayores más dos eventos menores. Con tres personas no alcanza; necesita apoyo de delegados de curso o pasar la Semana Literaria a otra comisión.</p>
+        <button class="cbtn" data-c="cev" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi alta" data-c="vsd">
+        <div class="ch"><h3>Vida Saludable &amp; Deportes</h3><span class="load">5</span></div>
+        <p class="ppl">Grace y Rossana</p>
+        <ul><li>Ventas en recreos (kiosko)</li><li>Parents Games</li><li>Campeonato fútbol apoderados</li><li>Clases de cueca</li><li>Vacunación influenza</li></ul>
+        <p class="cn">Cinco actividades, entre ellas Parents Games, que es inter-sede. Rossana está también en Solidaridad.</p>
+        <button class="cbtn" data-c="vsd" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi media" data-c="inc">
+        <div class="ch"><h3>Inclusión, Convivencia &amp; Bienestar</h3><span class="load">4</span></div>
+        <p class="ppl">Rodrigo y Juan Cartagena</p>
+        <ul><li>Red de apoderados nuevos</li><li>Mesa de aprendizaje e inclusión</li><li>Encuesta de clima por curso</li><li>Encuentro de apoderados nuevos</li></ul>
+        <p class="cn">Carga equilibrada. Rodrigo está también en Seguridad: dos comisiones de gestión con Dirección recaen en la misma persona.</p>
+        <button class="cbtn" data-c="inc" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi media" data-c="sol">
+        <div class="ch"><h3>Solidaridad</h3><span class="load">3</span></div>
+        <p class="ppl">Bárbara y Rossana</p>
+        <ul><li>Campaña Hogar San Ricardo</li><li>Teletón</li><li>Juguetes Ángel de la Guarda</li></ul>
+        <p class="cn">Tres campañas que el colegio ya corre. Su rol es sumar al CCPP, no duplicar.</p>
+        <button class="cbtn" data-c="sol" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi media" data-c="com">
+        <div class="ch"><h3>Comunicación</h3><span class="load">2</span></div>
+        <p class="ppl">Paulina y Claudio</p>
+        <ul><li>Reunión mensual con Dirección</li><li>Informe semestral de compromisos</li></ul>
+        <p class="cn">Pocas actividades propias, pero difunde todas las demás: actas, convocatorias, redes y el sitio. Es la comisión que más trabajo invisible tiene.</p>
+        <button class="cbtn" data-c="com" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi baja" data-c="seg">
+        <div class="ch"><h3>Seguridad &amp; Infraestructura</h3><span class="load">1</span></div>
+        <p class="ppl">Rodrigo y Leo</p>
+        <ul><li>Revisión de protocolos</li></ul>
+        <p class="cn">Una sola actividad planificada, y el pilar de Seguridad fue el más prometido en campaña. Falta agenda propia: simulacros, accesos y tránsito, transporte escolar, estacionamientos (el colegio hizo reparaciones en agosto 2026).</p>
+        <button class="cbtn" data-c="seg" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi baja" data-c="ben">
+        <div class="ch"><h3>Beneficios &amp; Convenios</h3><span class="load">1</span></div>
+        <p class="ppl">Juan Andrés y Juan Astete</p>
+        <ul><li>Convenios y beneficios: base desde marzo, listas 2028 en diciembre</li></ul>
+        <p class="cn">Actividad inicial y permanente: la base de 23 convenios se revisa y publica en marzo, se mantiene todo el año y cierra con el convenio de listas 2028 en diciembre. Es el principal argumento para que una familia se haga socia.</p>
+        <button class="cbtn" data-c="ben" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi baja" data-c="lf">
+        <div class="ch"><h3>Lost &amp; Found</h3><span class="load">1</span></div>
+        <p class="ppl">Carolina y Cristina (por confirmar)</p>
+        <ul><li>Lost &amp; Found</li></ul>
+        <p class="cn">Trabajo permanente con rutina semanal. Cristina está entre paréntesis: confirmar antes de marzo.</p>
+        <button class="cbtn" data-c="lf" aria-pressed="false">Ver en el plan</button>
+      </div>
+      <div class="comi gap" data-c="dir">
+        <div class="ch"><h3>Directiva · sin comisión</h3><span class="load">1</span></div>
+        <p class="ppl">Por definir</p>
+        <ul><li>Cierre y rendición de cuentas</li></ul>
+        <p class="cn">La rendición de cuentas no tiene dueño. No hay comisión de tesorería o finanzas: definir quién maneja caja, cuotas y rendición.</p>
+        <button class="cbtn" data-c="dir" aria-pressed="false">Ver en el plan</button>
+      </div>
+    </div>
+    <p class="gnote">«Ver en el plan» resalta en el Gantt y en el calendario solo las actividades de esa comisión. Vuelve a pulsarlo para quitar el filtro. Las asignaciones son una propuesta para validar en la próxima reunión.</p>
+  </div>
+</section>
+
+<section class="bloque band" id="tipos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">No todo se planifica igual</span>
+      <h2>Tipos de trabajo</h2>
+      <p>Separar lo que corre todo el año de lo que se produce una vez es lo que evita que la directiva se mida solo por sus fiestas.</p>
+    </div>
+    <div class="tipos">
+      <div class="tipo hi">
+        <h3><span class="c">5</span>Trabajos permanentes</h3>
+        <ul><li>Lost &amp; Found</li><li>Ventas en recreos (kiosko)</li><li>Red de apoderados nuevos</li><li>Reunión mensual con Dirección</li><li>Convenios y beneficios (desde marzo)</li></ul>
+        <p>No tienen fecha: tienen dueño, rutina y un punto de revisión. Arrancan en marzo y se caen solos en mayo si nadie los mantiene. Son los que más se notan en el día a día y los que menos se planifican.</p>
+      </div>
+      <div class="tipo hi">
+        <h3><span class="c">5</span>Eventos mayores</h3>
+        <ul><li>Parents Games · marzo · <b>inter-sede</b></li><li>Café Concert · viernes 16 de abril</li><li>Bingo · agosto</li><li>Fonda Trewhelana · septiembre</li><li>Feria Navideña · noviembre</li></ul>
+        <p>Convocan a toda la comunidad y mueven presupuesto. Dos en el arranque del año (marzo y abril) y tres seguidos de agosto a noviembre. Cada uno necesita equipo propio, presupuesto tope y fecha de corte.</p>
+      </div>
+      <div class="tipo">
+        <h3><span class="c">3</span>Eventos menores</h3>
+        <ul><li>Encuentro de apoderados nuevos</li><li>Semana Literaria</li><li>Feria de las Pulgas</li></ul>
+        <p>De menor escala o en apoyo al colegio. Si falta equipo, estos se cancelan primero.</p>
+      </div>
+      <div class="tipo">
+        <h3><span class="c">5</span>Gestión con Dirección</h3>
+        <ul><li>Mesa de aprendizaje e inclusión</li><li>Revisión de protocolos</li><li>Encuesta de clima</li><li>Informe semestral</li><li>Cierre y rendición de cuentas</li></ul>
+        <p>Sin público ni producción, pero es el trabajo por el que los eligieron. No compite por manos con los eventos: compite por agenda con Dirección.</p>
+      </div>
+      <div class="tipo">
+        <h3><span class="c">2</span>Temporadas</h3>
+        <ul><li>Campeonato fútbol apoderados · abr–ago</li><li>Clases de cueca · agosto</li></ul>
+        <p>Actividades recurrentes durante varias semanas. Necesitan un coordinador fijo, no un equipo de evento.</p>
+      </div>
+      <div class="tipo">
+        <h3><span class="c">4</span>Campañas</h3>
+        <ul><li>Vacunación influenza · marzo</li><li>Hogar San Ricardo · mayo</li><li>Teletón · noviembre</li><li>Juguetes Ángel de la Guarda · nov–dic</li></ul>
+        <p>El colegio ya corre varias (Hogar San Ricardo, Teletón, Jeans Day). El CCPP suma; no duplica.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque band" id="gantt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Marzo a diciembre 2027</span>
+      <h2>Plan de trabajo</h2>
+      <p>Cuándo se prepara y cuándo ocurre cada cosa, cruzado con los feriados de 2027 y con el calendario que el colegio siguió en 2026 según sus comunicaciones.</p>
+    </div>
+    <div class="gkey">
+      <span><i class="k prep"></i>Preparación</span>
+      <span><i class="k ex"></i>Ejecución</span>
+      <span><i class="k perm"></i>Permanente</span>
+      <span><i class="k hito"></i>Hito con fecha</span>
+      <span><i class="k colk"></i>Actividad del colegio</span>
+      <span><i class="k bloq"></i>Feriado o receso</span>
+      <span><i class="k bland"></i>Ventana desaconsejada</span>
+    </div>
+    <div class="gscroll">
+    <div class="gantt">
+      <div class="grow ghead">
+        <div class="glabel">Actividad</div>
+        <div class="gm">Mar</div>
+        <div class="gm">Abr</div>
+        <div class="gm">May</div>
+        <div class="gm">Jun</div>
+        <div class="gm">Jul</div>
+        <div class="gm">Ago</div>
+        <div class="gm">Sep</div>
+        <div class="gm">Oct</div>
+        <div class="gm">Nov</div>
+        <div class="gm">Dic</div>
+      </div>
+      <div class="grow blabels">
+        <div class="glabel">Bloqueos</div>
+        <div class="bl" style="grid-column:2"><i class="dura" style="left:auto;right:2px">Semana Santa</i></div>
+        <div class="bl" style="grid-column:3"><i class="blanda" style="left:66.67%;transform:translateX(-50%)">Aniversario</i></div>
+        <div class="bl" style="grid-column:4"><i class="dura" style="left:69.35%;transform:translateX(-50%)">21–23 may</i></div>
+        <div class="bl" style="grid-column:5"><i class="dura" style="left:auto;right:2px">Vacaciones invierno (est.)</i></div>
+        <div class="bl" style="grid-column:6"><i class="dura" style="left:53.23%;transform:translateX(-50%)">16 jul</i></div>
+        <div class="bl" style="grid-column:7"><i class="blanda" style="left:auto;right:2px">F. Voz</i></div>
+        <div class="bl" style="grid-column:8"><i class="dura" style="left:48.33%;transform:translateX(-50%)">Receso 18 (est.)</i></div>
+        <div class="bl" style="grid-column:9"><i class="dura" style="left:32.26%;transform:translateX(-50%)">9–12 oct</i></div>
+        <div class="bl" style="grid-column:9"><i class="dura" style="left:auto;right:2px">30 oct – 1 nov</i></div>
+        <div class="bl" style="grid-column:11"><i class="dura" style="left:24.19%;transform:translateX(-50%)">8 dic</i></div>
+        <div class="bl" style="grid-column:11"><i class="blanda" style="left:auto;right:2px">Cierre del año escolar</i></div>
+      </div>
+      <div class="gbody">
+      <div class="grow ggroup"><div class="glabel"><b>Trabajos permanentes</b><span>Corren todo el año. No tienen fecha: tienen dueño y rutina.</span></div><div class="gcells"></div></div>
+      <div class="grow" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Lost &amp; Found</span><span class="pil">Pilar 1</span><span class="cm">Lost &amp; Found</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex perm" style="grid-column:2/12"><span>en marcha desde marzo</span></div>
+      </div>
+      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Ventas en recreos (kiosko)</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex perm" style="grid-column:2/12"><span>asignación anual, operación semanal</span></div>
+      </div>
+      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+        <div class="glabel"><span class="t">Red de apoderados nuevos</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex perm" style="grid-column:2/12"><span>activa todo el año</span></div>
+      </div>
+      <div class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+        <div class="glabel"><span class="t">Reunión mensual con Dirección</span><span class="pil">Pilar 5</span><span class="cm">Comunicación</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex perm" style="grid-column:2/12"><span>último jueves de cada mes</span></div>
+      </div>
+      <div class="grow" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+        <div class="glabel"><span class="t">Convenios y beneficios</span><span class="pil">Pilar 3</span><span class="cm">Beneficios &amp; Convenios</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex perm" style="grid-column:2/12"><span>base actualizada en marzo · altas todo el año · listas 2028 en dic</span></div>
+        <div class="hito" style="grid-column:11"></div>
+      </div>
+      <div class="grow ggroup"><div class="glabel"><b>Eventos mayores</b><span>Dos al arranque del año y tres seguidos de agosto a noviembre.</span></div><div class="gcells"></div></div>
+      <div class="grow" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Parents Games</span><span class="pil">Pilar 1</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex" style="grid-column:2/3"><span>sáb 20 mar · inter-sede</span></div>
+        <div class="hito" style="grid-column:2"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Café Concert</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:2/3"></div>
+        <div class="bar ex" style="grid-column:3/4"><span>viernes 16 de abril</span></div>
+        <div class="hito" style="grid-column:3"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Bingo</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:4/7"></div>
+        <div class="bar ex" style="grid-column:7/8"><span>1ª quincena ago</span></div>
+        <div class="hito" style="grid-column:7"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Fonda Trewhelana</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:6/8"></div>
+        <div class="bar ex" style="grid-column:8/9"><span>sáb 4 sep, con bailes</span></div>
+        <div class="hito" style="grid-column:8"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Feria Navideña</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:8/10"></div>
+        <div class="bar ex" style="grid-column:10/11"><span>noviembre</span></div>
+        <div class="hito" style="grid-column:10"></div>
+      </div>
+      <div class="grow ggroup"><div class="glabel"><b>Temporadas</b><span>Semanas seguidas. Necesitan coordinador fijo, no equipo de evento.</span></div><div class="gcells"></div></div>
+      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Campeonato fútbol apoderados</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:2/3"></div>
+        <div class="bar ex" style="grid-column:3/8"><span>liga de abril a agosto</span></div>
+        <div class="hito" style="grid-column:7"></div>
+      </div>
+      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Clases de cueca</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:6/7"></div>
+        <div class="bar ex" style="grid-column:7/9"><span>cierra en la Fonda</span></div>
+        <div class="hito" style="grid-column:8"></div>
+      </div>
+      <div class="grow ggroup"><div class="glabel"><b>Gestión con Dirección</b><span>El trabajo por el que los eligieron. Compite por agenda, no por manos.</span></div><div class="gcells"></div></div>
+      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+        <div class="glabel"><span class="t">Mesa de aprendizaje e inclusión</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:3/4"></div>
+        <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
+        <div class="hito" style="grid-column:4"></div>
+      </div>
+      <div class="grow" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)">
+        <div class="glabel"><span class="t">Revisión de protocolos</span><span class="pil">Pilar 2</span><span class="cm">Seguridad &amp; Infraestructura</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:3/4"></div>
+        <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
+        <div class="hito" style="grid-column:4"></div>
+      </div>
+      <div class="grow" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Encuesta de clima por curso</span><span class="pil">Pilar 1</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:4/5"></div>
+        <div class="bar ex" style="grid-column:5/6"><span>junio</span></div>
+        <div class="hito" style="grid-column:5"></div>
+      </div>
+      <div class="grow" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+        <div class="glabel"><span class="t">Informe semestral de compromisos</span><span class="pil">Pilar 5</span><span class="cm">Comunicación</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:6/7"></div>
+        <div class="bar ex" style="grid-column:7/8"><span>agosto</span></div>
+        <div class="hito" style="grid-column:7"></div>
+      </div>
+      <div class="grow" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)">
+        <div class="glabel"><span class="t">Cierre y rendición de cuentas</span><span class="pil">Pilar 5</span><span class="cm">Directiva · sin comisión</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:10/11"></div>
+        <div class="bar ex" style="grid-column:11/12"><span>diciembre</span></div>
+        <div class="hito" style="grid-column:11"></div>
+      </div>
+      <div class="grow ggroup"><div class="glabel"><b>Eventos menores y campañas</b><span>Si falta equipo, estos se cancelan primero.</span></div><div class="gcells"></div></div>
+      <div class="grow" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)">
+        <div class="glabel"><span class="t">Encuentro de apoderados nuevos</span><span class="pil">Pilar 3</span><span class="cm">Inclusión, Convivencia &amp; Bienestar</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex" style="grid-column:2/3"><span>¿fusionar con Parents Games?</span></div>
+        <div class="hito" style="grid-column:2"></div>
+      </div>
+      <div class="grow" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Vacunación influenza</span><span class="pil">Pilar 4</span><span class="cm">Vida Saludable &amp; Deportes</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar ex" style="grid-column:2/3"><span>marzo</span></div>
+        <div class="hito" style="grid-column:2"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)">
+        <div class="glabel"><span class="t">Semana Literaria</span><span class="pil">Pilar 1</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:3/4"></div>
+        <div class="bar ex" style="grid-column:4/5"><span>mayo · Día de las Letras</span></div>
+        <div class="hito" style="grid-column:4"></div>
+      </div>
+      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Campaña Hogar San Ricardo</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:3/4"></div>
+        <div class="bar ex" style="grid-column:4/5"><span>mayo</span></div>
+        <div class="hito" style="grid-column:4"></div>
+      </div>
+      <div class="grow" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Feria de las Pulgas</span><span class="pil">Pilar 4</span><span class="cm">Comunidad y Eventos</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:7/9"></div>
+        <div class="bar ex" style="grid-column:9/10"><span>octubre</span></div>
+        <div class="hito" style="grid-column:9"></div>
+      </div>
+      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Teletón</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:9/10"></div>
+        <div class="bar ex" style="grid-column:10/11"><span>noviembre</span></div>
+        <div class="hito" style="grid-column:10"></div>
+      </div>
+      <div class="grow" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)">
+        <div class="glabel"><span class="t">Juguetes Ángel de la Guarda</span><span class="pil">Pilar 4</span><span class="cm">Solidaridad</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar prep" style="grid-column:9/10"></div>
+        <div class="bar ex" style="grid-column:10/12"><span>entrega en diciembre</span></div>
+        <div class="hito" style="grid-column:11"></div>
+      </div>
+      <div class="grow ggroup colg"><div class="glabel"><b>Calendario del colegio</b><span>Lo que el colegio hizo en 2026, según sus correos. Compite por la atención de las familias.</span></div><div class="gcells"></div></div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Inicio de clases · reuniones de apoderados</span><span class="sub">2026: 2 de marzo</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:2/3"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Semana Aniversario</span><span class="sub">2026: 20–23 abr</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:3/4"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Día de las Letras · Día del Estudiante</span><span class="sub">2026: 13 y 21 may</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:4/5"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Reuniones de apoderados 2° semestre</span><span class="sub">2026: 14–22 jul</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:6/7"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Festival de la Voz · vacunación escolar</span><span class="sub">2026: 28 y 31 ago</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:7/8"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Semana de la Chilenidad · bailes</span><span class="sub">2026: 7–11 sep</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:8/9"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">Re-matrícula · elección CCPP · Ciencias · Cup</span><span class="sub">2026: octubre</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:9/10"><span>colegio</span></div>
+      </div>
+      <div class="grow colrow">
+        <div class="glabel"><span class="t">SIMCE 4° · graduación · Final Show</span><span class="sub">2026: oct – 2 dic</span></div>
+        <div class="cell" style="grid-column:2"></div>
+        <div class="cell" style="grid-column:3"></div>
+        <div class="cell" style="grid-column:4"></div>
+        <div class="cell" style="grid-column:5"></div>
+        <div class="cell" style="grid-column:6"></div>
+        <div class="cell" style="grid-column:7"></div>
+        <div class="cell" style="grid-column:8"></div>
+        <div class="cell" style="grid-column:9"></div>
+        <div class="cell" style="grid-column:10"></div>
+        <div class="cell" style="grid-column:11"></div>
+        <div class="bar col" style="grid-column:10/12"><span>colegio</span></div>
+      </div>
+        <div class="gover">
+          <div class="ov" style="grid-column:2"><i class="dura l" style="left:67.74%;width:22.58%" tabindex="0"><b class="tip"><strong>Semana Santa</strong>22 al 28 de marzo — Viernes Santo 26 y Sábado Santo 27. El sábado 27 es el equivalente al sábado de Parents Games 2026.</b></i></div>
+          <div class="ov" style="grid-column:3"><i class="blanda" style="left:60.00%;width:13.33%" tabindex="0"><b class="tip"><strong>Semana Aniversario (estimada)</strong>En 2026 fue del 20 al 23 de abril. El Café Concert del 16 queda justo antes; la Semana Literaria no debería ir esa semana.</b></i></div>
+          <div class="ov" style="grid-column:4"><i class="dura" style="left:64.52%;width:9.68%" tabindex="0"><b class="tip"><strong>Fin de semana largo</strong>21 al 23 de mayo — Glorias Navales (viernes 21). En 2026 coincidió con el Día del Estudiante y una semana corta.</b></i></div>
+          <div class="ov" style="grid-column:5"><i class="dura" style="left:60.00%;width:40.00%" tabindex="0"><b class="tip"><strong>Vacaciones de invierno (estimadas)</strong>En 2026: salida el jueves 18 de junio, regreso el lunes 6 de julio. Para 2027 se estima del 19 de junio al 4 de julio. Incluye el 21 y el 29 de junio.</b></i></div>
+          <div class="ov" style="grid-column:6"><i class="dura" style="left:0.00%;width:12.90%" tabindex="0"><b class="tip"><strong>Vacaciones de invierno (estimadas)</strong>Primera semana de julio, según el patrón 2026. Confirmar con el Plan de Funcionamiento 2027.</b></i></div>
+          <div class="ov" style="grid-column:6"><i class="dura" style="left:48.39%;width:9.68%" tabindex="0"><b class="tip"><strong>Fin de semana largo</strong>Virgen del Carmen cae viernes 16. En 2026 el colegio dio interferiado.</b></i></div>
+          <div class="ov" style="grid-column:7"><i class="blanda" style="left:83.87%;width:3.23%" tabindex="0"><b class="tip"><strong>Festival de la Voz (referencia)</strong>En 2026 fue el viernes 28 de agosto a las 18:30, con venta de entradas. Más la vacunación escolar CESFAM el 31. El Bingo no debería caer esa semana.</b></i></div>
+          <div class="ov" style="grid-column:8"><i class="blanda" style="left:16.67%;width:16.67%" tabindex="0"><b class="tip"><strong>Semana de la Chilenidad (estimada)</strong>En 2026 fue del 7 al 11 de septiembre, con bailes folclóricos el 8 y 9 entre semana.</b></i></div>
+          <div class="ov" style="grid-column:8"><i class="dura" style="left:33.33%;width:30.00%" tabindex="0"><b class="tip"><strong>Receso Fiestas Patrias (estimado)</strong>En 2026 fue del sábado 12 al lunes 21. En 2027 el 18 y 19 caen sábado y domingo; se estima del 11 al 19.</b></i></div>
+          <div class="ov" style="grid-column:9"><i class="dura" style="left:25.81%;width:12.90%" tabindex="0"><b class="tip"><strong>Fin de semana largo</strong>9 al 12 de octubre — el 12 cae martes y es trasladable. En 2026 el colegio dio libre el lunes 12.</b></i></div>
+          <div class="ov" style="grid-column:9"><i class="dura" style="left:45.16%;width:3.23%" tabindex="0"><b class="tip"><strong>Día del Profesor (estimado)</strong>En 2026 no hubo clases el viernes 16. En 2027 el 16 cae sábado: probablemente el viernes 15 sin clases.</b></i></div>
+          <div class="ov" style="grid-column:9"><i class="dura" style="left:93.55%;width:6.45%" tabindex="0"><b class="tip"><strong>Fin de semana largo</strong>30 de octubre al 1 de noviembre — Iglesias Evangélicas y Todos los Santos.</b></i></div>
+          <div class="ov" style="grid-column:10"><i class="dura r" style="left:0.00%;width:3.33%" tabindex="0"><b class="tip"><strong>Todos los Santos</strong>Lunes 1 de noviembre.</b></i></div>
+          <div class="ov" style="grid-column:11"><i class="dura r" style="left:22.58%;width:3.23%" tabindex="0"><b class="tip"><strong>Inmaculada Concepción</strong>Miércoles 8 de diciembre. Parte la semana en dos.</b></i></div>
+          <div class="ov" style="grid-column:11"><i class="blanda r" style="left:45.16%;width:54.84%" tabindex="0"><b class="tip"><strong>Cierre del año escolar</strong>Segunda quincena de diciembre. En 2026 el Final Show de 4° básicos fue el miércoles 2.</b></i></div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <p class="gnote">Pasa el cursor sobre una franja para ver qué bloquea. Lo marcado «est.» se proyecta desde el calendario 2026 del colegio y hay que confirmarlo con el Plan de Funcionamiento 2027, que en 2026 llegó el 26 de enero. Las barras de preparación de marzo arrancan en realidad en enero y febrero.</p>
+  </div>
+</section>
+
+
+<section class="bloque alt" id="fechas">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Antes de fijar un sábado</span>
+      <h2>Fechas que condicionan el calendario</h2>
+      <p>Feriados de 2027 cruzados con lo que el colegio hizo en 2026, según los correos de Comunicaciones.</p>
+    </div>
+    <div class="fechas">
+      <div class="frow alerta"><div class="f">22–28 mar<small>Semana Santa</small></div><div class="d">Viernes Santo 26 y <b>Sábado Santo 27</b>: justo el sábado equivalente a Parents Games 2026 (sábado 28 de marzo). Hay que mover esa jornada al 20 de marzo o al 3 de abril.</div></div>
+      <div class="frow alerta"><div class="f">19–22 abr<small>Semana Aniversario <i>(est.)</i></small></div><div class="d">En 2026 fue del 20 al 23 de abril, con horarios especiales. El Café Concert del viernes 16 queda justo antes; la Semana Literaria se movió a mayo para no caer encima.</div></div>
+      <div class="frow"><div class="f">13 may · 21–23 may<small>Día de las Letras y fin de semana largo</small></div><div class="d">El colegio celebró el Día de las Letras el miércoles 13 de mayo de 2026, con tour literario y trueque de libros. La Semana Literaria del CCPP debe ir pegada a eso. El 21 cae viernes y en 2026 coincidió con el Día del Estudiante.</div></div>
+      <div class="frow"><div class="f">may–jun<small>Preemergencias ambientales</small></div><div class="d">En 2026 el colegio suspendió el deporte los sábados 30 de mayo y 13 de junio por preemergencia. Cualquier actividad al aire libre de sábado en ese período necesita plan B.</div></div>
+      <div class="frow alerta"><div class="f">19 jun – 4 jul<small>Vacaciones de invierno <i>(est.)</i></small></div><div class="d">En 2026: salida el jueves 18 de junio, regreso el lunes 6 de julio. <b>No es julio completo</b>: el receso cae a fines de junio. Incluye el 21 y el 29 de junio.</div></div>
+      <div class="frow"><div class="f">16–18 jul · jul<small>Fin de semana largo y reuniones de apoderados</small></div><div class="d">Virgen del Carmen cae viernes 16. En 2026 las reuniones de apoderados del segundo semestre fueron del 14 al 22 de julio (1° y 2° básico, el 21): oportunidad para que el CCPP se presente curso por curso.</div></div>
+      <div class="frow alerta"><div class="f">fin de agosto<small>Festival de la Voz y vacunación escolar</small></div><div class="d">En 2026 el colegio hizo el Festival de la Voz el viernes 28 de agosto, con venta de entradas, y la vacunación escolar del CESFAM el lunes 31. El Bingo va en la primera quincena.</div></div>
+      <div class="frow alerta"><div class="f">6–19 sep<small>Chilenidad y receso Fiestas Patrias <i>(est.)</i></small></div><div class="d">En 2026: Fonda el sábado 5, Semana de la Chilenidad del 7 al 11 con bailes el 8 y 9, y receso del sábado 12 al lunes 21. En 2027 el 18 y 19 caen sábado y domingo. La Fonda el <b>sábado 4</b> calza con lo que ya hace el colegio.</div></div>
+      <div class="frow alerta"><div class="f">octubre<small>Mes más saturado del año</small></div><div class="d">Fin de semana largo del 9 al 12, Día del Profesor sin clases (2026: viernes 16; en 2027 probablemente el viernes 15), re-matrícula, elección del CCPP, Feria de las Ciencias, Trewhela's Cup y suspensiones por clima o Mineduc (2026: 9 y 20 de octubre).</div></div>
+      <div class="frow"><div class="f">30 oct – 1 nov<small>Fin de semana largo</small></div><div class="d">Iglesias Evangélicas domingo 31 y Todos los Santos lunes 1.</div></div>
+      <div class="frow"><div class="f">nov – 2 dic<small>Cierre de ciclo del colegio</small></div><div class="d">SIMCE de 4° básico, graduación y Túnel de Despedida de IV medio (2026: viernes 6 de noviembre) y Final Show de 4° básico (2026: miércoles 2 de diciembre). La Feria Navideña no debe chocar con esas fechas.</div></div>
+      <div class="frow"><div class="f">8 dic<small>Inmaculada Concepción</small></div><div class="d">Cae miércoles y parte la semana. La rendición de cuentas va antes.</div></div>
+      <div class="frow"><div class="f">2027<small>Sin elecciones programadas</small></div><div class="d">Según el ciclo electoral, las próximas son las municipales y regionales de 2028. Confirmar en Servel.</div></div>
+    </div>
+    <p class="gnote">Lo marcado «est.» es una proyección desde 2026. Los feriados del 29 de junio, 12 de octubre y 31 de octubre son trasladables por ley. Todo se confirma con el Plan de Funcionamiento 2027 del colegio.</p>
+  </div>
+</section>
+
+<section class="bloque band" id="calendario">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Marzo a diciembre</span>
+      <h2>Año escolar 2027</h2>
+      <p>22 actividades, más la cadencia fija de reuniones.</p>
+    </div>
+
+    <div class="strip"><b>Cadencia fija</b>Reunión mensual con Dirección, último jueves de cada mes — con acta que llega a las familias.</div>
+    <div class="strip"><b>Antes de marzo</b>Traspaso y acta con la directiva saliente. En enero se coordina Parents Games con el CCPP de Providencia y se arman kiosko, encuentro de apoderados nuevos y Café Concert.</div>
+    <div class="strip oro"><b>Semana Santa 2027</b>Del 22 al 28 de marzo, con Sábado Santo el 27. Todo lo de marzo va antes del viernes 19 o después del lunes 29.</div>
+
+    <div class="etapas">
+      <div class="etapa">
+        <div class="num"><b>Marzo</b><small>6</small></div>
+        <div class="mitems">
+          <div class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Convenios y beneficios</span><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: ene–feb</span></div><div class="m"><b>Lanzamiento en marzo:</b> base de 23 convenios revisada y publicada, aclarando los 9 que figuran «en gestión»</div><div class="m">Después, altas y bajas todo el año; es argumento central de la campaña de socios</div></div>
+          <div class="card" data-c="vsd" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Parents Games</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m"><b>Sábado 20 de marzo</b> (propuesta) · con el CCPP de Providencia y el colegio</div><div class="m">En 2026 fue el sábado 28 de marzo y sirvió como bienvenida a familias nuevas</div></div>
+          <div class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Encuentro de apoderados nuevos</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: enero</span></div><div class="m">Primera quincena, antes de Semana Santa</div><div class="m">Puede fusionarse con Parents Games, que ya cumple ese propósito</div></div>
+          <div class="card" data-c="lf" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Lost &amp; Found</span><div class="m resp"><span class="cmt">Lost &amp; Found</span><span>Carolina y Cristina (por confirmar)</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: enero</span></div><div class="m">Sistema permanente, no evento</div></div>
+          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Ventas en recreos (kiosko)</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: ene–feb</span></div><div class="m">Bases y sorteo por curso</div></div>
+          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Vacunación influenza</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: febrero</span></div><div class="m">En 2026 la campaña partió en marzo (aviso del 10 de marzo)</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Abril</b><small>2</small></div>
+        <div class="mitems">
+          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Café Concert</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: febrero</span></div><div class="m"><b>Viernes 16 de abril</b> · necesita 6–8 semanas</div><div class="m">Queda el viernes antes de la Semana Aniversario (est. 19–22 abr)</div></div>
+          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campeonato fútbol apoderados</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: marzo</span></div><div class="m">Liga de abril a agosto</div><div class="m">Riesgo: preemergencias ambientales suspenden deporte los sábados de mayo y junio</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Mayo</b><small>4</small></div>
+        <div class="mitems">
+          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Semana Literaria</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: marzo</span></div><div class="m">Junto al Día de las Letras del colegio (2026: miércoles 13 de mayo)</div><div class="m">Se movió desde abril para no chocar con el Aniversario</div></div>
+          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Campaña Hogar San Ricardo</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: abril</span></div><div class="m">El colegio la hizo en mayo de 2026: sumarse, no duplicar</div></div>
+          <div class="card" data-c="inc" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Mesa de aprendizaje e inclusión</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: abril</span></div><div class="m">Con Dirección: apoyos, cómo se piden, plazos</div></div>
+          <div class="card" data-c="seg" data-p="2" style="--pc:var(--p2);--pct:var(--p2t)"><span class="t">Revisión de protocolos</span><div class="m resp"><span class="cmt">Seguridad &amp; Infraestructura</span><span>Rodrigo y Leo</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 2</span><span class="prep">Prep: abril</span></div><div class="m">Ingreso, retiro y salidas pedagógicas</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Junio</b><small>1</small></div>
+        <div class="mitems">
+          <div class="card" data-c="inc" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Encuesta de clima por curso</span><div class="m resp"><span class="cmt">Inclusión, Convivencia &amp; Bienestar</span><span>Rodrigo y Juan Cartagena</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag media">Media</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m">Cerrar antes del 18 de junio: después vienen las vacaciones de invierno</div></div>
+        </div>
+      </div>
+      <div class="etapa rest">
+        <div class="num"><b>Julio</b><small>—</small></div>
+        <div class="rest-txt">Vuelta de vacaciones (est. lunes 5) y reuniones de apoderados del colegio — buena vitrina para presentar al CCPP. Solo preparación del Bingo.</div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Agosto</b><small>3</small></div>
+        <div class="mitems">
+          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Bingo</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: mayo</span></div><div class="m"><b>Primera quincena</b> · hito de recaudación a mitad de año</div><div class="m">Evitar fin de mes: Festival de la Voz del colegio (2026: viernes 28) y vacunación escolar</div></div>
+          <div class="card" data-c="vsd" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Clases de cueca</span><div class="m resp"><span class="cmt">Vida Saludable &amp; Deportes</span><span>Grace y Rossana</span></div><div class="m"><span class="tag kind">Temporada</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: julio</span></div><div class="m">Preparan los bailes que se presentan en la Fonda</div></div>
+          <div class="card" data-c="com" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Informe semestral de compromisos</span><div class="m resp"><span class="cmt">Comunicación</span><span>Paulina y Claudio</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: julio</span></div><div class="m">Avance del colegio, con indicadores</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Sept.</b><small>1</small></div>
+        <div class="mitems">
+          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Fonda Trewhelana</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: julio</span></div><div class="m"><b>Sábado 4 de septiembre</b>, con los bailes de los niños dentro de la fonda</div><div class="m">En 2026 la fonda fue el sábado 5; los bailes, el 8 y 9 entre semana</div><div class="m"><span class="tag ya">Cambio</span> Requiere acuerdo con Dirección</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Octubre</b><small>1</small></div>
+        <div class="mitems">
+          <div class="card" data-c="cev" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Feria de las Pulgas</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind">Evento</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: agosto</span></div><div class="m">Mes saturado: re-matrícula, elección CCPP, Feria de Ciencias, Cup, dos fines de semana largos</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Nov.</b><small>3</small></div>
+        <div class="mitems">
+          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Teletón</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">En 2026 el colegio la llevó (alcancías y reciclaje con colegios de Colina): sumarse</div></div>
+          <div class="card" data-c="cev" data-p="1" style="--pc:var(--p1);--pct:var(--p1t)"><span class="t">Feria Navideña</span><div class="m resp"><span class="cmt">Comunidad y Eventos</span><span>Anyela, Fran y Ronald</span></div><div class="m"><span class="tag kind mayor">Evento mayor</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 1</span><span class="prep">Prep: septiembre</span></div><div class="m">Sin bingo: ahora son dos producciones distintas</div></div>
+          <div class="card" data-c="sol" data-p="4" style="--pc:var(--p4);--pct:var(--p4t)"><span class="t">Juguetes Ángel de la Guarda</span><div class="m resp"><span class="cmt">Solidaridad</span><span>Bárbara y Rossana</span></div><div class="m"><span class="tag kind">Campaña</span><span class="tag media">Media</span><span class="pil">Pilar 4</span><span class="prep">Prep: octubre</span></div><div class="m">Entrega en diciembre</div></div>
+        </div>
+      </div>
+      <div class="etapa">
+        <div class="num"><b>Dic.</b><small>2</small></div>
+        <div class="mitems">
+          <div class="card" data-c="ben" data-p="3" style="--pc:var(--p3);--pct:var(--p3t)"><span class="t">Descuentos listas escolares 2028</span><div class="m">Hito anual dentro del trabajo permanente de convenios</div><div class="m resp"><span class="cmt">Beneficios &amp; Convenios</span><span>Juan Andrés y Juan Astete</span></div><div class="m"><span class="tag kind">Permanente</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 3</span><span class="prep">Prep: octubre</span></div></div>
+          <div class="card" data-c="dir" data-p="5" style="--pc:var(--p5);--pct:var(--p5t)"><span class="t">Cierre y rendición de cuentas</span><div class="m resp"><span class="cmt">Directiva · sin comisión</span><span>Por definir</span></div><div class="m"><span class="tag kind">Gestión</span><span class="tag ancla">Ancla</span><span class="pil">Pilar 5</span><span class="prep">Prep: noviembre</span></div><div class="m">Antes del 8 de diciembre; más encuesta a las familias</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloque alt" id="cobertura">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Dónde queda el programa</span>
+      <h2>Cobertura por pilar</h2>
+      <p>Actividades 2027 asignadas a cada uno de los cinco pilares de campaña.</p>
+    </div>
+    <div class="sem-tabla">
+      <div class="sem-row" style="--pc:var(--p1)"><div class="eje"><i></i><span>1 · Bienestar y convivencia</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">8</div></div>
+      <div class="sem-row" style="--pc:var(--p4)"><div class="eje"><i></i><span>4 · Vida saludable</span></div><div class="track"><div class="fill" style="width:100%"></div></div><div class="val">8</div></div>
+      <div class="sem-row" style="--pc:var(--p3)"><div class="eje"><i></i><span>3 · Inclusión</span></div><div class="track"><div class="fill" style="width:37.5%"></div></div><div class="val">3</div></div>
+      <div class="sem-row" style="--pc:var(--p5)"><div class="eje"><i></i><span>5 · Comunicación</span></div><div class="track"><div class="fill" style="width:25%"></div></div><div class="val">2</div></div>
+      <div class="sem-row" style="--pc:var(--p2)"><div class="eje"><i></i><span>2 · Seguridad</span></div><div class="track"><div class="fill" style="width:12.5%"></div></div><div class="val">1</div></div>
+    </div>
+    <p class="nota"><b>El riesgo está acá.</b> Dieciséis de las 22 actividades caen en Bienestar y Vida Saludable. Seguridad, Inclusión y Comunicación —el corazón de la campaña— quedan con 6 entre los tres. Y la señal de 2026 es clara: la charla del colegio sobre neurodiversidad e inclusión se suspendió por baja convocatoria. Si el CCPP no empuja el pilar 3, nadie lo hará.</p>
+  </div>
+</section>
+
+<section class="bloque band" id="decisiones">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tagline">Antes de cerrar el calendario</span>
+      <h2>Decisiones pendientes</h2>
+    </div>
+    <ol class="dec">
+      <li><b>Parents Games pasa a marzo.</b> En 2026 fue el sábado 28 de marzo, organizado por ambos CCPP y el colegio, como bienvenida a familias nuevas. En 2027 ese sábado es Sábado Santo. Propuesta: <b>sábado 20 de marzo</b> (alternativa: 3 de abril). Hay que acordarlo con el CCPP de Providencia en enero, y decidir si el Encuentro de apoderados nuevos se fusiona con esta jornada.</li>
+      <li><b>Pedir el calendario 2027 al colegio apenas exista.</b> En 2026 el Plan de Funcionamiento llegó el 26 de enero. Todo lo marcado «est.» depende de ese documento, y es la primera conversación natural con el nuevo rector.</li>
+      <li><b>Café Concert, viernes 16 de abril.</b> Preparación desde febrero, con equipo y local comprometidos antes de que termine 2026. Confirmar que la Semana Aniversario no se adelante a esa semana.</li>
+      <li><b>Semana Literaria a mayo.</b> Junto al Día de las Letras del colegio, en lugar del 23 de abril, que cae en la Semana Aniversario estimada.</li>
+      <li><b>Bingo, primera quincena de agosto.</b> Evita el Festival de la Voz y la vacunación escolar de fin de mes, y deja aire antes de la Fonda. Una dupla distinta a la de la Fonda.</li>
+      <li><b>Fonda el sábado 4 de septiembre, con los bailes.</b> Calza con 2026 (la Fonda fue el sábado 5), pero hoy los bailes van entre semana en la Semana de la Chilenidad. Moverlos al sábado es decisión de Dirección: plantearlo en mayo o junio.</li>
+      <li><b>Campañas: sumarse, no duplicar.</b> El colegio ya corrió Hogar San Ricardo (mayo) y Teletón (noviembre) en 2026. El CCPP debería acordar cómo suma, no organizar una campaña paralela.</li>
+      <li><b>Feria Navideña.</b> ¿Noviembre o diciembre? Tiene que esquivar graduación, Túnel de Despedida y Final Show.</li>
+      <li><b>Comisiones definidas: tres ajustes.</b> (1) Comunidad y Eventos lleva cuatro de los cinco eventos mayores con tres personas: sumar delegados de curso o mover la Semana Literaria. (2) Seguridad &amp; Infraestructura tiene una sola actividad, siendo un pilar central de la campaña: necesita agenda propia. (3) Nadie lleva tesorería ni la rendición de cuentas: definir responsable. Además, Rodrigo y Rossana están en dos comisiones cada uno, y falta confirmar a Cristina en Lost &amp; Found.</li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="mark"><img src="assets/logo.png" alt="Logo CCPP"></div>
+    <p class="lema-f">Primero nuestros hijos: una comunidad que cumple, acompaña y construye futuro.</p>
+    <p>Propuesta de trabajo — fechas y responsables por confirmar en la próxima reunión de directiva.</p>
+    <p class="fine">Centro de Padres, Madres y Apoderados · Trewhela's School, Sede Chicureo · Período 2027–2028</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btns = Array.prototype.slice.call(document.querySelectorAll('#legend .lg'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card, .grow[data-p]'));
+  function apply(){
+    var on = btns.filter(function(b){return b.getAttribute('aria-pressed')==='true';})
+                 .map(function(b){return b.dataset.p;});
+    var all = on.length === btns.length;
+    cards.forEach(function(c){
+      c.classList.toggle('dim', !all && on.indexOf(c.dataset.p) === -1);
+    });
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var onCount = btns.filter(function(x){return x.getAttribute('aria-pressed')==='true';}).length;
+      if(onCount === btns.length){
+        btns.forEach(function(x){ x.setAttribute('aria-pressed', x===b ? 'true':'false'); });
+      } else {
+        b.setAttribute('aria-pressed', b.getAttribute('aria-pressed')==='true' ? 'false':'true');
+        if(btns.every(function(x){return x.getAttribute('aria-pressed')==='false';})){
+          btns.forEach(function(x){ x.setAttribute('aria-pressed','true'); });
+        }
+      }
+      apply();
+    });
+  });
+  apply();
+  var cb = Array.prototype.slice.call(document.querySelectorAll('.cbtn'));
+  var items = Array.prototype.slice.call(document.querySelectorAll('.card[data-c], .grow[data-c]'));
+  cb.forEach(function(b){
+    b.addEventListener('click', function(){
+      var on = b.getAttribute('aria-pressed') !== 'true';
+      cb.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      btns.forEach(function(x){ x.setAttribute('aria-pressed','true'); });
+      if(on){
+        b.setAttribute('aria-pressed','true');
+        items.forEach(function(it){ it.classList.toggle('dim', it.dataset.c !== b.dataset.c); });
+        var g=document.getElementById('gantt'); if(g) g.scrollIntoView({behavior:'smooth'});
+      } else { items.forEach(function(it){ it.classList.remove('dim'); }); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
